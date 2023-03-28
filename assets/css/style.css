@@ -710,12 +710,12 @@ main {
 
 
 /**
- * #clients 
+ * #Technologies
  */
 
-.clients { margin-bottom: 15px; }
+.technologies { margin-bottom: 15px; }
 
-.clients-list {
+.technologies-list {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -725,25 +725,23 @@ main {
   padding-bottom: 25px;
   overflow-x: auto;
   scroll-behavior: smooth;
+  scroll-behavior: auto;
   overscroll-behavior-inline: contain;
   scroll-snap-type: inline mandatory;
   scroll-padding-inline: 25px;
 }
 
-.clients-item {
+.technologies-item {
   min-width: 50%;
   scroll-snap-align: start;
 }
 
-.clients-item img {
-  width: 100%;
-  filter: grayscale(1);
+.technologies-item img {
+  width: 70%;
   transition: var(--transition-1);
 }
 
-.clients-item img:hover { filter: grayscale(0); }
-
-
+.technologies-item img:hover { filter: drop-shadow(10px 10px 20px hsla(45, 100%, 71%, 0.648)); } 
 
 
 
@@ -818,37 +816,37 @@ main {
 
 
 /**
- * skills 
+ * Languages section
  */
 
-.skills-title { margin-bottom: 20px; }
+.languages-title { margin-bottom: 20px; }
 
-.skills-list { padding: 20px; }
+.languages-list { padding: 20px; }
 
 
-.skills-item:not(:last-child) { margin-bottom: 15px; }
+.languages-item:not(:last-child) { margin-bottom: 15px; }
 
-.skill .title-wrapper {
+.languages .title-wrapper {
   display: flex;
   align-items: center;
   gap: 5px;
   margin-bottom: 8px;
 }
 
-.skill .title-wrapper data {
+.languages .title-wrapper data {
   color: var(--light-gray);
   font-size: var(--fs-7);
   font-weight: var(--fw-300);
 }
 
-.skill-progress-bg {
+.languages-progress-bg {
   background: var(--jet);
   width: 100%;
   height: 8px;
   border-radius: 10px;
 }
 
-.skill-progress-fill {
+.languages-progress-fill {
   background: var(--text-gradient-yellow);
   height: 100%;
   border-radius: inherit;
@@ -1225,7 +1223,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * client
    */
 
-  .clients-item { min-width: calc(33.33% - 10px); }
+  .technologies-item { min-width: calc(33.33% - 10px); }
 
 
 
@@ -1457,16 +1455,16 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: 35px;
   }
 
-  /* clients */
+  /* Technologies */
 
-  .clients-list {
-    gap: 50px;
+  .technologies-list {
+    gap: 5px;
     margin: 0 -30px;
     padding: 45px;
     scroll-padding-inline: 45px;
   }
 
-  .clients-item { min-width: calc(33.33% - 35px); }
+  .technologies-item { min-width: calc(33.33% - 35px); }
 
 
 
@@ -1484,7 +1482,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     left: -43px;
   }
 
-  .skills-item:not(:last-child) { margin-bottom: 25px; }
+  .languages-item:not(:last-child) { margin-bottom: 25px; }
 
 
 
@@ -1720,9 +1718,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .testimonials-item { min-width: calc(50% - 15px); }
 
-  /* clients */
+  /* Technologies */
 
-  .clients-item { min-width: calc(25% - 38px); }
+  .technologies-item { min-width: calc(25% - 38px); }
 
 
 
