@@ -1273,7 +1273,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   .sidebar, article {
-    width: 380px;
+    width: 100%;
     margin-inline: auto;
     padding: 30px;
   }
@@ -1314,7 +1314,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar {
     max-height: 180px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   .sidebar.active { max-height: 584px; }
@@ -1323,7 +1323,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .avatar-box { border-radius: 30px; }
 
-  .avatar-box img { width: 120px; }
+  .avatar-box img { width: 90px; }
 
   .info-content .name { margin-bottom: 15px; }
 
