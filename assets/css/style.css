@@ -1,6 +1,10 @@
 :root {
 
-  /* colors & gradient */
+  /**
+   * colors
+   */
+
+  /* gradient */
 
 
   --bg-gradient-onyx: linear-gradient(
@@ -49,6 +53,10 @@
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 
+  /**
+   * typography
+   */
+
   /* font-family */
   --ff-poppins: 'Poppins', sans-serif;
 
@@ -68,7 +76,9 @@
   --fw-500: 500;
   --fw-600: 600;
 
-  /* shadow */
+  /**
+   * shadow
+   */
   
   --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
   --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
@@ -76,12 +86,17 @@
   --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
   --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
 
-  /* transition */
+  /**
+   * transition
+   */
 
   --transition-1: 0.25s ease;
   --transition-2: 0.5s ease-in-out;
 
 }
+
+
+
 
 
 /*-----------------------------------*\
@@ -126,6 +141,9 @@ html { font-family: var(--ff-poppins); }
 
 body { background: var(--sha-background);
 }
+
+
+
 
 
 /*-----------------------------------*\
@@ -260,6 +278,9 @@ article.active {
 }
 
 
+
+
+
 /*-----------------------------------*\
   #MAIN
 \*-----------------------------------*/
@@ -269,6 +290,9 @@ main {
   margin-bottom: 75px;
   min-width: 259px;
 }
+
+
+
 
 
 /*-----------------------------------*\
@@ -410,6 +434,9 @@ main {
 .social-item .social-link:hover { color: var(--light-gray); }
 
 
+
+
+
 /*-----------------------------------*\
   #NAVBAR
 \*-----------------------------------*/
@@ -449,6 +476,8 @@ main {
 
 
 
+
+
 /*-----------------------------------*\
   #ABOUT
 \*-----------------------------------*/
@@ -466,7 +495,9 @@ main {
 
 
 
-/* #service */
+/**
+ * #service 
+ */
 
 .service { margin-bottom: 35px; }
 
@@ -678,7 +709,9 @@ main {
 }
 
 
-/** #Technologies */
+/**
+ * #Technologies
+ */
 
 .technologies { margin-bottom: 15px; }
 
@@ -719,7 +752,9 @@ main {
 .article-title { margin-bottom: 30px; }
 
 
-/** education and experience */
+/**
+ * education and experience 
+ */
 
 .timeline { margin-bottom: 30px; }
 
@@ -780,7 +815,9 @@ main {
 }
 
 
-/* Languages section */
+/**
+ * Languages section
+ */
 
 .languages-title { margin-bottom: 20px; }
 
@@ -814,6 +851,8 @@ main {
   height: 100%;
   border-radius: inherit;
 }
+
+
 
 
 
@@ -973,6 +1012,9 @@ main {
 }
 
 
+
+
+
 /*-----------------------------------*\
   #BLOG
 \*-----------------------------------*/
@@ -1056,6 +1098,9 @@ main {
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
+
+
+
 
 
 /*-----------------------------------*\
@@ -1228,7 +1273,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   .sidebar, article {
-    width: 390px;
+    width: 420px;
     margin-inline: auto;
     padding: 30px;
   }
@@ -1257,7 +1302,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   main {
-    margin-top: 20px;
+    margin-top: 60px;
     margin-bottom: 100px;
   }
 
@@ -1269,7 +1314,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar {
     max-height: 180px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   .sidebar.active { max-height: 584px; }
