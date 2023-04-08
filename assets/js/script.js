@@ -158,4 +158,6 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
-
+// open image on click
+function imgWindow() {
+  window.open("image") }
