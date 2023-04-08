@@ -161,3 +161,13 @@ for (let i = 0; i < navigationLinks.length; i++) {
 // open image on click
 function imgWindow() {
   window.open("image") }
+
+// copy email address
+function copyEmail() {
+  var email = document.querySelector('.email-text');
+  var range = document.createRange();
+  range.selectNode(email);
+  window.getSelection().addRange(range);
+  document.execCommand('copy');
+  window.getSelection().removeAllRanges();
+}
