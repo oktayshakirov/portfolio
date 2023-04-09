@@ -139,8 +139,7 @@ input, textarea {
 
 html { font-family: var(--ff-poppins); }
 
-body { background: var(--sha-background) ;
-
+body { background: var(--sha-background);
 }
 
 
