@@ -1453,6 +1453,8 @@
           <h2 class="h2 article-title">Contact</h2>
         </header>
 
+
+          <!-- Copy Email Address -->
           <h3 class="h3 form-title" align="center">Email:</h3>
 
           <div class="container">
@@ -1461,10 +1463,20 @@
               <button class="copy-button" onclick="copyEmail()">Copy</button>
             </div>
           </div>
-     
+          <br>
+
+          <h3 class="h3 form-title" align="center">Schedule a Call:</h3>
+
+          <!-- Calendly popup widget -->
+          <center>
+          <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+          <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+          <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/oktayshakirov/30min?hide_landing_page_details=1&hide_gdpr_banner=1'});return false;">
+          <button class="copy-button">Click here</button></a>
+          </center>
 
           <br>
-          
+          <!-- Social Links -->
           <h3 class="h3 form-title" align="center">Socials:</h3>
           <br>
 
@@ -1507,17 +1519,6 @@
         </li>
         </ul>
         <br>
-        <br>
-
-        <h3 class="h3 form-title" align="center">Schedule a Call:</h3>
-
-        <!-- Calendly popup widget -->
-        <center>
-        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/oktayshakirov/30min?hide_landing_page_details=1&hide_gdpr_banner=1'});return false;">
-        <button class="copy-button">Click here</button></a>
-        </center>
 
       </article>
 
