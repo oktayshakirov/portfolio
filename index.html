@@ -1509,11 +1509,15 @@
         <br>
         <br>
 
-        <h3 class="h3 form-title" align="center">Book a meeting:</h3>
+        <h3 class="h3 form-title" align="center">Schedule a Call:</h3>
 
-        <!-- Calendly widget -->
-        <div class="calendly-inline-widget" data-url="https://calendly.com/oktayshakirov/30min?hide_landing_page_details=1&hide_gdpr_banner=1" style="min-width:250px;height:1100px;"></div>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly popup widget -->
+        <center>
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/oktayshakirov/30min?hide_landing_page_details=1&hide_gdpr_banner=1'});return false;">
+        <button class="copy-button">Click here</button></a>
+        </center>
 
       </article>
 

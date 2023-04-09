@@ -1875,7 +1875,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 .email-field {
   display: flex;
   align-items: center;
-  background-color: #f2f2f2;
+  background-color: hsla(0, 0%, 22%, 0.514);
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -1884,6 +1884,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 .email-text {
   flex-grow: 1;
   margin-right: 10px;
+  color: hsl(0, 0%, 100%);
 }
 .copy-button {
   background-color: hsl(0, 0%, 22%);
