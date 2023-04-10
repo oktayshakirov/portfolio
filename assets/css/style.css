@@ -422,7 +422,6 @@ main {
   align-items: center;
   gap: 15px;
   padding-bottom: 4px;
-  padding-left: 7px;
 }
 
 .social-item .social-link {
@@ -740,6 +739,21 @@ main {
 }
 
 .technologies-item img:hover { filter: drop-shadow(10px 10px 20px hsla(45, 100%, 71%, 0.648)); } 
+
+/* Social profiles */
+
+.socials-item {
+  min-width: 90%;
+  scroll-snap-align: start;
+  padding: 10%;
+}
+
+.socials-item img {
+  width: 90%;
+  transition: var(--transition-1);
+}
+
+.socials-item img:hover { filter: drop-shadow(10px 10px 20px hsla(45, 100%, 71%, 0.648)); } 
 
 
 
@@ -1464,6 +1478,16 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .technologies-item { min-width: calc(33.33% - 35px); }
 
+  /* Social profiles */
+
+.socials-item {
+  min-width: 110%;
+}
+
+.socials-item img {
+  width: 110%;
+}
+
 
 
   /**
@@ -1763,6 +1787,10 @@ textarea.form-input::-webkit-resizer { display: none; }
    * MAIN
    */
 
+  html, body {
+  min-height: 100%;
+  }
+
   main {
     max-width: 1200px;
     margin-inline: auto;
@@ -1856,15 +1884,14 @@ textarea.form-input::-webkit-resizer { display: none; }
   display: flex;
   align-items: center;
   background-color: hsla(0, 0%, 22%, 0.514);
-  padding: 10px;
-  width: 50%;
-  border-radius: 15px;
+  padding: 5px;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   margin-bottom: 10px;
 }
 .email-text {
   flex-grow: 1;
-  margin-right: 10px;
+  margin-right: 5px;
   color: hsl(0, 0%, 100%);
 }
 .copy-button {
@@ -1872,11 +1899,45 @@ textarea.form-input::-webkit-resizer { display: none; }
   color: hsl(45, 100%, 72%);
   border: none;
   border-radius: 5px;
-  padding: 10px;
+  padding: 5px;
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   transition: background-color 0.3s ease;
 }
 .copy-button:hover {
   background-color: hsl(195, 35%, 22%);
+}
+
+/* Certificates Container */
+
+.certificate-container {
+  position: relative;
+  display: inline-block;
+  padding: 5px;
+  border: 10px solid black;
+  box-sizing: border-box;
+}
+
+.certificate-container img {
+  display: block;
+  width: 250px;
+  height: auto;
+}
+
+.certificate-container:hover img {
+  transform: scale(1.05); 
+  cursor: zoom-in; 
+  transition: transform 0.5s ease; 
+}
+
+.certificate-container:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid #000;
+  pointer-events: none; /* Make sure the border does not interfere with the hover effect */
+  box-sizing: border-box; /* Make sure the border is included in the element's dimensions */
 }
