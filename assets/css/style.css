@@ -339,17 +339,19 @@ main {
   width: max-content;
   padding: 3px 12px;
   border-radius: 18px;
-  animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2.5s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
   from {
-    box-shadow: 0 0 0.5px #fff, 0 0 1px #fff, 0 0 3px #fff, 0 0 5px hsl(45, 100%, 72%), 0 0 10px hsl(45, 100%, 72%), 0 0 12px hsl(45, 100%, 72%), 0 0 14px hsl(45, 100%, 72%), 0 0 17px hsl(45, 100%, 72%);
+    box-shadow: 0 0 0.5px #fff, 0 0 1px #fff, 0 0 2px #fff, 0 0 4px hsl(45, 100%, 72%), 0 0 7px hsl(45, 100%, 72%), 0 0 10px hsl(45, 100%, 72%), 0 0 12px hsl(45, 100%, 72%), 0 0 15px hsl(45, 100%, 72%);
   }
   to {
     box-shadow: 0 0 2.5px #ffffff0e;
   }
 }
+
+
 
 
 
@@ -1958,6 +1960,4 @@ textarea.form-input::-webkit-resizer { display: none; }
   pointer-events: none; 
   box-sizing: border-box; 
 }
-
-/* glowing card in the sidebar */
 
