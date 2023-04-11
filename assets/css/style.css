@@ -1352,7 +1352,12 @@ textarea.form-input::-webkit-resizer { display: none; }
     font-size: var(--fs-8);
   }
 
-  .info_more-btn ion-icon { display: none; }
+  .info_more-btn ion-icon {
+    font-size: 26px;
+    color: hsl(45, 100%, 72%);
+  }
+  
+  
 
   .separator { margin: 32px 0; }
 
