@@ -557,14 +557,14 @@ main {
 
 
 /**
- * #testimonials 
+ * #hobbies 
  */
 
-.testimonials { margin-bottom: 30px; }
+.hobbies { margin-bottom: 30px; }
 
-.testimonials-title { margin-bottom: 20px; }
+.hobbies-title { margin-bottom: 20px; }
 
-.testimonials-list {
+.hobbies-list {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -578,12 +578,12 @@ main {
   scroll-snap-type: inline mandatory;
 }
 
-.testimonials-item {
+.hobbies-item {
   min-width: 100%;
   scroll-snap-align: center;
 }
 
-.testimonials-avatar-box {
+.hobbies-avatar-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -591,9 +591,9 @@ main {
   border-radius: 14px;
 }
 
-.testimonials-item-title { margin-bottom: 7px; font-size: 16px;}
+.hobbies-item-title { margin-bottom: 7px; font-size: 16px;}
 
-.testimonials-text {
+.hobbies-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
@@ -607,7 +607,7 @@ main {
 
 
 /**
- * #testimonials-modal
+ * #hobbies-modal
  */
 
 .modal-container {
@@ -653,7 +653,7 @@ main {
   pointer-events: all;
 }
 
-.testimonials-modal {
+.hobbies-modal {
   background: var(--eerie-black-2);
   position: relative;
   padding: 15px;
@@ -667,7 +667,7 @@ main {
   z-index: 2;
 }
 
-.modal-container.active .testimonials-modal {
+.modal-container.active .hobbies-modal {
   transform: scale(1);
   opacity: 1;
 }
@@ -1421,11 +1421,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .service-content-box { text-align: left; }
 
-  /* testimonials */
+  /* hobbies */
 
-  .testimonials-title { margin-bottom: 25px; }
+  .hobbies-title { margin-bottom: 25px; }
 
-  .testimonials-list {
+  .hobbies-list {
     gap: 30px;
     margin: 0 -30px;
     padding: 30px;
@@ -1437,28 +1437,28 @@ textarea.form-input::-webkit-resizer { display: none; }
     padding-top: 25px;
   }
 
-  .testimonials-avatar-box {
+  .hobbies-avatar-box {
     transform: translate(30px, -30px);
     border-radius: 20px;
   }
 
-  .testimonials-avatar-box img { width: 80px; }
+  .hobbies-avatar-box img { width: 80px; }
 
-  .testimonials-item-title {
+  .hobbies-item-title {
     margin-bottom: 10px;
     margin-left: 96px;
   }
 
-  .testimonials-text {
+  .hobbies-text {
     line-clamp: 4;
     -webkit-line-clamp: 4;
   }
 
-  /* testimonials modal */
+  /* hobbies modal */
 
   .modal-container { padding: 20px; }
 
-  .testimonials-modal {
+  .hobbies-modal {
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
@@ -1609,9 +1609,9 @@ textarea.form-input::-webkit-resizer { display: none; }
    * ABOUT
    */
 
-  /* testimonials modal */
+  /* hobbies modal */
 
-  .testimonials-modal {
+  .hobbies-modal {
     gap: 35px;
     max-width: 680px;
   }
@@ -1755,9 +1755,9 @@ textarea.form-input::-webkit-resizer { display: none; }
     gap: 20px 25px;
   }
 
-  /* testimonials */
+  /* hobbies */
 
-  .testimonials-item { min-width: calc(50% - 15px); }
+  .hobbies-item { min-width: calc(50% - 15px); }
 
   /* Technologies */
 
