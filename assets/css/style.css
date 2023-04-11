@@ -1373,7 +1373,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .navbar-list { gap: 20px; }
 
-  .navbar-link { --fs-8: 14px; padding: 20px 2px; }
+  .navbar-link {padding: 20px 2px; }
 
 
 
