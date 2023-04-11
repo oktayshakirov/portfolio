@@ -41,7 +41,7 @@
   /* solid */
 
   --jet: hsl(0, 0%, 22%);
-  --onyx: hsl(240, 1%, 17%);
+  --onyx: hsla(240, 1%, 17%, 0.84);
   --eerie-black-1: hsla(240, 3%, 13%, 0.836);
   --eerie-black-2: hsla(240, 2%, 12%, 0.418);
   --sha-background: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
@@ -338,8 +338,20 @@ main {
   font-weight: var(--fw-300);
   width: max-content;
   padding: 3px 12px;
-  border-radius: 8px;
+  border-radius: 18px;
+  animation: glow 1.5s ease-in-out infinite alternate;
 }
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 2.5px #fff, 0 0 5px #fff, 0 0 6px #fff, 0 0 7.5px hsl(45, 100%, 72%), 0 0 12.5px hsl(45, 100%, 72%), 0 0 15px hsl(45, 100%, 72%), 0 0 17.5px hsl(45, 100%, 72%), 0 0 20px hsl(45, 100%, 72%);
+  }
+  to {
+    box-shadow: 0 0 2.5px #fff, 0 0 5px #fff, 0 0 6px #fff, 0 0 7.5px #fff, 0 0 12.5px #fff, 0 0 15px var(--onyx), 0 0 17.5px var(--onyx), 0 0 20px var(--onyx);
+  }
+}
+
+
 
 .info_more-btn {
   position: absolute;
@@ -1943,6 +1955,9 @@ textarea.form-input::-webkit-resizer { display: none; }
   right: 0;
   bottom: 0;
   border: 1px solid #000;
-  pointer-events: none; /* Make sure the border does not interfere with the hover effect */
-  box-sizing: border-box; /* Make sure the border is included in the element's dimensions */
+  pointer-events: none; 
+  box-sizing: border-box; 
 }
+
+/* glowing card in the sidebar */
+
