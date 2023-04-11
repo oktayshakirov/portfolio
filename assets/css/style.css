@@ -326,7 +326,7 @@ main {
 .info-content .name {
   color: var(--white-2);
   font-size: var(--fs-4);
-  font-weight: var(--fw-500);
+  font-weight: var(--fw-600);
   letter-spacing: -0.25px;
   margin-bottom: 10px;
 }
