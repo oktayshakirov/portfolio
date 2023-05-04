@@ -194,7 +194,7 @@ function moveSlider() {
     });
   }
 }
-setInterval(moveSlider, 1000); //speed
+setInterval(moveSlider, 1500); //speed
 
 
 
