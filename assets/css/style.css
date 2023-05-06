@@ -736,8 +736,8 @@ main {
   margin: 0 -15px;
   padding: 25px;
   padding-bottom: 25px;
-  /* hide scrollbar with overflow: hidden */
-  overflow-x: auto; 
+  /* hide scrollbar with overflow: hidden, show with overflow: auto */
+  overflow-x: hidden; 
   overscroll-behavior-inline: contain;
   scroll-snap-type: inline mandatory;
   scroll-padding-inline: 25px;
@@ -765,8 +765,8 @@ main {
   margin: 0 -15px;
   padding: 25px;
   padding-bottom: 25px;
-  /* hide scrollbar with overflow: hidden */
-  overflow-x: auto; 
+  /* hide scrollbar with overflow: hidden, show with overflow: auto */
+  overflow-x: hidden; 
   overscroll-behavior-inline: contain;
   scroll-snap-type: inline mandatory;
   scroll-padding-inline: 25px;
