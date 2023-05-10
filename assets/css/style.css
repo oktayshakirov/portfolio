@@ -737,9 +737,8 @@ main {
   padding: 25px;
   padding-bottom: 25px;
   /* hide scrollbar with overflow: hidden, show with overflow: auto */
-  overflow-x: hidden; 
+  overflow-x: auto; 
   overscroll-behavior-inline: contain;
-  scroll-snap-type: inline mandatory;
   scroll-padding-inline: 25px;
 }
 
@@ -754,23 +753,6 @@ main {
 }
 
 .technologies-item img:hover { filter: drop-shadow(10px 10px 20px hsla(45, 100%, 71%, 0.648)); } 
-
-/* Multimedia */
-
-.multimedia-list {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 15px;
-  margin: 0 -15px;
-  padding: 25px;
-  padding-bottom: 25px;
-  /* hide scrollbar with overflow: hidden, show with overflow: auto */
-  overflow-x: hidden; 
-  overscroll-behavior-inline: contain;
-  scroll-snap-type: inline mandatory;
-  scroll-padding-inline: 25px;
-}
 
 
 /* Social profiles */
@@ -1410,7 +1392,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .navbar { border-radius: 20px 20px 0 0; }
 
-  .navbar-list { gap: 20px; }
+  .navbar-list { gap: 15px; }
 
   .navbar-link {padding: 20px 2px; }
 
@@ -1512,15 +1494,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     gap: 9px;
     margin: 0 -30px;
     padding: 45px;
-    scroll-padding-inline: 45px;
-  }
-
-  /* Multiemdia */
-
-  .multimedia-list {
-    gap: 7px;
-    margin: 0 -30px;
-    padding: 50px;
     scroll-padding-inline: 45px;
   }
 
@@ -1760,7 +1733,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     right: 0;
     width: max-content;
     border-radius: 0 20px;
-    padding: 0 20px;
+    padding: 0 10px;
     box-shadow: none;
   }
 
