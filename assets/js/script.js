@@ -19,7 +19,7 @@ sidebarBtn.click();
 
 
 // auto scrollbar
-var scrollInterval = 1000; // Set the interval time as a variable
+var scrollInterval = 1000; // Scrolling speed in milliseconds
 
 function moveSlider() {
   var sliders = document.querySelectorAll('.technologies-list');
@@ -27,9 +27,9 @@ function moveSlider() {
     var slider = sliders[i];
     var sliderWidth = slider.offsetWidth;
     var scrollPos = slider.scrollLeft;
-    var nextPos = scrollPos + (sliderWidth * 0.1); // Scroll 10% of the slider width
+    var nextPos = scrollPos + (sliderWidth * 0.1); // Percentage of the scrollbar to be scrolled
     if (nextPos >= slider.scrollWidth - sliderWidth) { // Check if the next position is at the end of the slider
-      nextPos = 0; // Reset to the beginning
+      nextPos = 0; 
     }
     slider.scrollTo({
       left: nextPos,
@@ -38,7 +38,7 @@ function moveSlider() {
   }
 }
 
-var sliderInterval = setInterval(moveSlider, scrollInterval); // Use the variable to set the interval time
+var sliderInterval = setInterval(moveSlider, scrollInterval); 
 
 var sliders = document.querySelectorAll('.technologies-list');
 for (var i = 0; i < sliders.length; i++) {
@@ -47,7 +47,7 @@ for (var i = 0; i < sliders.length; i++) {
     clearInterval(sliderInterval);
   });
   slider.addEventListener('mouseleave', function() {
-    sliderInterval = setInterval(moveSlider, scrollInterval); // Reuse the variable to reset the interval time
+    sliderInterval = setInterval(moveSlider, scrollInterval); 
   });
 }
 
