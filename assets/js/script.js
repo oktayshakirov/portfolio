@@ -18,6 +18,38 @@ sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); }
 sidebarBtn.click();
 
 
+// auto scrollbar
+var scrollInterval = 1000; // Set the interval time as a variable
+
+function moveSlider() {
+  var sliders = document.querySelectorAll('.technologies-list');
+  for (var i = 0; i < sliders.length; i++) {
+    var slider = sliders[i];
+    var sliderWidth = slider.offsetWidth;
+    var scrollPos = slider.scrollLeft;
+    var nextPos = scrollPos + (sliderWidth * 0.1); // Scroll 10% of the slider width
+    if (nextPos >= slider.scrollWidth - sliderWidth) { // Check if the next position is at the end of the slider
+      nextPos = 0; // Reset to the beginning
+    }
+    slider.scrollTo({
+      left: nextPos,
+      behavior: 'smooth'
+    });
+  }
+}
+
+var sliderInterval = setInterval(moveSlider, scrollInterval); // Use the variable to set the interval time
+
+var sliders = document.querySelectorAll('.technologies-list');
+for (var i = 0; i < sliders.length; i++) {
+  var slider = sliders[i];
+  slider.addEventListener('mouseenter', function() {
+    clearInterval(sliderInterval);
+  });
+  slider.addEventListener('mouseleave', function() {
+    sliderInterval = setInterval(moveSlider, scrollInterval); // Reuse the variable to reset the interval time
+  });
+}
 
 
 
@@ -177,36 +209,7 @@ function copyEmail() {
   window.getSelection().removeAllRanges();
 }
 
-// auto scrollbar
-function moveSlider() {
-  var sliders = document.querySelectorAll('.technologies-list');
-  for (var i = 0; i < sliders.length; i++) {
-    var slider = sliders[i];
-    var sliderWidth = slider.offsetWidth;
-    var scrollPos = slider.scrollLeft;
-    var nextPos = scrollPos + (sliderWidth * 0.005); // Scroll 10% of the slider width
-    if (nextPos >= slider.scrollWidth - sliderWidth) { // Check if the next position is at the end of the slider
-      nextPos = 0; // Reset to the beginning
-    }
-    slider.scrollTo({
-      left: nextPos,
-      behavior: 'smooth'
-    });
-  }
-}
 
-var sliderInterval = setInterval(moveSlider, 30); //speed
-
-var sliders = document.querySelectorAll('.technologies-list');
-for (var i = 0; i < sliders.length; i++) {
-  var slider = sliders[i];
-  slider.addEventListener('mouseenter', function() {
-    clearInterval(sliderInterval);
-  });
-  slider.addEventListener('mouseleave', function() {
-    sliderInterval = setInterval(moveSlider, 30);
-  });
-}
 
 
 

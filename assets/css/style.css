@@ -729,11 +729,12 @@ main {
 .technologies { margin-bottom: 15px; }
 
 .technologies-list {
+  white-space: nowrap;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 15px;
-  margin: 0 -15px;
+  margin: 0 -55px;
   padding: 25px;
   padding-bottom: 25px;
   /* hide scrollbar with overflow: hidden, show with overflow: auto */
