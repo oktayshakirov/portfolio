@@ -800,12 +800,12 @@ main {
 }
 
 .technologies-item img {
-  width: 80%;
+  width: 100%;
   transition: var(--transition-1);
 }
 
 .technologies-item img:hover {
-  filter: drop-shadow(10px 10px 20px hsla(45, 100%, 71%, 0.648));
+  filter: drop-shadow(10px 10px 30px hsl(45, 100%, 71%));
 }
 
 /* Social profiles */

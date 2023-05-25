@@ -30,6 +30,8 @@ function moveSlider() {
     var nextPos = scrollPos + scrollDistance;
     if (nextPos >= slider.scrollWidth - sliderWidth) {
       nextPos = 0;
+    } else if (nextPos <= 0) {
+      nextPos = slider.scrollWidth - sliderWidth;
     }
     slider.scrollTo({
       left: nextPos,
@@ -51,13 +53,11 @@ for (var i = 0; i < sliders.length; i++) {
   });
 }
 
-// testimonials variables
+// variables
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
 const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
-
-// modal variable
 const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
