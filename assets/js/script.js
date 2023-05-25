@@ -18,7 +18,8 @@ sidebarBtn.addEventListener("click", function () {
 sidebarBtn.click();
 
 // auto scrollbar
-var scrollInterval = 1000; // Scrolling speed in milliseconds
+var scrollInterval = 20; // Adjust this value for scrolling speed
+var scrollDistance = 1; // Adjust this value for scrolling distance in pixels
 
 function moveSlider() {
   var sliders = document.querySelectorAll(".technologies-list");
@@ -26,9 +27,8 @@ function moveSlider() {
     var slider = sliders[i];
     var sliderWidth = slider.offsetWidth;
     var scrollPos = slider.scrollLeft;
-    var nextPos = scrollPos + sliderWidth * 0.005; // Percentage of the scrollbar to be scrolled
+    var nextPos = scrollPos + scrollDistance;
     if (nextPos >= slider.scrollWidth - sliderWidth) {
-      // Check if the next position is at the end of the slider
       nextPos = 0;
     }
     slider.scrollTo({
@@ -189,3 +189,46 @@ function copyEmail() {
   document.execCommand("copy");
   window.getSelection().removeAllRanges();
 }
+
+// Animated percentage bar
+function increaseProgress(element, targetWidth) {
+  var currentWidth = 0;
+  var increment = 1;
+  var interval = 10;
+
+  var timer = setInterval(function () {
+    currentWidth += increment;
+    element.style.width = currentWidth + "%";
+    if (currentWidth >= targetWidth) {
+      clearInterval(timer);
+    }
+  }, interval);
+}
+
+function startAnimationOnScroll() {
+  var progressFillElements = document.querySelectorAll(
+    ".languages-progress-fill"
+  );
+
+  var options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5,
+  };
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        var targetWidth = parseInt(entry.target.style.width);
+        increaseProgress(entry.target, targetWidth);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
+
+  progressFillElements.forEach(function (element) {
+    observer.observe(element);
+  });
+}
+
+startAnimationOnScroll();
