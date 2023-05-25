@@ -18,7 +18,7 @@ sidebarBtn.addEventListener("click", function () {
 sidebarBtn.click();
 
 // auto scrollbar
-var scrollInterval = 20; // Adjust this value for scrolling speed
+var scrollInterval = 50; // Adjust this value for scrolling speed
 var scrollDistance = 1; // Adjust this value for scrolling distance in pixels
 
 function moveSlider() {
