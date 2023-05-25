@@ -1,57 +1,55 @@
-'use strict';
-
-
+"use strict";
 
 // element toggle function
-const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
-
-
+const elementToggleFunc = function (elem) {
+  elem.classList.toggle("active");
+};
 
 // sidebar variables
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
 // sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
+sidebarBtn.addEventListener("click", function () {
+  elementToggleFunc(sidebar);
+});
 
 // sidebar clicked by default
 sidebarBtn.click();
 
-
 // auto scrollbar
-var scrollInterval = 1000; // Scrolling speed in milliseconds
+var scrollInterval = 30; // Scrolling speed in milliseconds
 
 function moveSlider() {
-  var sliders = document.querySelectorAll('.technologies-list');
+  var sliders = document.querySelectorAll(".technologies-list");
   for (var i = 0; i < sliders.length; i++) {
     var slider = sliders[i];
     var sliderWidth = slider.offsetWidth;
     var scrollPos = slider.scrollLeft;
-    var nextPos = scrollPos + (sliderWidth * 0.1); // Percentage of the scrollbar to be scrolled
-    if (nextPos >= slider.scrollWidth - sliderWidth) { // Check if the next position is at the end of the slider
-      nextPos = 0; 
+    var nextPos = scrollPos + sliderWidth * 0.005; // Percentage of the scrollbar to be scrolled
+    if (nextPos >= slider.scrollWidth - sliderWidth) {
+      // Check if the next position is at the end of the slider
+      nextPos = 0;
     }
     slider.scrollTo({
       left: nextPos,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   }
 }
 
-var sliderInterval = setInterval(moveSlider, scrollInterval); 
+var sliderInterval = setInterval(moveSlider, scrollInterval);
 
-var sliders = document.querySelectorAll('.technologies-list');
+var sliders = document.querySelectorAll(".technologies-list");
 for (var i = 0; i < sliders.length; i++) {
   var slider = sliders[i];
-  slider.addEventListener('mouseenter', function() {
+  slider.addEventListener("mouseenter", function () {
     clearInterval(sliderInterval);
   });
-  slider.addEventListener('mouseleave', function() {
-    sliderInterval = setInterval(moveSlider, scrollInterval); 
+  slider.addEventListener("mouseleave", function () {
+    sliderInterval = setInterval(moveSlider, scrollInterval);
   });
 }
-
-
 
 // testimonials variables
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
@@ -68,29 +66,27 @@ const modalText = document.querySelector("[data-modal-text]");
 const testimonialsModalFunc = function () {
   modalContainer.classList.toggle("active");
   overlay.classList.toggle("active");
-}
+};
 
 // add click event to all modal items
 for (let i = 0; i < testimonialsItem.length; i++) {
-
   testimonialsItem[i].addEventListener("click", function () {
-
     modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
     modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
+    modalTitle.innerHTML = this.querySelector(
+      "[data-testimonials-title]"
+    ).innerHTML;
+    modalText.innerHTML = this.querySelector(
+      "[data-testimonials-text]"
+    ).innerHTML;
 
     testimonialsModalFunc();
-
   });
-
 }
 
 // add click event to modal close button
 modalCloseBtn.addEventListener("click", testimonialsModalFunc);
 overlay.addEventListener("click", testimonialsModalFunc);
-
-
 
 // custom select variables
 const select = document.querySelector("[data-select]");
@@ -98,17 +94,17 @@ const selectItems = document.querySelectorAll("[data-select-item]");
 const selectValue = document.querySelector("[data-selecct-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
-select.addEventListener("click", function () { elementToggleFunc(this); });
+select.addEventListener("click", function () {
+  elementToggleFunc(this);
+});
 
 // add event in all select items
 for (let i = 0; i < selectItems.length; i++) {
   selectItems[i].addEventListener("click", function () {
-
     let selectedValue = this.innerText.toLowerCase();
     selectValue.innerText = this.innerText;
     elementToggleFunc(select);
     filterFunc(selectedValue);
-
   });
 }
 
@@ -116,9 +112,7 @@ for (let i = 0; i < selectItems.length; i++) {
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
 const filterFunc = function (selectedValue) {
-
   for (let i = 0; i < filterItems.length; i++) {
-
     if (selectedValue === "all") {
       filterItems[i].classList.add("active");
     } else if (selectedValue === filterItems[i].dataset.category) {
@@ -126,18 +120,14 @@ const filterFunc = function (selectedValue) {
     } else {
       filterItems[i].classList.remove("active");
     }
-
   }
-
-}
+};
 
 // add event in all filter button items for large screen
 let lastClickedBtn = filterBtn[0];
 
 for (let i = 0; i < filterBtn.length; i++) {
-
   filterBtn[i].addEventListener("click", function () {
-
     let selectedValue = this.innerText.toLowerCase();
     selectValue.innerText = this.innerText;
     filterFunc(selectedValue);
@@ -145,12 +135,8 @@ for (let i = 0; i < filterBtn.length; i++) {
     lastClickedBtn.classList.remove("active");
     this.classList.add("active");
     lastClickedBtn = this;
-
   });
-
 }
-
-
 
 // contact form variables
 const form = document.querySelector("[data-form]");
@@ -160,18 +146,14 @@ const formBtn = document.querySelector("[data-form-btn]");
 // add event to all form input field
 for (let i = 0; i < formInputs.length; i++) {
   formInputs[i].addEventListener("input", function () {
-
     // check form validation
     if (form.checkValidity()) {
       formBtn.removeAttribute("disabled");
     } else {
       formBtn.setAttribute("disabled", "");
     }
-
   });
 }
-
-
 
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
@@ -180,7 +162,6 @@ const pages = document.querySelectorAll("[data-page]");
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
-
     for (let i = 0; i < pages.length; i++) {
       if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
         pages[i].classList.add("active");
@@ -191,31 +172,20 @@ for (let i = 0; i < navigationLinks.length; i++) {
         navigationLinks[i].classList.remove("active");
       }
     }
-
   });
 }
 
 // open image on click
 function imgWindow() {
-  window.open("image") }
+  window.open("image");
+}
 
 // copy email address
 function copyEmail() {
-  var email = document.querySelector('.email-text');
+  var email = document.querySelector(".email-text");
   var range = document.createRange();
   range.selectNode(email);
   window.getSelection().addRange(range);
-  document.execCommand('copy');
+  document.execCommand("copy");
   window.getSelection().removeAllRanges();
 }
-
-
-
-
-
-
-
-
-
-
-
