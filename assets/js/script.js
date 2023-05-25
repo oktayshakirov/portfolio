@@ -18,8 +18,10 @@ sidebarBtn.addEventListener("click", function () {
 sidebarBtn.click();
 
 // auto scrollbar
-var scrollInterval = 20; // Adjust this value for scrolling speed
-var scrollDistance = 1; // Adjust this value for scrolling distance in pixels
+var scrollInterval = 20; // scrolling speed
+var scrollDistance = 1; // distance in pixels
+
+var isSliderRunning = false;
 
 function moveSlider() {
   var sliders = document.querySelectorAll(".technologies-list");
@@ -40,18 +42,38 @@ function moveSlider() {
   }
 }
 
-var sliderInterval = setInterval(moveSlider, scrollInterval);
+var sliderInterval;
+
+function startSlider() {
+  if (!isSliderRunning) {
+    sliderInterval = setInterval(moveSlider, scrollInterval);
+    isSliderRunning = true;
+  }
+}
+
+function stopSlider() {
+  clearInterval(sliderInterval);
+  isSliderRunning = false;
+}
 
 var sliders = document.querySelectorAll(".technologies-list");
 for (var i = 0; i < sliders.length; i++) {
   var slider = sliders[i];
-  slider.addEventListener("mouseenter", function () {
-    clearInterval(sliderInterval);
-  });
-  slider.addEventListener("mouseleave", function () {
-    sliderInterval = setInterval(moveSlider, scrollInterval);
-  });
+  slider.addEventListener("mouseenter", stopSlider);
+  slider.addEventListener("mouseleave", startSlider);
 }
+
+window.addEventListener("scroll", function () {
+  var section = document.getElementById("tech-skills");
+  var sectionRect = section.getBoundingClientRect();
+  var isSectionVisible =
+    sectionRect.top <= window.innerHeight && sectionRect.bottom >= 0;
+  if (isSectionVisible) {
+    startSlider();
+  } else {
+    stopSlider();
+  }
+});
 
 // variables
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
