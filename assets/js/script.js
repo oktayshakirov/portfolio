@@ -18,7 +18,7 @@ sidebarBtn.addEventListener("click", function () {
 sidebarBtn.click();
 
 // auto scrollbar
-var scrollInterval = 30; // Scrolling speed in milliseconds
+var scrollInterval = 1000; // Scrolling speed in milliseconds
 
 function moveSlider() {
   var sliders = document.querySelectorAll(".technologies-list");
@@ -27,9 +27,8 @@ function moveSlider() {
     var sliderWidth = slider.offsetWidth;
     var scrollPos = slider.scrollLeft;
     var nextPos = scrollPos + sliderWidth * 0.005; // Percentage of the scrollbar to be scrolled
-    var scrollThreshold = slider.scrollWidth - sliderWidth - 1;
-
-    if (nextPos >= scrollThreshold) {
+    if (nextPos >= slider.scrollWidth - sliderWidth) {
+      // Check if the next position is at the end of the slider
       nextPos = 0;
     }
     slider.scrollTo({
