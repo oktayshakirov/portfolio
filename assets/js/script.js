@@ -27,8 +27,9 @@ function moveSlider() {
     var sliderWidth = slider.offsetWidth;
     var scrollPos = slider.scrollLeft;
     var nextPos = scrollPos + sliderWidth * 0.005; // Percentage of the scrollbar to be scrolled
-    if (nextPos >= slider.scrollWidth - sliderWidth) {
-      // Check if the next position is at the end of the slider
+    var scrollThreshold = slider.scrollWidth - sliderWidth - 1;
+
+    if (nextPos >= scrollThreshold) {
       nextPos = 0;
     }
     slider.scrollTo({
