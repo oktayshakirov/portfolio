@@ -194,23 +194,6 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
-// Loading projects
-document.addEventListener("DOMContentLoaded", function () {
-  var images = document.querySelectorAll(".fade-in");
-  function imageLoaded(img) {
-    return img.complete && img.naturalHeight !== 0;
-  }
-  images.forEach(function (image) {
-    if (imageLoaded(image)) {
-      image.classList.add("loaded");
-    } else {
-      image.addEventListener("load", function () {
-        image.classList.add("loaded");
-      });
-    }
-  });
-});
-
 // open certificates on click
 function imgWindow() {
   window.open("image");

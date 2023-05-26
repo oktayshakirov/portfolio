@@ -2101,14 +2101,3 @@ textarea.form-input::-webkit-resizer {
   pointer-events: none;
   box-sizing: border-box;
 }
-
-/* Loading projects */
-
-.fade-in {
-  opacity: 0;
-  transition: opacity 0.3s ease-in;
-}
-
-.fade-in.loaded {
-  opacity: 1;
-}
