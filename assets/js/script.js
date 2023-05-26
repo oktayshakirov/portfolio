@@ -18,61 +18,58 @@ sidebarBtn.addEventListener("click", function () {
 sidebarBtn.click();
 
 // auto scrollbar
-var scrollInterval = 20; // scrolling speed
-var scrollDistance = 1; // distance in pixels
+const list = document.querySelector(".technologies-list");
+const listItems = list.querySelectorAll(".technologies-item");
+const scrollSpeed = 0.7; // speed
+const intervalDuration = 10; // smoothness
+const totalWidth = list.scrollWidth - list.clientWidth;
+let scrollPosition = 0;
+let scrolling = false;
 
-var isSliderRunning = false;
+function startScrolling() {
+  if (!scrolling) {
+    scrolling = true;
+    const interval = setInterval(() => {
+      scrollPosition += scrollSpeed;
 
-function moveSlider() {
-  var sliders = document.querySelectorAll(".technologies-list");
-  for (var i = 0; i < sliders.length; i++) {
-    var slider = sliders[i];
-    var sliderWidth = slider.offsetWidth;
-    var scrollPos = slider.scrollLeft;
-    var nextPos = scrollPos + scrollDistance;
-    if (nextPos >= slider.scrollWidth - sliderWidth) {
-      nextPos = 0;
-    } else if (nextPos <= 0) {
-      nextPos = slider.scrollWidth - sliderWidth;
-    }
-    slider.scrollTo({
-      left: nextPos,
-      behavior: "smooth",
+      if (scrollPosition >= totalWidth) {
+        scrollPosition = 0;
+      }
+
+      if (!scrolling) {
+        clearInterval(interval);
+      }
+
+      list.scrollLeft = scrollPosition;
+    }, intervalDuration);
+  }
+}
+
+function stopScrolling() {
+  scrolling = false;
+}
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        startScrolling();
+      } else {
+        stopScrolling();
+      }
     });
-  }
-}
+  },
+  { threshold: 0 }
+);
 
-var sliderInterval;
+observer.observe(list);
 
-function startSlider() {
-  if (!isSliderRunning) {
-    sliderInterval = setInterval(moveSlider, scrollInterval);
-    isSliderRunning = true;
-  }
-}
+list.addEventListener("mouseenter", () => {
+  stopScrolling();
+});
 
-function stopSlider() {
-  clearInterval(sliderInterval);
-  isSliderRunning = false;
-}
-
-var sliders = document.querySelectorAll(".technologies-list");
-for (var i = 0; i < sliders.length; i++) {
-  var slider = sliders[i];
-  slider.addEventListener("mouseenter", stopSlider);
-  slider.addEventListener("mouseleave", startSlider);
-}
-
-window.addEventListener("scroll", function () {
-  var section = document.getElementById("tech-skills");
-  var sectionRect = section.getBoundingClientRect();
-  var isSectionVisible =
-    sectionRect.top <= window.innerHeight && sectionRect.bottom >= 0;
-  if (isSectionVisible) {
-    startSlider();
-  } else {
-    stopSlider();
-  }
+list.addEventListener("mouseleave", () => {
+  startScrolling();
 });
 
 // variables
