@@ -17,7 +17,7 @@ sidebarBtn.addEventListener("click", function () {
 // sidebar clicked by default
 sidebarBtn.click();
 
-// auto scrollbar
+// auto scrolling Tech Skills
 const list = document.querySelector(".technologies-list");
 const listItems = list.querySelectorAll(".technologies-item");
 const scrollSpeed = 0.7; // speed
