@@ -251,3 +251,13 @@ function startAnimationOnScroll() {
 }
 
 startAnimationOnScroll();
+
+// Loading Animation
+window.addEventListener("DOMContentLoaded", (event) => {
+  const images = document.querySelectorAll(".project-img img");
+  images.forEach((img) => {
+    img.addEventListener("load", function () {
+      this.parentNode.classList.remove("loading");
+    });
+  });
+});
