@@ -262,3 +262,65 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
   });
 });
+
+// Age Counter Animation
+function countTo(target, duration) {
+  const start = 0;
+  const increment = (target / duration) * 50;
+
+  let current = start;
+  const timer = setInterval(function () {
+    current += increment;
+    document.getElementById("age").textContent =
+      Math.floor(current) + " years old";
+
+    if (current >= target) {
+      clearInterval(timer);
+      document.getElementById("age").textContent = target + " years old";
+    }
+  }, 50);
+}
+
+function calculateAge(birthDate) {
+  const birthYear = new Date(birthDate).getFullYear();
+  const currentYear = new Date().getFullYear();
+  const age = currentYear - birthYear;
+
+  return age;
+}
+
+const ageElement = document.getElementById("age");
+ageElement.textContent = "0 years old";
+
+setTimeout(function () {
+  countTo(calculateAge("1994-07-01"), 1000);
+}, 1000);
+
+// Location Animation
+const cities = [
+  "Paris",
+  "London",
+  "Sofia",
+  "Istanbul",
+  "Amsterdam",
+  "Rome",
+  "Barcelona",
+  "Vienna",
+  "Prague",
+  "Berlin, DE",
+];
+
+const locationElement = document.getElementById("location");
+let index = 0;
+
+function flipLocation() {
+  locationElement.textContent = cities[index];
+
+  if (cities[index] === "Berlin, DE") {
+    clearInterval(intervalId);
+  }
+
+  index = (index + 1) % cities.length;
+}
+
+const intervalId = setInterval(flipLocation, 100);

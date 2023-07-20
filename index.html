@@ -76,34 +76,24 @@
         <ul class="contacts-list">
 
           <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-number-sharp"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1982-06-23">July 1, 1994</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
             <div class="icon-box">
               <ion-icon name="location-sharp"></ion-icon>
             </div>
-
             <div class="contact-info">
               <p class="contact-title">Location</p>
-
-              <address>Berlin, Germany</address>
+              <address id="location"></address>
             </div>
-
-
           </li>
 
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="hourglass"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Age</p>
+              <time id="age" class="counting-animation"></time>
+            </div>
+          </li>
 
         </ul>
 
@@ -618,7 +608,7 @@
 
                 <div class="hobbies-text" data-hobbies-text>
                   <p>
-                    Exploring Stocks, Cryptocurrency and Long-Term Growth Opportunities for Financial Investment
+                    Exploring Stocks, Crypto and Long-Term Growth Opportunities for Financial Investment
                   </p>
                 </div>
 
@@ -636,7 +626,7 @@
 
                 <div class="hobbies-text" data-hobbies-text>
                   <p>
-                    Creating Instrumentals, Mixing and Mastering Tracks, Remixing and Collaborating with Musicians
+                    Creating Instrumentals, Mixing and Mastering Tracks and Collaborating with Musicians
                   </p>
                 </div>
 
@@ -995,6 +985,22 @@
             <li class="project-item active" data-filter-item data-category="websites">
               <a href="https://beyond-the-buzz.vercel.app/">
                 <figure class="project-img loading">
+                  <img src="./assets/images/Coming-Soon.jpeg" loading="lazy">
+                </figure>
+              </a>
+              <h3 class="project-title">AskMed by Bayer</h3>
+              <p class="project-category">Website</p>
+              <p class="project-development">Drupal | PHP | CSS</p>
+              <div class="project-buttons">
+                <a href="https://https://askmed.bayer.com/">
+                  <ion-icon name="eye-outline"></ion-icon> Preview
+                </a>
+              </div>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="websites">
+              <a href="https://beyond-the-buzz.vercel.app/">
+                <figure class="project-img loading">
                   <img src="./assets/images/projects/tinnitus-blog.png" loading="lazy">
                 </figure>
               </a>
@@ -1174,19 +1180,19 @@
                 <div class="blog-content">
 
                   <div class="blog-meta">
-                    <p class="blog-category">Content Creation</p>
+                    <p class="blog-category">Marketing & BizDev</p>
 
                     <span class="dot"></span>
 
-                    <time datetime="2022-02-23">Community building</time>
+                    <time datetime="2022-02-23">Content Creator</time>
                   </div>
 
                   <h3 class="h3 blog-item-title">Pigletz</h3>
 
                   <p class="blog-text">
-                    I build and moderate the Pigletz community, managing their entire social media presence.
-                    This includes producing and editing high-quality Web3 content for the YouTube channel.
-                    Additionally, I coordinate with Web3 partnerships, expanding the community's reach and impact.
+                    I create and manage the Pigletz community's social media presence, including producing and editing
+                    high-quality Web3 content for their YouTube channel. I also work on expanding the community's reach
+                    and impact through partnerships in the Web3 space.
                   </p>
 
                 </div>

@@ -473,7 +473,7 @@ main {
 }
 
 .support {
-  width: 30%;
+  width: 300px;
   border-radius: 15px;
 }
 
@@ -606,10 +606,6 @@ main {
  * #hobbies 
  */
 
-.hobbies {
-  margin-bottom: 30px;
-}
-
 .hobbies-title {
   margin-bottom: 20px;
   display: flex;
@@ -626,7 +622,7 @@ main {
 
 .hobbies-item {
   min-width: 100%;
-  padding: 25px;
+  padding: 15px;
 }
 
 .hobbies-avatar-box {
@@ -639,13 +635,12 @@ main {
 
 .hobbies-item-title {
   margin-bottom: 7px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .hobbies-text {
+  font-size: 12px;
   color: var(--light-gray);
-  font-size: var(--fs-6);
-  font-weight: var(--fw-300);
   line-height: 1.6;
   display: -webkit-box;
   line-clamp: 4;
@@ -917,6 +912,7 @@ main {
  */
 
 .languages-title {
+  font-size: 20px;
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
@@ -1774,6 +1770,10 @@ textarea.form-input::-webkit-resizer {
   .form-btn ion-icon {
     font-size: 18px;
   }
+
+  .support {
+    width: 160px;
+  }
 }
 
 /**
@@ -1815,7 +1815,7 @@ textarea.form-input::-webkit-resizer {
    * ABOUT
    */
 
-  /* hobbies modal */
+  /* hobbies */
 
   .hobbies-list {
     grid-template-columns: repeat(2, 1fr);
@@ -1875,10 +1875,10 @@ textarea.form-input::-webkit-resizer {
     width: max-content;
     margin-left: auto;
   }
-}
 
-.support {
-  width: 40%;
+  .support {
+    width: 200px;
+  }
 }
 
 /**
@@ -1986,6 +1986,10 @@ textarea.form-input::-webkit-resizer {
 
   .blog-banner-box {
     height: 230px;
+  }
+
+  .support {
+    width: 230px;
   }
 }
 
