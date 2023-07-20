@@ -550,6 +550,8 @@ main {
 }
 
 .service-title {
+  display: flex;
+  justify-content: center;
   margin-bottom: 20px;
 }
 
@@ -610,25 +612,21 @@ main {
 
 .hobbies-title {
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .hobbies-list {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 15px;
-  margin: 0 -15px;
+  margin: 0;
   padding: 25px 15px;
   padding-bottom: 35px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  overscroll-behavior-inline: contain;
-  scroll-snap-type: inline mandatory;
+  display: grid;
+  gap: 15px;
 }
 
 .hobbies-item {
   min-width: 100%;
-  scroll-snap-align: center;
+  padding: 25px;
 }
 
 .hobbies-avatar-box {
@@ -787,6 +785,11 @@ main {
   margin-bottom: 15px;
 }
 
+.technologies-title {
+  display: flex;
+  justify-content: center;
+}
+
 .technologies-list {
   white-space: nowrap;
   display: flex;
@@ -914,6 +917,8 @@ main {
  */
 
 .languages-title {
+  display: flex;
+  justify-content: center;
   margin-bottom: 20px;
 }
 
@@ -1812,13 +1817,8 @@ textarea.form-input::-webkit-resizer {
 
   /* hobbies modal */
 
-  .hobbies-modal {
-    gap: 35px;
-    max-width: 680px;
-  }
-
-  .modal-avatar-box img {
-    width: 80px;
+  .hobbies-list {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   /**
