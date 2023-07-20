@@ -316,3 +316,17 @@ function flipmotto() {
 }
 
 const intervalId = setInterval(flipmotto, 100);
+
+// Expanding Summary
+function toggleText() {
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("toggle-button");
+
+  if (moreText.style.display === "none") {
+    moreText.style.display = "block";
+    btnText.innerHTML = "&uarr; &nbsp; &nbsp; Hide text &nbsp; &nbsp; &uarr;";
+  } else {
+    moreText.style.display = "none";
+    btnText.innerHTML = "&darr; &nbsp; &nbsp; Read More &nbsp; &nbsp; &darr;";
+  }
+}
