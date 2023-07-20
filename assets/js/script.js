@@ -296,31 +296,23 @@ setTimeout(function () {
   countTo(calculateAge("1994-07-01"), 1000);
 }, 1000);
 
-// Location Animation
-const cities = [
-  "Paris",
-  "London",
-  "Sofia",
-  "Istanbul",
-  "Amsterdam",
-  "Rome",
-  "Barcelona",
-  "Vienna",
-  "Prague",
-  "Berlin, DE",
-];
+// Motto Animation
+const text = Array.from({ length: 30 }, () =>
+  Array.from({ length: 19 }, () => Math.round(Math.random())).join("")
+);
+text.push("Innovations in Bytes");
 
-const locationElement = document.getElementById("location");
+const mottoElement = document.getElementById("motto");
 let index = 0;
 
-function flipLocation() {
-  locationElement.textContent = cities[index];
+function flipmotto() {
+  mottoElement.textContent = text[index];
 
-  if (cities[index] === "Berlin, DE") {
+  if (text[index] === "Innovations in Bytes") {
     clearInterval(intervalId);
   }
 
-  index = (index + 1) % cities.length;
+  index = (index + 1) % text.length;
 }
 
-const intervalId = setInterval(flipLocation, 100);
+const intervalId = setInterval(flipmotto, 100);

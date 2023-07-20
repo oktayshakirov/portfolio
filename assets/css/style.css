@@ -350,22 +350,24 @@ main {
 }
 
 .info-content .title {
+  display: flex;
+  justify-content: center;
   color: var(--white-1);
-  background: var(--onyx);
+  background: var(--eerie-black-2);
   font-size: var(--fs-8);
   font-weight: var(--fw-300);
-  width: max-content;
+  width: 175px;
   padding: 3px 12px;
   border-radius: 18px;
-  animation: glow 2.5s ease-in-out infinite alternate;
+  animation: glow 5s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
   from {
     box-shadow: 0 0 0.5px #fff, 0 0 1px #fff, 0 0 2px #fff,
-      0 0 4px hsl(45, 100%, 72%), 0 0 7px hsl(45, 100%, 72%),
-      0 0 10px hsl(45, 100%, 72%), 0 0 12px hsl(45, 100%, 72%),
-      0 0 15px hsl(45, 100%, 72%);
+      0 0 4px hsla(45, 100%, 90%, 0.5), 0 0 7px hsla(45, 100%, 90%, 0.5),
+      0 0 10px hsla(45, 100%, 90%, 0.5), 0 0 12px hsla(45, 100%, 90%, 0.5),
+      0 0 15px hsla(45, 100%, 90%, 0.5);
   }
   to {
     box-shadow: 0 0 2.5px #ffffff0e;
@@ -1518,7 +1520,7 @@ textarea.form-input::-webkit-resizer {
   }
 
   .avatar-box img {
-    width: 90px;
+    width: 70px;
   }
 
   .info-content .name {
