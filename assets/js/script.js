@@ -297,10 +297,10 @@ setTimeout(function () {
 }, 1000);
 
 // Motto Animation
-const text = Array.from({ length: 30 }, () =>
-  Array.from({ length: 19 }, () => Math.round(Math.random())).join("")
+const text = Array.from({ length: 20 }, () =>
+  Array.from({ length: 16 }, () => Math.round(Math.random())).join("")
 );
-text.push("Innovations in Bytes");
+text.push("Binary Visionary");
 
 const mottoElement = document.getElementById("motto");
 let index = 0;
@@ -308,7 +308,7 @@ let index = 0;
 function flipmotto() {
   mottoElement.textContent = text[index];
 
-  if (text[index] === "Innovations in Bytes") {
+  if (text[index] === "Binary Visionary") {
     clearInterval(intervalId);
   }
 
