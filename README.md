@@ -21,7 +21,9 @@ git clone https://github.com/oktayshakirov/portfolio.git
 
 ![Desktop Demo](./assets/images/projects/portfolio.png "Desktop Demo")
 
-Also viewable [here](https://oktayshakirov.com)
+<p align="center">
+  <a href="https://oktayshakirov.com"><strong>➥ Live Demo</strong></a>
+</p>
 
 
 ## License
