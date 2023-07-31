@@ -1007,14 +1007,14 @@ main {
 }
 
 .select-item button {
-  background: var(--eerie-black-2);
+  background: rgba(48, 48, 48, 0.953);
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   text-transform: capitalize;
   width: 100%;
   padding: 8px 10px;
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
 .select-item button:hover {
