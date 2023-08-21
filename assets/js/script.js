@@ -300,7 +300,7 @@ setTimeout(function () {
 const text = Array.from({ length: 20 }, () =>
   Array.from({ length: 16 }, () => Math.round(Math.random())).join("")
 );
-text.push("Binary Visionary");
+text.push("Hello, World !");
 
 const mottoElement = document.getElementById("motto");
 let index = 0;
@@ -308,7 +308,7 @@ let index = 0;
 function flipmotto() {
   mottoElement.textContent = text[index];
 
-  if (text[index] === "Binary Visionary") {
+  if (text[index] === "Hello, World !") {
     clearInterval(intervalId);
   }
 
