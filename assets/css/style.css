@@ -2195,3 +2195,24 @@ textarea.form-input::-webkit-resizer {
   pointer-events: none;
   box-sizing: border-box;
 }
+
+/* Pagination Buttons */
+.pagination-box {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pagination-button {
+  color: var(--white-2);
+}
+
+.pagination-icon {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: var(--white-2);
+}
