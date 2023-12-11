@@ -339,5 +339,3 @@ function toggleText() {
     btnText.innerHTML = "&darr; &nbsp; &nbsp; Show more &nbsp; &nbsp; &darr;";
   }
 }
-
-// Page Buttons
