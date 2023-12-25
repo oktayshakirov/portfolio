@@ -1174,12 +1174,16 @@ main {
 
 .project-buttons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  gap: 4px;
 }
 
 .project-buttons a {
+  flex: 1 1 auto;
+  min-width: 200px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1208,6 +1212,9 @@ main {
 .blog-card {
   background-color: hsla(240, 3%, 13%, 0.263);
   border-radius: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .blog-posts {
