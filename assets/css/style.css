@@ -45,7 +45,6 @@
   --eerie-black-1: hsla(240, 3%, 13%, 0.836);
   --eerie-black-2: hsla(240, 2%, 12%, 0.418);
   --sha-background: linear-gradient(to bottom, #23d3ff 0%, #276aa5 100%);
-  --sha-background-dark: linear-gradient(to right, #232526, #414345);
   --white-1: hsl(0, 0%, 100%);
   --white-2: hsl(0, 0%, 98%);
   --orange-yellow-crayola: hsl(45, 100%, 72%);
@@ -1203,8 +1202,13 @@ main {
 }
 
 /*-----------------------------------*\
-  #BLOG
+  #Side Projects
 \*-----------------------------------*/
+
+.blog-card {
+  background-color: hsla(240, 3%, 13%, 0.263);
+  border-radius: 20px;
+}
 
 .blog-posts {
   margin-bottom: 10px;
@@ -1214,24 +1218,6 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
-}
-
-.blog-post-item > a {
-  position: relative;
-  background: var(--border-gradient-onyx);
-  height: 100%;
-  box-shadow: var(--shadow-4);
-  border-radius: 16px;
-  z-index: 1;
-}
-
-.blog-post-item > a::before {
-  content: "";
-  position: absolute;
-  inset: 1px;
-  border-radius: inherit;
-  background: var(--eerie-black-1);
-  z-index: -1;
 }
 
 .blog-banner-box {
@@ -1246,10 +1232,6 @@ main {
   height: 100%;
   object-fit: cover;
   transition: var(--transition-1);
-}
-
-.blog-post-item > a:hover .blog-banner-box img {
-  transform: scale(1.1);
 }
 
 .blog-content {
@@ -1281,10 +1263,6 @@ main {
   margin-bottom: 10px;
   line-height: 1.3;
   transition: var(--transition-1);
-}
-
-.blog-post-item > a:hover .blog-item-title {
-  color: var(--orange-yellow-crayola);
 }
 
 .blog-text {
