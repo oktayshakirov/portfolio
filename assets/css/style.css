@@ -1215,6 +1215,7 @@ main {
   width: 100%;
   box-sizing: border-box;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .blog-posts {

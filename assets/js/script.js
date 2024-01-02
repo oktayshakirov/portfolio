@@ -291,9 +291,14 @@ function countTo(target, duration) {
 }
 
 function calculateAge(birthDate) {
-  const birthYear = new Date(birthDate).getFullYear();
-  const currentYear = new Date().getFullYear();
-  const age = currentYear - birthYear;
+  const birth = new Date(birthDate);
+  const today = new Date();
+  let age = today.getFullYear() - birth.getFullYear();
+  const m = today.getMonth() - birth.getMonth();
+
+  if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) {
+    age--;
+  }
 
   return age;
 }
