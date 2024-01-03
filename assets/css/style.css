@@ -141,7 +141,7 @@ textarea {
 
 ::selection {
   background: var(--orange-yellow-crayola);
-  color: var(--sha-background);
+  color: var(--eerie-black-1);
 }
 
 :focus {
