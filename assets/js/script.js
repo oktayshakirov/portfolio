@@ -209,13 +209,17 @@ function imgWindow() {
 }
 
 // copy email address
-function copyEmail() {
+function copyEmail(e) {
   var email = document.querySelector(".email-text");
   var range = document.createRange();
   range.selectNode(email);
   window.getSelection().addRange(range);
   document.execCommand("copy");
   window.getSelection().removeAllRanges();
+  e.target.innerText = "Copied"
+  setTimeout(()=>{
+    e.target.innerText="Copy";
+  }, 300)
 }
 
 // Animated percentage bar
