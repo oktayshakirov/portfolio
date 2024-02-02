@@ -816,6 +816,12 @@ main {
   transition: var(--transition-1);
 }
 
+@media (max-width: 450px) {
+  .technologies-item img {
+    width: 120%;
+  }
+}
+
 .technologies-item img:hover {
   filter: drop-shadow(10px 10px 30px hsl(45, 100%, 71%));
 }
@@ -917,11 +923,39 @@ main {
  * Languages section
  */
 
+ .languages.content-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 480px) {
+  .languages.content-card {
+    display: block;
+  }
+}
+
+ .languages-column {
+  width: 100%; 
+}
+
 .languages-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.languages-title-second {
   font-size: 20px;
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+@media (max-width: 450px) { 
+  .languages-title-second {
+    font-size: 15px;
+  }
 }
 
 .languages-list {
@@ -943,6 +977,13 @@ main {
   color: var(--light-gray);
   font-size: var(--fs-7);
   font-weight: var(--fw-300);
+}
+
+@media (max-width: 450px) { 
+  .title-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .languages-progress-bg {
