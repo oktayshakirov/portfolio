@@ -979,12 +979,7 @@ main {
   font-weight: var(--fw-300);
 }
 
-@media (max-width: 450px) { 
-  .title-wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-}
+
 
 .languages-progress-bg {
   background: var(--jet);
