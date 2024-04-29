@@ -465,13 +465,12 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
-  padding-bottom: 4px;
+  gap: 20px;
 }
 
 .social-item .social-link {
   color: var(--light-gray-70);
-  font-size: 18px;
+  font-size: 25px;
 }
 
 .social-item .social-link:hover {
@@ -1047,14 +1046,13 @@ main {
 }
 
 .select-item button {
-  background: rgba(48, 48, 48, 0.953);
+  background: rgba(49, 49, 49, 0.973);
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   text-transform: capitalize;
   width: 100%;
   padding: 8px 10px;
-  border-radius: 5px;
 }
 
 .select-item button:hover {
