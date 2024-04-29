@@ -131,16 +131,16 @@ for (let i = 0; i < selectItems.length; i++) {
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
 const filterFunc = function (selectedValue) {
-  for (let i = 0; i < filterItems.length; i++) {
-    if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
+  filterItems.forEach(item => {
+    const categories = item.dataset.category.split(' ');
+    if (selectedValue === "all" || categories.includes(selectedValue)) {
+      item.classList.add("active");
     } else {
-      filterItems[i].classList.remove("active");
+      item.classList.remove("active");
     }
-  }
+  });
 };
+
 
 // add event in all filter button items for large screen
 let lastClickedBtn = filterBtn[0];
@@ -348,3 +348,5 @@ function toggleText() {
     btnText.innerHTML = "&darr; &nbsp; &nbsp; Show more &nbsp; &nbsp; &darr;";
   }
 }
+
+
