@@ -131,8 +131,8 @@ for (let i = 0; i < selectItems.length; i++) {
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
 const filterFunc = function (selectedValue) {
-  filterItems.forEach(item => {
-    const categories = item.dataset.category.split(' ');
+  filterItems.forEach((item) => {
+    const categories = item.dataset.category.split(" ");
     if (selectedValue === "all" || categories.includes(selectedValue)) {
       item.classList.add("active");
     } else {
@@ -140,7 +140,6 @@ const filterFunc = function (selectedValue) {
     }
   });
 };
-
 
 // add event in all filter button items for large screen
 let lastClickedBtn = filterBtn[0];
@@ -216,10 +215,10 @@ function copyEmail(e) {
   window.getSelection().addRange(range);
   document.execCommand("copy");
   window.getSelection().removeAllRanges();
-  e.target.innerText = "Copied"
-  setTimeout(()=>{
-    e.target.innerText="Copy";
-  }, 300)
+  e.target.innerText = "Copied";
+  setTimeout(() => {
+    e.target.innerText = "Copy";
+  }, 300);
 }
 
 // Animated percentage bar
@@ -348,5 +347,3 @@ function toggleText() {
     btnText.innerHTML = "&darr; &nbsp; &nbsp; Show more &nbsp; &nbsp; &darr;";
   }
 }
-
-
