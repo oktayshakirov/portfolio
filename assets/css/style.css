@@ -797,7 +797,7 @@ main {
 }
 
 .technologies-item {
-  min-width: 50%;
+  flex: 0 0 20%;
   scroll-snap-align: start;
   text-align: center;
 }
@@ -816,24 +816,32 @@ main {
 }
 
 @media (max-width: 550px) {
+  .technologies-item {
+    flex: 0 0 30%;
+  }
+
+  .technologies-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .image-title {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .technologies-item {
+    flex: 0 0 40%;
+  }
+
   .technologies-item img {
     width: 50px;
     height: 50px;
   }
 
   .image-title {
-    font-size: 10px;
-  }
-}
-
-@media (max-width: 400px) {
-  .technologies-item img {
-    width: 40px;
-    height: 40px;
-  }
-
-  .image-title {
-    font-size: 8px;
+    font-size: 11px;
   }
 }
 
