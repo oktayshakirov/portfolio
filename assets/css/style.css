@@ -791,17 +791,9 @@ main {
 }
 
 .technologies-list {
-  white-space: nowrap;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 25px;
-  padding: 25px;
-  padding-bottom: 25px;
   /* hide scrollbar with overflow: hidden, show with overflow: auto */
   overflow-x: auto;
-  overscroll-behavior-inline: contain;
-  scroll-padding-inline: 25px;
 }
 
 .technologies-item {
@@ -836,12 +828,12 @@ main {
 
 @media (max-width: 400px) {
   .technologies-item img {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
   }
 
   .image-title {
-    font-size: 9px;
+    font-size: 8px;
   }
 }
 
