@@ -795,8 +795,7 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 15px;
-  margin: 0 -55px;
+  gap: 25px;
   padding: 25px;
   padding-bottom: 25px;
   /* hide scrollbar with overflow: hidden, show with overflow: auto */
@@ -808,16 +807,41 @@ main {
 .technologies-item {
   min-width: 50%;
   scroll-snap-align: start;
+  text-align: center;
 }
 
 .technologies-item img {
-  width: 100%;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
   transition: var(--transition-1);
 }
 
-@media (max-width: 450px) {
+.image-title {
+  margin-top: 8px;
+  font-size: 20px;
+  color: var(--light-gray);
+}
+
+@media (max-width: 550px) {
   .technologies-item img {
-    width: 120%;
+    width: 50px;
+    height: 50px;
+  }
+
+  .image-title {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .technologies-item img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .image-title {
+    font-size: 7px;
   }
 }
 

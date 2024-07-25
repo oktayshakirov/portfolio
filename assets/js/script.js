@@ -347,3 +347,18 @@ function toggleText() {
     btnText.innerHTML = "&darr; &nbsp; &nbsp; Show more &nbsp; &nbsp; &darr;";
   }
 }
+
+// Turn image alt text into title
+
+document.addEventListener("DOMContentLoaded", function () {
+  const items = document.querySelectorAll(".technologies-item");
+
+  items.forEach((item) => {
+    const image = item.querySelector("img");
+    const titleText = image.alt; 
+    const titleDiv = document.createElement("div"); 
+    titleDiv.className = "image-title";
+    titleDiv.textContent = titleText;
+    item.appendChild(titleDiv); 
+  });
+});
