@@ -1150,6 +1150,7 @@ main {
   justify-content: center;
   align-items: center;
   margin: auto;
+  padding-top: 56.25%;
   margin-top: 50px;
   margin-bottom: 50px;
   --height-of-loader: 40px;
