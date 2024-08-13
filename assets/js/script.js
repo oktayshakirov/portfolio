@@ -367,22 +367,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   let projectItems = document.querySelectorAll(".project-item");
-
-  let observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          let img = entry.target.querySelector("img");
-          img.src = img.getAttribute("data-src");
-          img.classList.remove("loading");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
+  let placeholderSrc = "./assets/images/projects/project-placeholder.jpg";
 
   projectItems.forEach((item) => {
+    let img = item.querySelector("img");
+    img.src = placeholderSrc;
+
+    let observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            img.src = img.getAttribute("data-src");
+            img.onload = () => {
+              img.classList.remove("loading");
+            };
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
     observer.observe(item);
   });
 });
