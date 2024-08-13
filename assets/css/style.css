@@ -1263,10 +1263,6 @@ main {
   color: rgb(165, 165, 165);
 }
 
-.project-buttons a.disabled:hover {
-  background-color: hsla(240, 3%, 13%, 0.214);
-}
-
 .project-buttons ion-icon {
   margin-right: 5px;
 }
