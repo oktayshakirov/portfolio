@@ -355,10 +355,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
   items.forEach((item) => {
     const image = item.querySelector("img");
-    const titleText = image.alt; 
-    const titleDiv = document.createElement("div"); 
+    const titleText = image.alt;
+    const titleDiv = document.createElement("div");
     titleDiv.className = "image-title";
     titleDiv.textContent = titleText;
-    item.appendChild(titleDiv); 
+    item.appendChild(titleDiv);
+  });
+});
+
+// Lazy Loading on scroll for Projects
+
+document.addEventListener("DOMContentLoaded", function () {
+  let projectItems = document.querySelectorAll(".project-item");
+
+  let observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          let img = entry.target.querySelector("img");
+          img.src = img.getAttribute("data-src");
+          img.classList.remove("loading");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  projectItems.forEach((item) => {
+    observer.observe(item);
   });
 });
