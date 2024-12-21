@@ -107,7 +107,9 @@
 }
 
 a {
+  display: inline;
   text-decoration: none;
+  color: var(--orange-yellow-crayola);
 }
 
 li {
