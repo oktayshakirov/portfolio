@@ -107,7 +107,7 @@
 }
 
 a {
-  display: inline;
+  display: inline-block !important;
   text-decoration: none;
   color: var(--orange-yellow-crayola);
 }
