@@ -276,23 +276,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
 });
 
 // Age Counter Animation
-function countTo(target, duration) {
-  const start = 0;
-  const increment = (target / duration) * 50;
-
-  let current = start;
-  const timer = setInterval(function () {
-    current += increment;
-    document.getElementById("age").textContent =
-      Math.floor(current) + " years old";
-
-    if (current >= target) {
-      clearInterval(timer);
-      document.getElementById("age").textContent = target + " years old";
-    }
-  }, 50);
-}
-
 function calculateAge(birthDate) {
   const birth = new Date(birthDate);
   const today = new Date();
@@ -306,12 +289,9 @@ function calculateAge(birthDate) {
   return age;
 }
 
-const ageElement = document.getElementById("age");
-ageElement.textContent = "0 years old";
-
-setTimeout(function () {
-  countTo(calculateAge("1994-07-01"), 1000);
-}, 1000);
+document.getElementById("age").textContent = `${calculateAge(
+  "1994-07-01"
+)} years old`;
 
 // Motto Animation
 const text = Array.from({ length: 20 }, () =>
