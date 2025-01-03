@@ -173,34 +173,36 @@ for (let i = 0; i < formInputs.length; i++) {
   });
 }
 
-// page navigation variables
+// Page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
-    const targetSection = this.getAttribute("data-target-section")
-      ? this.getAttribute("data-target-section")
-      : this.innerHTML.toLowerCase();
-
-    for (let i = 0; i < pages.length; i++) {
-      if (targetSection === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-
-        if (navigationLinks[i]) {
-          navigationLinks[i].classList.add("active");
-        }
-        window.scrollTo(0, 0);
-      } else {
-        pages[i].classList.remove("active");
-
-        if (navigationLinks[i]) {
-          navigationLinks[i].classList.remove("active");
-        }
-      }
-    }
+// Helper function to update active states
+function updateActiveState(targetSection) {
+  pages.forEach((page) => {
+    page.classList.toggle("active", page.dataset.page === targetSection);
   });
+
+  navigationLinks.forEach((link) => {
+    const linkTarget =
+      link.getAttribute("data-target-section") ||
+      link.textContent.trim().toLowerCase();
+    link.classList.toggle("active", linkTarget === targetSection);
+  });
+
+  // Scroll to the top when navigation occurs
+  window.scrollTo(0, 0);
 }
+
+// Event listener for navigation links
+navigationLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    const targetSection =
+      link.getAttribute("data-target-section") ||
+      link.textContent.trim().toLowerCase();
+    updateActiveState(targetSection);
+  });
+});
 
 // open certificates on click
 function imgWindow() {
