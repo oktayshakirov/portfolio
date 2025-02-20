@@ -2265,7 +2265,7 @@ textarea.form-input::-webkit-resizer {
   padding-top: 10px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .store-badges-container {
     flex-direction: column;
   }
@@ -2274,9 +2274,4 @@ textarea.form-input::-webkit-resizer {
 .store-badge {
   height: 50px;
   width: auto;
-}
-@media (max-width: 480px) {
-  .store-badge {
-    height: 40px;
-  }
 }
