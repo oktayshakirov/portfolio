@@ -2270,8 +2270,3 @@ textarea.form-input::-webkit-resizer {
     flex-direction: column;
   }
 }
-
-.store-badge {
-  height: 50px;
-  width: auto;
-}
