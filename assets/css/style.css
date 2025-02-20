@@ -2255,3 +2255,28 @@ textarea.form-input::-webkit-resizer {
   border-radius: 10px;
   box-shadow: var(--shadow-2);
 }
+
+.store-badges-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 30px;
+  padding-top: 10px;
+}
+
+@media (max-width: 400px) {
+  .store-badges-container {
+    flex-direction: column;
+  }
+}
+
+.store-badge {
+  height: 50px;
+  width: auto;
+}
+@media (max-width: 480px) {
+  .store-badge {
+    height: 40px;
+  }
+}
