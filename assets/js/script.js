@@ -156,23 +156,6 @@ for (let i = 0; i < filterBtn.length; i++) {
   });
 }
 
-// contact form variables
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
-
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
-  });
-}
-
 // Page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
@@ -366,5 +349,101 @@ document.addEventListener("DOMContentLoaded", function () {
 
   projectItems.forEach((item) => {
     observer.observe(item);
+  });
+});
+
+// GitHub Contributions
+
+document.addEventListener("DOMContentLoaded", function () {
+  const calendarContainer = document.querySelector(
+    ".activity-calendar-container"
+  );
+  const grid = document.querySelector(".calendar-grid");
+  const tooltip = document.querySelector(".activity-tooltip");
+  const username = "oktayshakirov";
+  const apiUrl = `https://github-contributions-api.jogruber.de/v4/${username}?y=last`;
+
+  // Create the months container and add it to the DOM
+  const monthsContainer = document.createElement("div");
+  monthsContainer.className = "months-container";
+  calendarContainer.insertBefore(monthsContainer, grid);
+
+  fetch(apiUrl)
+    .then((response) => response.json())
+    .then((data) => {
+      const contributions = data.contributions;
+      if (!contributions || contributions.length === 0) return;
+
+      const firstDate = new Date(contributions[0].date);
+      const dayOfWeek = firstDate.getUTCDay();
+      const startDay = dayOfWeek === 0 ? 6 : dayOfWeek - 1;
+
+      // Add empty cells for alignment
+      for (let i = 0; i < startDay; i++) {
+        grid.appendChild(document.createElement("div"));
+      }
+
+      // Populate the grid with contribution data
+      contributions.forEach((contribution) => {
+        const dayCell = document.createElement("div");
+
+        // Add the base class and a level-specific class
+        dayCell.classList.add("calendar-day");
+        if (contribution.level > 0) {
+          dayCell.classList.add(`level-${contribution.level}`);
+        }
+
+        dayCell.dataset.count = contribution.count;
+        dayCell.dataset.date = contribution.date;
+        grid.appendChild(dayCell);
+      });
+
+      // Populate month labels
+      const monthLabels = new Set();
+      let lastMonth = -1;
+      contributions.forEach((c) => {
+        const date = new Date(c.date);
+        const month = date.getUTCMonth();
+        if (month !== lastMonth) {
+          monthLabels.add({
+            index: month,
+            name: date.toLocaleString("default", {
+              month: "short",
+              timeZone: "UTC",
+            }),
+          });
+          lastMonth = month;
+        }
+      });
+      monthsContainer.innerHTML = Array.from(monthLabels)
+        .map((m) => `<div>${m.name}</div>`)
+        .join("");
+    })
+    .catch((error) =>
+      console.error("Error fetching GitHub contribution data:", error)
+    );
+
+  // Tooltip logic
+  calendarContainer.addEventListener("mouseover", function (event) {
+    if (event.target.classList.contains("calendar-day")) {
+      const count = event.target.dataset.count;
+      const date = new Date(event.target.dataset.date).toLocaleDateString(
+        "en-US",
+        { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" }
+      );
+      if (count) {
+        tooltip.innerHTML = `<strong>${count} contributions</strong> on ${date}`;
+        tooltip.style.display = "block";
+      }
+    }
+  });
+
+  calendarContainer.addEventListener("mouseout", function () {
+    tooltip.style.display = "none";
+  });
+
+  calendarContainer.addEventListener("mousemove", function (event) {
+    tooltip.style.left = `${event.pageX + 15}px`;
+    tooltip.style.top = `${event.pageY - 30}px`;
   });
 });
