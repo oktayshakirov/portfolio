@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Workflow Automation & AI",
+    "categories": ["Workflow Automation", "AI Integration"],
+    "description": "I design automation workflows using n8n that integrate OpenAI, Gemini and other AI models for SEO content writing, image/video generation and social media sharing. My systems automatically generate and distribute content across all platforms.",
+    "image": "./assets/images/projects/n8n.jpg",
+    "alt": "Automation Workflows",
+    "links": {
+      "github": "https://github.com/oktayshakirov/crypto-wiki-automation"
+    }
+  },
+  {
+    "id": 2,
+    "title": "Pigletz.com",
+    "categories": ["Marketing & BizDev", "Content Creator"],
+    "description": "I create and manage the Pigletz community's social media presence, including producing and editing high-quality Web3 content for their YouTube channel. I also work on expanding the community's reach and impact through partnerships in the Web3 space.",
+    "image": "./assets/images/projects/pigletz.jpg",
+    "alt": "Pigletz",
+    "links": {
+      "website": "https://pigletz.com",
+      "instagram": "https://www.instagram.com/pigletznft",
+      "youtube": "https://www.youtube.com/@PigletzNFT"
+    }
+  },
+  {
+    "id": 3,
+    "title": "Digital Content Creation",
+    "categories": ["Multimedia Design", "3D Rendering"],
+    "description": "My digital art portfolio, which includes a wide collection of graphic designs, 3D models and short video animations created for various purposes. I have long experience working with popular softwares like Adobe Photoshop, After Effects, Premiere Pro and Blender.",
+    "image": "./assets/images/projects/digital-content.jpg",
+    "alt": "Sha Pixels",
+    "links": {
+      "instagram": "https://www.instagram.com/sha.pixels"
+    }
+  },
+  {
+    "id": 4,
+    "title": "Music Production",
+    "categories": ["Beat Making", "Sound Design"],
+    "description": "Produced over 100 instrumentals in different genres, collaborated with artists and my beats are on popular streaming platforms like Spotify, iTunes, Amazon and Deezer. Currently i'm using this skill to create sound therapy, white noise and relaxing music for one of my projects.",
+    "image": "./assets/images/projects/sha-beats.jpg",
+    "alt": "Sha Beats",
+    "links": {
+      "spotify": "https://open.spotify.com/artist/0veyQeAcyLxXfbbnZpa3mf?si=0Xk9lBtDTP24o8w1nrPfRw",
+      "instagram": "https://www.instagram.com/sha.beats",
+      "youtube": "https://www.youtube.com/@SHABEATS"
+    }
+  }
+]

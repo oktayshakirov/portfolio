@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | Oktay Shakirov</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <style>
+    .error-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 2rem;
+    }
+    .error-page h1 {
+      font-size: 6rem;
+      margin: 0;
+      color: var(--orange-yellow-crayola);
+    }
+    .error-page p {
+      font-size: 1.5rem;
+      color: var(--light-gray);
+      margin: 1rem 0;
+    }
+    .error-page a {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      background: var(--border-gradient-onyx);
+      color: var(--orange-yellow-crayola);
+      border-radius: 8px;
+      text-decoration: none;
+      transition: var(--transition-1);
+    }
+    .error-page a:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-2);
+    }
+  </style>
+</head>
+<body>
+  <div class="error-page">
+    <h1>404</h1>
+    <p>Oops! The page you're looking for doesn't exist.</p>
+    <a href="/">Go Back Home</a>
+  </div>
+</body>
+</html>

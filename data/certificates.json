@@ -1,0 +1,100 @@
+[
+  {
+    "group": "Technical Competence",
+    "icon": "desktop-outline",
+    "items": [
+      {
+        "title": "Computer Science Degree: Software Development",
+        "issuer": "IHK Berlin",
+        "image": "./assets/images/certificates/ausbildung.png"
+      },
+      {
+        "title": "TypeScript Essentials",
+        "issuer": "LinkedIn Learning",
+        "image": "./assets/images/certificates/typescript.png"
+      },
+      {
+        "title": "React Native Essentials",
+        "issuer": "LinkedIn Learning",
+        "image": "./assets/images/certificates/react-native.png"
+      },
+      {
+        "title": "Node.js Essentials",
+        "issuer": "LinkedIn Learning",
+        "image": "./assets/images/certificates/node.js-essentials.png"
+      },
+      {
+        "title": "React.js Essentials",
+        "issuer": "LinkedIn Learning",
+        "image": "./assets/images/certificates/react.js-essentials.png"
+      },
+      {
+        "title": "JavaScript Essentials",
+        "issuer": "LinkedIn Learning",
+        "image": "./assets/images/certificates/javascript-essentials.png"
+      },
+      {
+        "title": "Fundamentals of Digital Marketing",
+        "issuer": "Google Certified Digital Marketing Course",
+        "image": "./assets/images/certificates/fundamentals-of-digital-marketing.png"
+      },
+      {
+        "title": "Elements of AI",
+        "issuer": "University of Helsinki",
+        "image": "./assets/images/certificates/elements-of-ai.png"
+      }
+    ]
+  },
+  {
+    "group": "Professional Skills",
+    "icon": "people-outline",
+    "items": [
+      {
+        "title": "Efficient Email Management",
+        "issuer": "WEKA Media GmbH & Co. KG",
+        "image": "./assets/images/certificates/efficient-email-management.png"
+      },
+      {
+        "title": "Time and Self Management",
+        "issuer": "VIWIS GmbH",
+        "image": "./assets/images/certificates/time-and-self-management.png"
+      },
+      {
+        "title": "Excel 2013 Professional",
+        "issuer": "Microsoft",
+        "image": "./assets/images/certificates/excel-2013-professional.png"
+      },
+      {
+        "title": "Word 2013 Professional",
+        "issuer": "Microsoft",
+        "image": "./assets/images/certificates/word-2013-professional.png"
+      },
+      {
+        "title": "Intercultural Competence",
+        "issuer": "IMAP GmbH",
+        "image": "./assets/images/certificates/intercultural-competence.png"
+      },
+      {
+        "title": "Communication and Complaint Management",
+        "issuer": "Hiba impulse GmbH",
+        "image": "./assets/images/certificates/communication-complaint-management.png"
+      }
+    ]
+  },
+  {
+    "group": "Language Proficiency",
+    "icon": "language-outline",
+    "items": [
+      {
+        "title": "German Language C1",
+        "issuer": "TELC European Language Certificates",
+        "image": "./assets/images/certificates/german-c1.png"
+      },
+      {
+        "title": "English Language B2",
+        "issuer": "LinguaTV GmbH",
+        "image": "./assets/images/certificates/english-b2.png"
+      }
+    ]
+  }
+]

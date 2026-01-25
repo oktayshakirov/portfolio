@@ -46,3 +46,7 @@ build/
 *.min.js
 *.min.css
 
+# Internal documentation (keep private)
+ATTRIBUTION_PROTECTION.md
+PERFORMANCE_OPTIMIZATION.md
+

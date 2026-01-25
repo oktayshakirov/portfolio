@@ -6,12 +6,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="google-adsense-account" content="ca-pub-5852582960793521">
-  <title>Oktay Shakirov - Portfolio</title>
-  <meta property="og:title" content="Oktay Shakirov - Portfolio" />
+  <meta name="description" content="Oktay Shakirov is a Full-Stack software developer from Berlin, Germany. Specializing in creating visually appealing websites, apps and mobile games.">
+  <meta name="keywords" content="Full-Stack Developer, Web Developer, Mobile App Developer, React, JavaScript, TypeScript, Berlin, Germany">
+  <meta name="author" content="Oktay Shakirov">
+  <meta name="theme-color" content="#276aa5">
+  
+  <title>Oktay Shakirov - Full-Stack Developer Portfolio | Berlin, Germany</title>
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Oktay Shakirov - Full-Stack Developer Portfolio" />
   <meta property="og:description"
     content="Oktay Shakirov is a Full-Stack software developer from Berlin, Germany. Specializing in creating visually appealing websites, apps and mobile games." />
-  <meta property="og:image" content="./assets/images/logo.ico" />
+  <meta property="og:image" content="https://oktayshakirov.com/assets/images/logo.ico" />
   <meta property="og:url" content="https://oktayshakirov.com" />
+  <meta property="og:site_name" content="Oktay Shakirov Portfolio">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Oktay Shakirov - Full-Stack Developer Portfolio">
+  <meta name="twitter:description" content="Full-Stack software developer from Berlin, Germany. Specializing in creating visually appealing websites, apps and mobile games.">
+  <meta name="twitter:image" content="https://oktayshakirov.com/assets/images/logo.ico">
+  <meta name="twitter:creator" content="@oktayshakirov">
   <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
   <!--
     - favicon
@@ -23,21 +39,14 @@
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
 
-  <!-- Google Analytics-->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G1H2WJ7XH4"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-G1H2WJ7XH4');
-  </script>
+  <!-- Google Analytics - Only loads on authorized domains -->
+  <!-- IMPORTANT: If you're using this portfolio template, replace the tracking ID with your own! -->
+  <!-- The analytics will only work on the original domain (oktayshakirov.com) -->
+  <!-- To use your own analytics, update the domain check in assets/js/modules/analytics.js -->
 
 </head>
 
@@ -67,7 +76,7 @@
           <p class="title notranslate" id="motto"></p>
         </div>
 
-        <button class="info_more-btn" data-sidebar-btn>
+        <button class="info_more-btn" data-sidebar-btn aria-label="Toggle sidebar information" type="button">
           <ion-icon name="swap-vertical"></ion-icon>
         </button>
 
@@ -112,8 +121,6 @@
 
         </ul>
 
-        <div class="separator"></div>
-
         <ul class="social-list">
 
           <li class="social-item">
@@ -155,7 +162,7 @@
       - #main-content
     -->
 
-    <div class="main-content">
+    <div class="main-content" role="main">
 
       <!--
         - #NAVBAR
@@ -166,23 +173,23 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
+            <button class="navbar-link active" data-nav-link aria-label="Navigate to About section" aria-current="page" type="button">About</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Projects</button>
+            <button class="navbar-link" data-nav-link aria-label="Navigate to Projects section" type="button">Projects</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Sideworks</button>
+            <button class="navbar-link" data-nav-link aria-label="Navigate to Sideworks section" type="button">Sideworks</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Certificates</button>
+            <button class="navbar-link" data-nav-link aria-label="Navigate to Certificates section" type="button">Certificates</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
+            <button class="navbar-link" data-nav-link aria-label="Navigate to Contact section" type="button">Contact</button>
           </li>
 
         </ul>
@@ -191,7 +198,8 @@
 
       <div class="modal-container" data-modal-container>
         <div class="overlay" data-overlay></div>
-        <button class="modal-close-btn" data-modal-close-btn>
+        <button class="modal-close-btn" data-modal-close-btn aria-label="Close modal" type="button">
+          <ion-icon name="close"></ion-icon>
         </button>
       </div>
 
@@ -243,7 +251,7 @@
               </p>
             </div>
           </div>
-          <center> <button class="more" id="toggle-button" onclick="toggleText()">&darr; &nbsp; &nbsp; Show more &nbsp;
+          <center> <button class="more" id="toggle-button" aria-label="Toggle about text visibility" type="button">&darr; &nbsp; &nbsp; Show more &nbsp;
               &nbsp; &darr;</button> </center>
         </section>
 
@@ -1391,7 +1399,7 @@
               </p>
 
               <div class="certificate-container">
-                <img src="./assets/images/certificates/ausbildung.png" onclick="window.open(this.src)">
+                <img src="./assets/images/certificates/ausbildung.png" alt="Computer Science Degree Certificate">
               </div>
 
             </li>
@@ -1404,7 +1412,7 @@
               </p>
 
               <div class="certificate-container">
-                <img src="./assets/images/certificates/typescript.png" onclick="window.open(this.src)">
+                <img src="./assets/images/certificates/typescript.png" alt="TypeScript Essentials Certificate">
               </div>
 
             </li>
@@ -1417,7 +1425,7 @@
               </p>
 
               <div class="certificate-container">
-                <img src="./assets/images/certificates/react-native.png" onclick="window.open(this.src)">
+                <img src="./assets/images/certificates/react-native.png" alt="React Native Essentials Certificate">
               </div>
 
             </li>
@@ -1430,7 +1438,7 @@
               </p>
 
               <div class="certificate-container">
-                <img src="./assets/images/certificates/node.js-essentials.png" onclick="window.open(this.src)">
+                <img src="./assets/images/certificates/node.js-essentials.png" alt="Node.js Essentials Certificate">
               </div>
 
             </li>
@@ -1443,7 +1451,7 @@
               </p>
 
               <div class="certificate-container">
-                <img src="./assets/images/certificates/react.js-essentials.png" onclick="window.open(this.src)">
+                <img src="./assets/images/certificates/react.js-essentials.png" alt="React.js Essentials Certificate">
               </div>
 
             </li>
@@ -1456,7 +1464,7 @@
               </p>
 
               <div class="certificate-container">
-                <img src="./assets/images/certificates/javascript-essentials.png" onclick="window.open(this.src)">
+                <img src="./assets/images/certificates/javascript-essentials.png" alt="JavaScript Essentials Certificate">
               </div>
 
             </li>
@@ -1470,7 +1478,7 @@
 
               <div class="certificate-container">
                 <img src="./assets/images/certificates/fundamentals-of-digital-marketing.png"
-                  onclick="window.open(this.src)">
+                  alt="Fundamentals of Digital Marketing Certificate">
               </div>
 
             </li>
@@ -1510,7 +1518,7 @@
                 WEKA Media GmbH & Co. KG
               </p>
               <div class="certificate-container">
-                <img src="./assets/images/certificates/efficient-email-management.png" onclick="window.open(this.src)">
+                <img src="./assets/images/certificates/efficient-email-management.png" alt="Efficient Email Management Certificate">
               </div>
 
             </li>
@@ -1523,7 +1531,7 @@
                 VIWIS GmbH
               </p>
               <div class="certificate-container">
-                <img src="./assets/images/certificates/time-and-self-management.png" onclick="window.open(this.src)">
+                <img src="./assets/images/certificates/time-and-self-management.png" alt="Time and Self Management Certificate">
               </div>
 
             </li>
@@ -1536,7 +1544,7 @@
                 Microsoft
               </p>
               <div class="certificate-container">
-                <img src="./assets/images/certificates/excel-2013-professional.png" onclick="window.open(this.src)">
+                <img src="./assets/images/certificates/excel-2013-professional.png" alt="Excel 2013 Professional Certificate">
               </div>
 
             </li>
@@ -1549,7 +1557,7 @@
                 Microsoft
               </p>
               <div class="certificate-container">
-                <img src="./assets/images/certificates/word-2013-professional.png" onclick="window.open(this.src)">
+                <img src="./assets/images/certificates/word-2013-professional.png" alt="Word 2013 Professional Certificate">
               </div>
 
             </li>
@@ -1562,7 +1570,7 @@
                 IMAP GmbH
               </p>
               <div class="certificate-container">
-                <img src="./assets/images/certificates/intercultural-competence.png" onclick="window.open(this.src)">
+                <img src="./assets/images/certificates/intercultural-competence.png" alt="Intercultural Competence Certificate">
               </div>
 
             </li>
@@ -1576,7 +1584,7 @@
               </p>
               <div class="certificate-container">
                 <img src="./assets/images/certificates/communication-complaint-management.png"
-                  onclick="window.open(this.src)">
+                  alt="Communication and Complaint Management Certificate">
               </div>
 
             </li>
@@ -1602,7 +1610,7 @@
                 TELC European Language Certificates
               </p>
               <div class="certificate-container">
-                <img src="./assets/images/certificates/german-c1.png" onclick="window.open(this.src)">
+                <img src="./assets/images/certificates/german-c1.png" alt="German Language C1 Certificate">
               </div>
 
             </li>
@@ -1615,7 +1623,7 @@
                 LinguaTV GmbH
               </p>
               <div class="certificate-container">
-                <img src="./assets/images/certificates/english-b2.png" onclick="window.open(this.src)">
+                <img src="./assets/images/certificates/english-b2.png" alt="English Language B2 Certificate">
               </div>
 
             </li>
@@ -1645,7 +1653,7 @@
           <div class="container">
             <div class="email-field">
               <div class="email-text">info@oktayshakirov.com</div>
-              <button class="copy-button" onclick="copyEmail(event)">Copy</button>
+              <button class="copy-button" aria-label="Copy email address to clipboard" type="button">Copy</button>
             </div>
           </div>
         </div>
@@ -1659,8 +1667,12 @@
             <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
             <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
             <a href=""
-              onclick="Calendly.initPopupWidget({url: 'https://calendly.com/oktayshakirov/30min?hide_landing_page_details=1&hide_gdpr_banner=1'});return false;">
-              <img src="./assets/images/calendar.png"></img></a>
+              id="calendly-link"
+              aria-label="Schedule a video call via Calendly"
+              role="button"
+              class="calendly-icon-link">
+              <ion-icon name="videocam-outline"></ion-icon>
+            </a>
           </center>
         </div>
         <br>
@@ -1670,31 +1682,7 @@
           <h3 class="h3 form-title" align="center">Socials:</h3>
 
           <ul class="social-list">
-
-            <li class="social-item">
-              <a href="https://github.com/oktayshakirov" class="socials-item">
-                <img src="./assets/images/socials/github.png"></img>
-              </a>
-            </li>
-
-            <li class="social-item">
-              <a href="https://www.linkedin.com/in/oktayshakirov" class="socials-item">
-                <img src="./assets/images/socials/linkedin.png"></img>
-              </a>
-            </li>
-
-            <li class="social-item">
-              <a href="https://www.instagram.com/oktay.shakirov/" class="socials-item">
-                <img src="./assets/images/socials/instagram.png"></img>
-              </a>
-            </li>
-
-            <li class="social-item">
-              <a href="https://twitter.com/oktayshakirov" class="socials-item">
-                <img src="./assets/images/socials/twitter.png"></img>
-              </a>
-            </li>
-
+            <!-- Social links loaded dynamically from data/socials.json -->
           </ul>
         </div>
         <br>
@@ -1750,7 +1738,7 @@
   <!--
     - custom js link
   -->
-  <script src="./assets/js/script.js"></script>
+  <script type="module" src="./assets/js/main.js"></script>
 
   <!--
     - ionicon link

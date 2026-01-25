@@ -26,6 +26,31 @@ git clone https://github.com/oktayshakirov/portfolio.git
 </p>
 
 
+## ⚠️ Important: Google Analytics Configuration
+
+**If you're using this portfolio template, you MUST configure Google Analytics:**
+
+The analytics script is **domain-protected** - it only works on `oktayshakirov.com`. 
+
+To use your own analytics:
+1. Open `assets/js/modules/analytics.js`
+2. Replace `G-G1H2WJ7XH4` with your own Google Analytics Tracking ID
+3. Update `AUTHORIZED_DOMAINS` array with your domain(s)
+
+**This prevents traffic from copied portfolios from being counted in the original owner's analytics.**
+
+## ⚠️ Important: Attribution Notice
+
+**This portfolio includes an attribution footer that must remain visible.**
+
+- **DO NOT remove or modify the attribution** - doing so will break website functionality
+- The attribution is an integral part of the codebase and removing it will cause errors
+- If you wish to use this portfolio **without attribution**, please contact me:
+  - **Email:** info@oktayshakirov.com
+  - **LinkedIn:** [oktayshakirov](https://www.linkedin.com/in/oktayshakirov)
+
+**Attempting to remove the attribution may result in broken functionality and is not recommended.**
+
 ## License
 
 MIT

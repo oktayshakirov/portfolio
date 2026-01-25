@@ -1,0 +1,337 @@
+[
+  {
+    "id": 1,
+    "title": "Love Swipe",
+    "category": ["applications", "games"],
+    "status": "Complete Build",
+    "type": "Solo Project",
+    "technologies": "React Native",
+    "image": "./assets/images/projects/love-swipe.jpg",
+    "links": {
+      "ios": "https://apps.apple.com/de/app/love-swipe-truth-or-dare/id6757429065?l=en-GB",
+      "android": "https://play.google.com/store/apps/details?id=com.shadev.loveswipe"
+    }
+  },
+  {
+    "id": 2,
+    "title": "Hello Berlin 365",
+    "category": ["websites", "designs"],
+    "status": "Complete Build",
+    "type": "Solo Development",
+    "technologies": "Next.js | Shadcn UI | Tailwind CSS",
+    "image": "./assets/images/projects/helloberlin365.png",
+    "links": {
+      "preview": "https://www.helloberlin365.com",
+      "github": "https://github.com/oktayshakirov/helloberlin365"
+    }
+  },
+  {
+    "id": 3,
+    "title": "Shape Beats",
+    "category": ["applications", "games"],
+    "status": "Complete Build",
+    "type": "Solo Project",
+    "technologies": "React Native",
+    "image": "./assets/images/projects/shape-beats.jpg",
+    "links": {
+      "ios": "https://apps.apple.com/us/app/shape-beats/id6751116257",
+      "android": "https://play.google.com/store/apps/details?id=com.shapebeats"
+    }
+  },
+  {
+    "id": 4,
+    "title": "Crypto Wiki App",
+    "category": ["applications"],
+    "status": "Complete Build",
+    "type": "Solo Development",
+    "technologies": "React Native | TypeScript | Firebase",
+    "image": "./assets/images/projects/cryptowiki-app.jpg",
+    "links": {
+      "ios": "https://apps.apple.com/de/app/crypto-wiki/id6742765176",
+      "android": "https://play.google.com/store/apps/details?id=com.shadev.thecryptowiki"
+    }
+  },
+  {
+    "id": 5,
+    "title": "Tinnitus Help App",
+    "category": ["applications"],
+    "status": "Complete Build",
+    "type": "Solo Development",
+    "technologies": "React Native | TypeScript | Firebase",
+    "image": "./assets/images/projects/tinnitushelp-app.jpg",
+    "links": {
+      "preview": "https://tinnitushelp.me/app",
+      "ios": "https://apps.apple.com/de/app/tinnitushelp-me/id6741688965?l=en-GB",
+      "android": "https://play.google.com/store/apps/details?id=com.shadev.tinnitushelpme"
+    }
+  },
+  {
+    "id": 6,
+    "title": "Fungi vs Bacteria Mobile Game",
+    "category": ["games"],
+    "status": "On Hold",
+    "type": "Team Project",
+    "technologies": "Unity | C# | Blender",
+    "image": "./assets/images/projects/fungi-vs-bacteria.jpg",
+    "links": {
+      "github": "https://github.com/oktayshakirov/fungi-vs-bacteria",
+      "figma": "https://www.figma.com/design/2WRQK888SfMS39zy0vgoIM/Fungi-vs-Bacteria?node-id=0-1&t=2dKGxUSf1MgOMDbK-1"
+    }
+  },
+  {
+    "id": 7,
+    "title": "Snowman Run Mobile Game",
+    "category": ["games"],
+    "status": "Complete Build",
+    "type": "Solo Development",
+    "technologies": "Unity | C#",
+    "image": "./assets/images/projects/snowman-run.png",
+    "links": {
+      "ios": "https://apps.apple.com/de/app/snowman-run-winter-escape/id6739736566?l=en-GB",
+      "android": "https://play.google.com/store/apps/details?id=com.ShaDev.SnowmanRun"
+    }
+  },
+  {
+    "id": 8,
+    "title": "TheCrypto.Wiki",
+    "category": ["websites", "designs"],
+    "status": "Complete Build",
+    "type": "Solo Development",
+    "technologies": "Next.js | React.js | API's",
+    "image": "./assets/images/projects/crypto-wiki.png",
+    "links": {
+      "preview": "https://www.thecrypto.wiki",
+      "github": "https://github.com/oktayshakirov/crypto-wiki"
+    }
+  },
+  {
+    "id": 9,
+    "title": "MyFitPhoto AI",
+    "category": ["websites", "applications"],
+    "status": "Frontend + AI Integration",
+    "type": "Team Project",
+    "technologies": "React.js | Chakra UI",
+    "image": "./assets/images/projects/myfitphoto.png",
+    "links": {
+      "preview": "https://myfitphoto.com/"
+    }
+  },
+  {
+    "id": 10,
+    "title": "TinnitusHelp.me",
+    "category": ["websites", "designs"],
+    "status": "Complete Build",
+    "type": "Solo Development",
+    "technologies": "Next.js | TypeScript | Material-UI",
+    "image": "./assets/images/projects/tinnitus-blog.png",
+    "links": {
+      "preview": "https://www.tinnitushelp.me/",
+      "github": "https://github.com/oktayshakirov/tinnitus-blog"
+    }
+  },
+  {
+    "id": 11,
+    "title": "Clonings AI",
+    "category": ["applications", "websites"],
+    "status": "Frontend",
+    "type": "Team Project",
+    "technologies": "React.js | Chakra UI",
+    "image": "./assets/images/projects/clonings.png",
+    "links": {
+      "preview": "https://clonings.ai/",
+      "github": "https://github.com/oktayshakirov/clonings-ai"
+    }
+  },
+  {
+    "id": 12,
+    "title": "Cortextual AI Website",
+    "category": ["websites"],
+    "status": "Frontend",
+    "type": "Solo Development",
+    "technologies": "Wordpress",
+    "image": "./assets/images/projects/cortextual.png",
+    "links": {
+      "preview": "https://cortextual.ai"
+    }
+  },
+  {
+    "id": 13,
+    "title": "FashionSwap App",
+    "category": ["applications", "designs"],
+    "status": "Design + Frontend",
+    "type": "Team Project",
+    "technologies": "Figma | React.js | Chakra UI",
+    "image": "./assets/images/projects/fashionswap.png",
+    "links": {
+      "preview": "https://www.fashionswap.ai/",
+      "figma": "https://www.figma.com/file/E0LCV0R8Z1quFISQnEXsJH/FashionSwap?type=design&node-id=34%3A88&mode=design&t=5Zdkopqchsl0NiUf-1"
+    }
+  },
+  {
+    "id": 14,
+    "title": "Inventory Management App",
+    "category": ["applications", "designs"],
+    "status": "Design + Frontend",
+    "type": "Team Project",
+    "technologies": "Figma | React.js | Chakra UI",
+    "image": "./assets/images/projects/contour.png",
+    "links": {
+      "preview": "https://contour.bg",
+      "figma": "https://www.figma.com/file/8mCYvhRkKW89CIWHRAy9RU/Contour.bg-(Demo)?type=design&t=PKX6RVacjJ6Nuqei-6"
+    }
+  },
+  {
+    "id": 15,
+    "title": "MyBestWishes AI",
+    "category": ["websites", "designs", "applications"],
+    "status": "Design + Frontend + AI Integration",
+    "type": "Team Project",
+    "technologies": "Figma | React.js | Chakra UI",
+    "image": "./assets/images/projects/mybestwishes.png",
+    "links": {
+      "preview": "https://mybestwishes.ai/",
+      "figma": "https://www.figma.com/file/Q8TREoM195xySYKnNjjMun/MyBestWishes-2.0?type=design&mode=design&t=zuAWuwuUFFqp1leb-0"
+    }
+  },
+  {
+    "id": 16,
+    "title": "MyWorkPhoto AI",
+    "category": ["websites", "designs", "applications"],
+    "status": "Design + Frontend + AI Integration",
+    "type": "Team Project",
+    "technologies": "Figma | React.js | Chakra UI",
+    "image": "./assets/images/projects/myworkphoto.png",
+    "links": {
+      "preview": "https://myworkphoto.com/",
+      "figma": "https://www.figma.com/file/eUARUbGIBm2KuNNnvdXDkA/MyWorkPhoto?type=design&mode=design&t=zuAWuwuUFFqp1leb-1"
+    }
+  },
+  {
+    "id": 17,
+    "title": "Ogno Marketing Dashboard",
+    "category": ["applications", "designs"],
+    "status": "Complete Build",
+    "type": "Solo Development",
+    "technologies": "React.js | Strapi.js | MySQL",
+    "image": "./assets/images/projects/ogno-dashboard.png",
+    "links": {
+      "preview": "https://ogno.netlify.app/",
+      "github": "https://github.com/oktayshakirov/marketing-dashboard"
+    }
+  },
+  {
+    "id": 18,
+    "title": "Bayer USA Health App",
+    "category": ["websites"],
+    "status": "Frontend",
+    "type": "Team Project",
+    "technologies": "Drupal | PHP | CSS",
+    "image": "./assets/images/projects/bayer-askmed.png",
+    "links": {
+      "preview": "https://askmed.bayer.com/"
+    }
+  },
+  {
+    "id": 19,
+    "title": "EnEmZet Online Store",
+    "category": ["websites"],
+    "status": "Complete Build",
+    "type": "Solo Development",
+    "technologies": "Next.js | TypeScript | MySQL",
+    "image": "./assets/images/projects/enemzet.png",
+    "links": {
+      "preview": "https://enemzet.bg/",
+      "github": "https://github.com/En-Em-Zet"
+    }
+  },
+  {
+    "id": 20,
+    "title": "Timeazon Online Store",
+    "category": ["websites", "designs"],
+    "status": "Complete Build",
+    "type": "Solo Development",
+    "technologies": "React.js | Node.js | MySQL | Sass",
+    "image": "./assets/images/projects/watch_store.png",
+    "links": {
+      "preview": "https://timeazon.netlify.app/",
+      "github": "https://github.com/oktayshakirov/timeazon-fullstack"
+    }
+  },
+  {
+    "id": 21,
+    "title": "Weather App",
+    "category": ["applications"],
+    "status": "Frontend",
+    "type": "Solo Development",
+    "technologies": "JavaScript | API's | CSS",
+    "image": "./assets/images/projects/weather-app.png",
+    "links": {
+      "preview": "https://oktayshakirov.github.io/weather-app/",
+      "github": "https://github.com/oktayshakirov/weather-app"
+    }
+  },
+  {
+    "id": 22,
+    "title": "Pigletz Memory Game",
+    "category": ["games"],
+    "status": "Frontend",
+    "type": "Solo Development",
+    "technologies": "JavaScript | CSS",
+    "image": "./assets/images/projects/pigletz-matching.png",
+    "links": {
+      "preview": "https://oktayshakirov.github.io/pigletz-matching/",
+      "github": "https://github.com/oktayshakirov/pigletz-matching"
+    }
+  },
+  {
+    "id": 23,
+    "title": "Team Management Tool",
+    "category": ["applications"],
+    "status": "Complete Build",
+    "type": "Solo Development",
+    "technologies": "PHP | CSV Data | CSS",
+    "image": "./assets/images/projects/team-manager.png",
+    "links": {
+      "preview": "http://oktayshakirov.rf.gd/team-manager/",
+      "github": "https://github.com/oktayshakirov/team-manager"
+    }
+  },
+  {
+    "id": 24,
+    "title": "Personal Portfolio",
+    "category": ["websites", "designs"],
+    "status": "Frontend",
+    "type": "Solo Development",
+    "technologies": "JavaScript | CSS | HTML",
+    "image": "./assets/images/projects/portfolio.png",
+    "links": {
+      "preview": "/",
+      "github": "https://github.com/oktayshakirov/portfolio"
+    }
+  },
+  {
+    "id": 25,
+    "title": "Quiz Time",
+    "category": ["games"],
+    "status": "Frontend",
+    "type": "Solo Development",
+    "technologies": "PHP | CSS | HTML",
+    "image": "./assets/images/projects/quiz.png",
+    "links": {
+      "preview": "https://oktayshakirov.000webhostapp.com/quiz",
+      "github": "https://github.com/oktayshakirov/quiz"
+    }
+  },
+  {
+    "id": 26,
+    "title": "BerliNEW Android App",
+    "category": ["applications"],
+    "status": "Complete Build",
+    "type": "Solo Development",
+    "technologies": "Wordpress | Android SDK",
+    "image": "./assets/images/projects/berlinew.jpg",
+    "links": {
+      "preview": "https://berlinew.wordpress.com/categories"
+    }
+  }
+]

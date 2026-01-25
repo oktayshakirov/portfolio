@@ -1,0 +1,26 @@
+[
+  {
+    "id": "github",
+    "name": "GitHub",
+    "url": "https://github.com/oktayshakirov",
+    "icon": "logo-github"
+  },
+  {
+    "id": "linkedin",
+    "name": "LinkedIn",
+    "url": "https://www.linkedin.com/in/oktayshakirov",
+    "icon": "logo-linkedin"
+  },
+  {
+    "id": "instagram",
+    "name": "Instagram",
+    "url": "https://www.instagram.com/oktay.shakirov/",
+    "icon": "logo-instagram"
+  },
+  {
+    "id": "twitter",
+    "name": "Twitter",
+    "url": "https://twitter.com/oktayshakirov",
+    "icon": "logo-twitter"
+  }
+]

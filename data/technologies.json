@@ -1,0 +1,19 @@
+[
+  { "id": 1, "name": "HTML", "image": "./assets/images/html.png", "alt": "HTML" },
+  { "id": 2, "name": "CSS", "image": "./assets/images/css.png", "alt": "CSS" },
+  { "id": 3, "name": "JavaScript", "image": "./assets/images/java-script.png", "alt": "JavaScript" },
+  { "id": 4, "name": "React", "image": "./assets/images/react.png", "alt": "React" },
+  { "id": 5, "name": "Next", "image": "./assets/images/next.png", "alt": "Next" },
+  { "id": 6, "name": "Node", "image": "./assets/images/node.png", "alt": "Node" },
+  { "id": 7, "name": "TypeScript", "image": "./assets/images/typescript.png", "alt": "TypeScript" },
+  { "id": 8, "name": "Npm", "image": "./assets/images/npm.png", "alt": "Npm" },
+  { "id": 9, "name": "PHP", "image": "./assets/images/php.png", "alt": "PHP" },
+  { "id": 10, "name": "MySQL", "image": "./assets/images/mysql.png", "alt": "MySQL" },
+  { "id": 11, "name": "Linux", "image": "./assets/images/linux.png", "alt": "Linux" },
+  { "id": 12, "name": "Wordpress", "image": "./assets/images/wordpress.png", "alt": "Wordpress" },
+  { "id": 13, "name": "Git", "image": "./assets/images/git.png", "alt": "Git" },
+  { "id": 14, "name": "Docker", "image": "./assets/images/docker.png", "alt": "Docker" },
+  { "id": 15, "name": "Unity", "image": "./assets/images/unity.png", "alt": "Unity" },
+  { "id": 16, "name": "Figma", "image": "./assets/images/figma.png", "alt": "Figma" },
+  { "id": 17, "name": "n8n", "image": "./assets/images/n8n.png", "alt": "n8n" }
+]
