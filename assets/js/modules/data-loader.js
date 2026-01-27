@@ -9,6 +9,8 @@ import {
   generateCertificateHTML,
   generateSideworkHTML,
   generateSocialHTML,
+  generateFilterButtonsHTML,
+  generateFilterSelectHTML,
 } from "./render.js";
 
 /**
@@ -85,6 +87,29 @@ const showErrorState = (container, message = "Failed to load content", retryFn =
 };
 
 /**
+ * Load and render filter categories
+ */
+export const loadFilters = async () => {
+  const filterCategories = ["All", "Websites", "Applications", "Games", "Designs"];
+  
+  // Desktop filter buttons
+  const filterList = document.querySelector(".filter-list");
+  if (filterList) {
+    filterList.innerHTML = generateFilterButtonsHTML(filterCategories);
+  }
+  
+  // Mobile filter select
+  const selectList = document.querySelector(".select-list");
+  if (selectList) {
+    selectList.innerHTML = generateFilterSelectHTML(filterCategories);
+  }
+  
+  // Re-initialize project filter after rendering
+  const { initProjectFilter } = await import("./projects.js");
+  initProjectFilter();
+};
+
+/**
  * Load and render projects
  */
 export const loadProjects = async () => {
@@ -132,6 +157,13 @@ export const loadTechnologies = async () => {
     // Re-initialize technologies module
     const { initTechnologies } = await import("./technologies.js");
     initTechnologies();
+    
+    // Re-initialize tech scrolling after content is loaded
+    const { initTechScrolling } = await import("./animations.js");
+    // Wait a bit for DOM to update and images to load
+    setTimeout(() => {
+      initTechScrolling();
+    }, 100);
   } catch (error) {
     console.error("Error loading technologies:", error);
     showErrorState(container, "Failed to load technologies.", loadTechnologies);

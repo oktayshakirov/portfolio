@@ -95,24 +95,39 @@ export const initTechScrolling = () => {
   const list = document.querySelector(".technologies-list");
   if (!list) return;
 
+  // Check if content is actually loaded (not skeleton loaders)
+  const hasContent = list.querySelectorAll(".technologies-item img").length > 0;
+  if (!hasContent) {
+    // Content not loaded yet, wait a bit and retry
+    setTimeout(() => initTechScrolling(), 200);
+    return;
+  }
+
   const scrollSpeed = 0.7;
   const intervalDuration = 10;
-  const totalWidth = list.scrollWidth - list.clientWidth;
   let scrollPosition = 0;
   let scrolling = false;
+  let scrollInterval = null;
+
+  const getTotalWidth = () => {
+    return list.scrollWidth - list.clientWidth;
+  };
 
   const startScrolling = () => {
-    if (!scrolling) {
+    if (!scrolling && scrollInterval === null) {
       scrolling = true;
-      const interval = setInterval(() => {
+      scrollInterval = setInterval(() => {
+        const totalWidth = getTotalWidth();
+        
+        // Recalculate if content might have changed
+        if (totalWidth <= 0) {
+          return; // Wait for content to load
+        }
+
         scrollPosition += scrollSpeed;
 
         if (scrollPosition >= totalWidth) {
           scrollPosition = 0;
-        }
-
-        if (!scrolling) {
-          clearInterval(interval);
         }
 
         list.scrollLeft = scrollPosition;
@@ -122,6 +137,10 @@ export const initTechScrolling = () => {
 
   const stopScrolling = () => {
     scrolling = false;
+    if (scrollInterval) {
+      clearInterval(scrollInterval);
+      scrollInterval = null;
+    }
   };
 
   const observer = new IntersectionObserver(

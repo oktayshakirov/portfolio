@@ -1,6 +1,19 @@
 [
   {
     "id": 1,
+    "title": "Drone Cinematography",
+    "categories": ["Aerial Photography", "Cinematography"],
+    "description": "I capture stunning perspectives using professional drone for landscape photography, video cinematography and commercial imagery. I license my drone footage through stock platforms for filmmakers, marketers and content creators worldwide.",
+    "image": "./assets/images/projects/drone.jpg",
+    "alt": "Drone Photography",
+    "links": {
+      "tiktok": "https://www.tiktok.com/@oktay.shakirov",
+      "adobeStock": "https://stock.adobe.com/de/contributor/213141910/Oktay",
+      "shutterstock": "https://www.shutterstock.com/g/Shakirov030/about"
+    }
+  },
+  {
+    "id": 2,
     "title": "Workflow Automation & AI",
     "categories": ["Workflow Automation", "AI Integration"],
     "description": "I design automation workflows using n8n that integrate OpenAI, Gemini and other AI models for SEO content writing, image/video generation and social media sharing. My systems automatically generate and distribute content across all platforms.",
@@ -11,7 +24,20 @@
     }
   },
   {
-    "id": 2,
+    "id": 3,
+    "title": "Music Production",
+    "categories": ["Beat Making", "Sound Design"],
+    "description": "Produced over 100 instrumentals in different genres, collaborated with artists and my beats are on popular streaming platforms like Spotify, iTunes, Amazon and Deezer. Currently i'm using this skill to create sound therapy, white noise and relaxing music for one of my projects.",
+    "image": "./assets/images/projects/sha-beats.jpg",
+    "alt": "Sha Beats",
+    "links": {
+      "spotify": "https://open.spotify.com/artist/0veyQeAcyLxXfbbnZpa3mf?si=0Xk9lBtDTP24o8w1nrPfRw",
+      "instagram": "https://www.instagram.com/sha.beats",
+      "youtube": "https://www.youtube.com/@SHABEATS"
+    }
+  },
+  {
+    "id": 4,
     "title": "Pigletz.com",
     "categories": ["Marketing & BizDev", "Content Creator"],
     "description": "I create and manage the Pigletz community's social media presence, including producing and editing high-quality Web3 content for their YouTube channel. I also work on expanding the community's reach and impact through partnerships in the Web3 space.",
@@ -24,7 +50,7 @@
     }
   },
   {
-    "id": 3,
+    "id": 5,
     "title": "Digital Content Creation",
     "categories": ["Multimedia Design", "3D Rendering"],
     "description": "My digital art portfolio, which includes a wide collection of graphic designs, 3D models and short video animations created for various purposes. I have long experience working with popular softwares like Adobe Photoshop, After Effects, Premiere Pro and Blender.",
@@ -32,19 +58,6 @@
     "alt": "Sha Pixels",
     "links": {
       "instagram": "https://www.instagram.com/sha.pixels"
-    }
-  },
-  {
-    "id": 4,
-    "title": "Music Production",
-    "categories": ["Beat Making", "Sound Design"],
-    "description": "Produced over 100 instrumentals in different genres, collaborated with artists and my beats are on popular streaming platforms like Spotify, iTunes, Amazon and Deezer. Currently i'm using this skill to create sound therapy, white noise and relaxing music for one of my projects.",
-    "image": "./assets/images/projects/sha-beats.jpg",
-    "alt": "Sha Beats",
-    "links": {
-      "spotify": "https://open.spotify.com/artist/0veyQeAcyLxXfbbnZpa3mf?si=0Xk9lBtDTP24o8w1nrPfRw",
-      "instagram": "https://www.instagram.com/sha.beats",
-      "youtube": "https://www.youtube.com/@SHABEATS"
     }
   }
 ]

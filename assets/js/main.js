@@ -26,6 +26,7 @@ import {
   loadCertificates,
   loadSideworks,
   loadSocials,
+  loadFilters,
 } from "./modules/data-loader.js";
 
 /**
@@ -35,12 +36,14 @@ const init = () => {
   // Core functionality
   initSidebar();
   initNavigation();
-  initProjectFilter();
+  
+  // Load filter categories first, then initialize filter functionality
+  loadFilters().catch(console.error);
 
   // Animations and effects
   initProgressBars();
   initLazyLoading();
-  initTechScrolling();
+  // initTechScrolling() is called after technologies are loaded in loadTechnologies()
   initMottoAnimation();
   initAgeCounter().catch(console.error);
 

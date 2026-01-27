@@ -2179,11 +2179,10 @@ main {
 
 .pagination-button {
   padding: 10px 20px;
-  background-color: rgba(0, 0, 0, 0.1);
-  color: var(--white-1);
+  background-color: hsla(0, 0%, 23%, 0.214);
+  color: var(--orange-yellow-crayola);
   cursor: pointer;
   border-radius: 10px;
-  box-shadow: var(--shadow-2);
 }
 
 .store-badges-container {

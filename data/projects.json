@@ -60,7 +60,6 @@
     "technologies": "React Native | TypeScript | Firebase",
     "image": "./assets/images/projects/tinnitushelp-app.jpg",
     "links": {
-      "preview": "https://tinnitushelp.me/app",
       "ios": "https://apps.apple.com/de/app/tinnitushelp-me/id6741688965?l=en-GB",
       "android": "https://play.google.com/store/apps/details?id=com.shadev.tinnitushelpme"
     }

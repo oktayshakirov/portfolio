@@ -82,6 +82,35 @@ export const generateProjectHTML = (project) => {
 };
 
 /**
+ * Generate filter buttons HTML (desktop)
+ * @param {Array<string>} categories - Array of category names
+ * @returns {string} HTML string
+ */
+export const generateFilterButtonsHTML = (categories) => {
+  return categories.map((category, index) => {
+    const activeClass = index === 0 ? ' class="active"' : '';
+    return `
+      <li class="filter-item">
+        <button${activeClass} data-filter-btn>${category}</button>
+      </li>
+    `;
+  }).join('');
+};
+
+/**
+ * Generate filter select items HTML (mobile)
+ * @param {Array<string>} categories - Array of category names
+ * @returns {string} HTML string
+ */
+export const generateFilterSelectHTML = (categories) => {
+  return categories.map(category => `
+    <li class="select-item">
+      <button data-select-item>${category}</button>
+    </li>
+  `).join('');
+};
+
+/**
  * Generate technology HTML from technology data
  * @param {Object} tech - Technology data object
  * @returns {string} HTML string
@@ -171,6 +200,27 @@ export const generateSideworkHTML = (sidework) => {
       buttonLinks.push(`
         <a href="${links.spotify}" aria-label="Listen to ${title} on Spotify" target="_blank" rel="noopener noreferrer">
           <ion-icon name="musical-notes"></ion-icon> Spotify
+        </a>
+      `);
+    }
+    if (links.tiktok) {
+      buttonLinks.push(`
+        <a href="${links.tiktok}" aria-label="View ${title} on TikTok" target="_blank" rel="noopener noreferrer">
+          <ion-icon name="logo-tiktok"></ion-icon> TikTok
+        </a>
+      `);
+    }
+    if (links.adobeStock) {
+      buttonLinks.push(`
+        <a href="${links.adobeStock}" aria-label="View ${title} on Adobe Stock" target="_blank" rel="noopener noreferrer">
+          <ion-icon name="image-outline"></ion-icon> Adobe Stock
+        </a>
+      `);
+    }
+    if (links.shutterstock) {
+      buttonLinks.push(`
+        <a href="${links.shutterstock}" aria-label="View ${title} on Shutterstock" target="_blank" rel="noopener noreferrer">
+          <ion-icon name="images-outline"></ion-icon> Shutterstock
         </a>
       `);
     }
