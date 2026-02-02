@@ -163,30 +163,12 @@ export const initTechScrolling = () => {
 };
 
 /**
- * Initialize motto animation
+ * Initialize motto (render final text only)
  */
 export const initMottoAnimation = () => {
   const mottoElement = document.getElementById("motto");
   if (!mottoElement) return;
-
-  const text = Array.from({ length: 20 }, () =>
-    Array.from({ length: 16 }, () => Math.round(Math.random())).join("")
-  );
-  text.push("Hello, World !");
-
-  let index = 0;
-
-  const flipMotto = () => {
-    mottoElement.textContent = text[index];
-
-    if (text[index] === "Hello, World !") {
-      clearInterval(intervalId);
-    }
-
-    index = (index + 1) % text.length;
-  };
-
-  const intervalId = setInterval(flipMotto, 100);
+  mottoElement.textContent = "Hello, World !";
 };
 
 /**
