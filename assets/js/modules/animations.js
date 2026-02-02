@@ -163,15 +163,6 @@ export const initTechScrolling = () => {
 };
 
 /**
- * Initialize motto (render final text only)
- */
-export const initMottoAnimation = () => {
-  const mottoElement = document.getElementById("motto");
-  if (!mottoElement) return;
-  mottoElement.textContent = "Hello, World !";
-};
-
-/**
  * Initialize age counter
  */
 export const initAgeCounter = async () => {

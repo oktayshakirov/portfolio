@@ -10,7 +10,6 @@ import {
   initProgressBars,
   initLazyLoading,
   initTechScrolling,
-  initMottoAnimation,
   initAgeCounter,
 } from "./modules/animations.js";
 import { initGitHubCalendar } from "./modules/github-calendar.js";
@@ -44,7 +43,6 @@ const init = () => {
   initProgressBars();
   initLazyLoading();
   // initTechScrolling() is called after technologies are loaded in loadTechnologies()
-  initMottoAnimation();
   initAgeCounter().catch(console.error);
 
   // Load dynamic content from JSON
