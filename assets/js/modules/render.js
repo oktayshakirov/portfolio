@@ -203,12 +203,6 @@ export const generateSideworkHTML = (sidework) => {
         </a>
       `);
     }
-    if (links.tiktok) {
-      buttonLinks.push(`
-        <a href="${links.tiktok}" aria-label="View ${title} on TikTok" target="_blank" rel="noopener noreferrer">
-          <ion-icon name="logo-tiktok"></ion-icon> TikTok
-        </a>
-      `);
     }
     if (links.adobeStock) {
       buttonLinks.push(`
