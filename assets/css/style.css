@@ -150,6 +150,7 @@ textarea {
 
 html {
   font-family: var(--ff-poppins);
+  background: #0a0a0f;
 }
 
 body {
