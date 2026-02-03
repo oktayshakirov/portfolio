@@ -9,15 +9,17 @@
  * @returns {string} HTML string
  */
 export const generateProjectHTML = (project) => {
-  const { id, title, category, status, type, technologies, image, links } = project;
-  
+  const { id, title, category, status, type, technologies, image, links } =
+    project;
+
   const categoryString = category.join(" ");
-  const hasLink = links?.preview || links?.ios || links?.android || links?.github;
-  
+  const hasLink =
+    links?.preview || links?.ios || links?.android || links?.github;
+
   let buttonsHTML = "";
   if (links) {
     const buttonLinks = [];
-    
+
     if (links.preview) {
       buttonLinks.push(`
         <a href="${links.preview}" aria-label="Preview ${title}" target="_blank" rel="noopener noreferrer">
@@ -53,14 +55,18 @@ export const generateProjectHTML = (project) => {
         </a>
       `);
     }
-    
+
     if (buttonLinks.length > 0) {
-      buttonsHTML = `<div class="project-buttons">${buttonLinks.join("")}</div>`;
+      buttonsHTML = `<div class="project-buttons">${buttonLinks.join(
+        "",
+      )}</div>`;
     }
   }
-  
-  const imageHTML = hasLink 
-    ? `<a href="${links.preview || links.ios || links.android || links.github || '#'}">
+
+  const imageHTML = hasLink
+    ? `<a href="${
+        links.preview || links.ios || links.android || links.github || "#"
+      }">
          <figure class="project-img loading">
            <img data-src="${image}" loading="lazy" alt="${title} project screenshot">
          </figure>
@@ -68,7 +74,7 @@ export const generateProjectHTML = (project) => {
     : `<figure class="project-img loading">
          <img data-src="${image}" loading="lazy" alt="${title} project screenshot">
        </figure>`;
-  
+
   return `
     <li class="project-item active" data-filter-item data-category="${categoryString}">
       ${imageHTML}
@@ -87,14 +93,16 @@ export const generateProjectHTML = (project) => {
  * @returns {string} HTML string
  */
 export const generateFilterButtonsHTML = (categories) => {
-  return categories.map((category, index) => {
-    const activeClass = index === 0 ? ' class="active"' : '';
-    return `
+  return categories
+    .map((category, index) => {
+      const activeClass = index === 0 ? ' class="active"' : "";
+      return `
       <li class="filter-item">
         <button${activeClass} data-filter-btn>${category}</button>
       </li>
     `;
-  }).join('');
+    })
+    .join("");
 };
 
 /**
@@ -103,11 +111,15 @@ export const generateFilterButtonsHTML = (categories) => {
  * @returns {string} HTML string
  */
 export const generateFilterSelectHTML = (categories) => {
-  return categories.map(category => `
+  return categories
+    .map(
+      (category) => `
     <li class="select-item">
       <button data-select-item>${category}</button>
     </li>
-  `).join('');
+  `,
+    )
+    .join("");
 };
 
 /**
@@ -163,11 +175,11 @@ export const generateSocialHTML = (social, className = "social-link") => {
  */
 export const generateSideworkHTML = (sidework) => {
   const { id, title, categories, description, image, alt, links } = sidework;
-  
+
   let buttonsHTML = "";
   if (links) {
     const buttonLinks = [];
-    
+
     if (links.website) {
       buttonLinks.push(`
         <a href="${links.website}" aria-label="Visit ${title}" target="_blank" rel="noopener noreferrer">
@@ -203,7 +215,6 @@ export const generateSideworkHTML = (sidework) => {
         </a>
       `);
     }
-    }
     if (links.adobeStock) {
       buttonLinks.push(`
         <a href="${links.adobeStock}" aria-label="View ${title} on Adobe Stock" target="_blank" rel="noopener noreferrer">
@@ -218,14 +229,18 @@ export const generateSideworkHTML = (sidework) => {
         </a>
       `);
     }
-    
+
     if (buttonLinks.length > 0) {
-      buttonsHTML = `<div class="project-buttons">${buttonLinks.join("")}</div>`;
+      buttonsHTML = `<div class="project-buttons">${buttonLinks.join(
+        "",
+      )}</div>`;
     }
   }
-  
-  const categoriesHTML = categories.map(cat => `<p class="blog-category">${cat}</p>`).join('<span class="dot"></span>');
-  
+
+  const categoriesHTML = categories
+    .map((cat) => `<p class="blog-category">${cat}</p>`)
+    .join('<span class="dot"></span>');
+
   return `
     <li class="blog-card">
       <figure class="blog-banner-box">
