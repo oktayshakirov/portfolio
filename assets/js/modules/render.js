@@ -34,9 +34,23 @@ export const generateProjectHTML = (project) => {
         </a>
       `);
     }
+    if (links.iosDisabled) {
+      buttonLinks.push(`
+        <a href="#" class="disabled" aria-label="${title} on iOS coming soon" aria-disabled="true">
+          <ion-icon name="logo-apple"></ion-icon> iPhone
+        </a>
+      `);
+    }
     if (links.android) {
       buttonLinks.push(`
         <a href="${links.android}" aria-label="Download ${title} on Android" target="_blank" rel="noopener noreferrer">
+          <ion-icon name="logo-android"></ion-icon> Android
+        </a>
+      `);
+    }
+    if (links.androidDisabled) {
+      buttonLinks.push(`
+        <a href="#" class="disabled" aria-label="${title} on Android coming soon" aria-disabled="true">
           <ion-icon name="logo-android"></ion-icon> Android
         </a>
       `);

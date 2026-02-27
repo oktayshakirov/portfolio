@@ -1,5 +1,18 @@
 [
   {
+    "id": 27,
+    "title": "Drone Pal App",
+    "category": ["applications"],
+    "status": "Complete Build",
+    "type": "Solo Project",
+    "technologies": "React Native",
+    "image": "./assets/images/projects/coming-soon.jpeg",
+    "links": {
+      "iosDisabled": true,
+      "androidDisabled": true
+    }
+  },
+  {
     "id": 1,
     "title": "Love Swipe",
     "category": ["applications", "games"],
