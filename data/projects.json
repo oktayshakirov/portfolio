@@ -1,14 +1,14 @@
 [
   {
     "id": 27,
-    "title": "Drone Pal App",
+    "title": "Drone Pal",
     "category": ["applications"],
     "status": "Complete Build",
     "type": "Solo Project",
     "technologies": "React Native",
-    "image": "./assets/images/projects/coming-soon.jpeg",
+    "image": "./assets/images/projects/drone-pal.png",
     "links": {
-      "iosDisabled": true,
+      "ios": "https://apps.apple.com/de/app/drone-pal/id6760303630?l=en-GB",
       "androidDisabled": true
     }
   },
