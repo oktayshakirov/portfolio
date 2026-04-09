@@ -29,6 +29,34 @@ import {
 } from "./modules/data-loader.js";
 
 /**
+ * Hide the initial page preloader
+ */
+const PRELOADER_MIN_VISIBLE_MS = 900;
+const preloaderShownAt = performance.now();
+
+const hidePreloader = () => {
+  const preloader = document.getElementById("site-preloader");
+  if (!preloader) return;
+
+  preloader.classList.add("hidden");
+  document.body.classList.remove("preloader-active");
+
+  // Remove from DOM after fade-out to avoid unnecessary overlay node.
+  window.setTimeout(() => {
+    preloader.remove();
+  }, 400);
+};
+
+/**
+ * Ensure preloader remains visible long enough for at least one spin.
+ */
+const hidePreloaderWithMinimumDelay = () => {
+  const elapsed = performance.now() - preloaderShownAt;
+  const remaining = Math.max(0, PRELOADER_MIN_VISIBLE_MS - elapsed);
+  window.setTimeout(hidePreloader, remaining);
+};
+
+/**
  * Initialize all modules when DOM is ready
  */
 const init = () => {
@@ -87,6 +115,12 @@ const init = () => {
     });
   });
 };
+
+// Hide preloader when all critical page resources are loaded.
+window.addEventListener("load", hidePreloaderWithMinimumDelay);
+
+// Fallback in case load is delayed by third-party resources.
+window.setTimeout(hidePreloaderWithMinimumDelay, 2500);
 
 // Initialize when DOM is ready
 if (document.readyState === "loading") {
