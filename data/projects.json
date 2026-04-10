@@ -9,7 +9,7 @@
     "image": "./assets/images/projects/drone-pal.png",
     "links": {
       "ios": "https://apps.apple.com/de/app/drone-pal/id6760303630?l=en-GB",
-      "androidDisabled": true
+      "androidDisabled": "https://play.google.com/store/apps/details?id=com.shadev.dronepal"
     }
   },
   {
