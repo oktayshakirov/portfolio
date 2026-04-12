@@ -2530,3 +2530,48 @@ main {
   transform: translateY(-2px);
   box-shadow: var(--shadow-2);
 }
+
+/*-----------------------------------*\
+  #404 PAGE
+\*-----------------------------------*/
+
+.error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 2rem;
+  color: var(--white-2);
+}
+
+.error-page h1 {
+  font-size: 6rem;
+  margin: 0;
+  font-weight: var(--fw-600);
+  color: var(--white-2);
+  letter-spacing: -0.25px;
+}
+
+.error-page p {
+  font-size: 1.5rem;
+  color: var(--light-gray);
+  margin: 1rem 0;
+}
+
+.error-page a {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background: var(--border-gradient-onyx);
+  color: var(--orange-yellow-crayola);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: var(--transition-1);
+}
+
+.error-page a:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-2);
+}
