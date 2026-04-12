@@ -2564,14 +2564,8 @@ main {
   display: inline-block;
   margin-top: 2rem;
   padding: 1rem 2rem;
-  background: var(--border-gradient-onyx);
   color: var(--orange-yellow-crayola);
   border-radius: 8px;
   text-decoration: none;
-  transition: var(--transition-1);
 }
 
-.error-page a:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-2);
-}
