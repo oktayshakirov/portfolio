@@ -47,7 +47,7 @@ const showLoadingState = (container, type = "projects") => {
       .fill(0)
       .map(
         () => `
-      <li class="blog-card skeleton">
+      <li class="sidework-card skeleton">
         <div class="skeleton-image"></div>
         <div class="skeleton-content">
           <div class="skeleton-title"></div>
@@ -229,7 +229,7 @@ export const loadCertificates = async () => {
  * Load and render sideworks
  */
 export const loadSideworks = async () => {
-  const container = document.querySelector(".blog-posts-list");
+  const container = document.querySelector(".sidework-posts-list");
   if (!container) return;
 
   showLoadingState(container, "sideworks");

@@ -252,20 +252,20 @@ export const generateSideworkHTML = (sidework) => {
   }
 
   const categoriesHTML = categories
-    .map((cat) => `<p class="blog-category">${cat}</p>`)
+    .map((cat) => `<p class="sidework-category">${cat}</p>`)
     .join('<span class="dot"></span>');
 
   return `
-    <li class="blog-card">
-      <figure class="blog-banner-box">
+    <li class="sidework-card">
+      <figure class="sidework-banner-box">
         <img src="${image}" alt="${alt}" loading="lazy">
       </figure>
-      <div class="blog-content">
-        <div class="blog-meta">
+      <div class="sidework-content">
+        <div class="sidework-meta">
           ${categoriesHTML}
         </div>
-        <h3 class="h3 blog-item-title">${title}</h3>
-        <p class="blog-text">${description}</p>
+        <h3 class="h3 sidework-item-title">${title}</h3>
+        <p class="sidework-text">${description}</p>
       </div>
       ${buttonsHTML}
     </li>
