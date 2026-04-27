@@ -19,7 +19,7 @@
     "status": "Complete Build",
     "type": "Solo Project",
     "technologies": "React Native",
-    "image": "./assets/images/projects/love-swipe.jpg",
+    "image": "./assets/images/projects/love-swipe.png",
     "links": {
       "ios": "https://apps.apple.com/de/app/love-swipe-truth-or-dare/id6757429065?l=en-GB",
       "android": "https://play.google.com/store/apps/details?id=com.shadev.loveswipe"
