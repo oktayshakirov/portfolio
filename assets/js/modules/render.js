@@ -9,7 +9,7 @@
  * @returns {string} HTML string
  */
 export const generateProjectHTML = (project) => {
-  const { id, title, category, status, type, technologies, image, links } =
+  const { title, category, status, type, technologies, image, links } =
     project;
 
   const categoryString = category.join(" ");
@@ -188,7 +188,7 @@ export const generateSocialHTML = (social, className = "social-link") => {
  * @returns {string} HTML string
  */
 export const generateSideworkHTML = (sidework) => {
-  const { id, title, categories, description, image, alt, links } = sidework;
+  const { title, categories, description, image, alt, links } = sidework;
 
   let buttonsHTML = "";
   if (links) {

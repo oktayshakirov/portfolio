@@ -30,7 +30,7 @@ const showLoadingState = (container, type = "projects") => {
         <div class="skeleton-text"></div>
         <div class="skeleton-text short"></div>
       </li>
-    `
+    `,
       )
       .join(""),
     technologies: Array(17)
@@ -40,7 +40,7 @@ const showLoadingState = (container, type = "projects") => {
       <li class="technologies-item skeleton">
         <div class="skeleton-image small"></div>
       </li>
-    `
+    `,
       )
       .join(""),
     sideworks: Array(4)
@@ -55,7 +55,7 @@ const showLoadingState = (container, type = "projects") => {
           <div class="skeleton-text"></div>
         </div>
       </li>
-    `
+    `,
       )
       .join(""),
   };
@@ -69,12 +69,16 @@ const showLoadingState = (container, type = "projects") => {
  * @param {string} message - Error message
  * @param {Function} retryFn - Retry function
  */
-const showErrorState = (container, message = "Failed to load content", retryFn = null) => {
+const showErrorState = (
+  container,
+  message = "Failed to load content",
+  retryFn = null,
+) => {
   container.innerHTML = `
     <div class="error-state">
       <ion-icon name="alert-circle-outline"></ion-icon>
       <p>${message}</p>
-      ${retryFn ? '<button class="retry-button" aria-label="Retry loading" type="button">Retry</button>' : ''}
+      ${retryFn ? '<button class="retry-button" aria-label="Retry loading" type="button">Retry</button>' : ""}
     </div>
   `;
 
@@ -90,20 +94,26 @@ const showErrorState = (container, message = "Failed to load content", retryFn =
  * Load and render filter categories
  */
 export const loadFilters = async () => {
-  const filterCategories = ["All", "Websites", "Applications", "Games", "Designs"];
-  
+  const filterCategories = [
+    "All",
+    "Websites",
+    "Applications",
+    "Games",
+    "Designs",
+  ];
+
   // Desktop filter buttons
   const filterList = document.querySelector(".filter-list");
   if (filterList) {
     filterList.innerHTML = generateFilterButtonsHTML(filterCategories);
   }
-  
+
   // Mobile filter select
   const selectList = document.querySelector(".select-list");
   if (selectList) {
     selectList.innerHTML = generateFilterSelectHTML(filterCategories);
   }
-  
+
   // Re-initialize project filter after rendering
   const { initProjectFilter } = await import("./projects.js");
   initProjectFilter();
@@ -132,7 +142,11 @@ export const loadProjects = async () => {
     initLazyLoading();
   } catch (error) {
     console.error("Error loading projects:", error);
-    showErrorState(container, "Failed to load projects. Please refresh the page.", loadProjects);
+    showErrorState(
+      container,
+      "Failed to load projects. Please refresh the page.",
+      loadProjects,
+    );
   }
 };
 
@@ -157,7 +171,7 @@ export const loadTechnologies = async () => {
     // Re-initialize technologies module
     const { initTechnologies } = await import("./technologies.js");
     initTechnologies();
-    
+
     // Re-initialize tech scrolling after content is loaded
     const { initTechScrolling } = await import("./animations.js");
     // Wait a bit for DOM to update and images to load
@@ -203,17 +217,23 @@ export const loadCertificates = async () => {
     });
 
     // Find the certificates article and replace content
-    const certificatesArticle = document.querySelector('[data-page="certificates"]');
+    const certificatesArticle = document.querySelector(
+      '[data-page="certificates"]',
+    );
     if (certificatesArticle) {
       const header = certificatesArticle.querySelector("header");
-      const existingContent = certificatesArticle.querySelector(".timeline")?.parentElement;
-      
+      const existingContent =
+        certificatesArticle.querySelector(".timeline")?.parentElement;
+
       if (existingContent) {
         existingContent.innerHTML = html;
       } else {
         const contentDiv = document.createElement("div");
         contentDiv.innerHTML = html;
-        certificatesArticle.insertBefore(contentDiv, certificatesArticle.querySelector(".pagination-box"));
+        certificatesArticle.insertBefore(
+          contentDiv,
+          certificatesArticle.querySelector(".pagination-box"),
+        );
       }
     }
 
@@ -253,7 +273,10 @@ export const loadSideworks = async () => {
  * @param {string} containerSelector - CSS selector for the container
  * @param {string} className - CSS class for the social links (default: "social-link")
  */
-export const loadSocials = async (containerSelector, className = "social-link") => {
+export const loadSocials = async (
+  containerSelector,
+  className = "social-link",
+) => {
   const container = document.querySelector(containerSelector);
   if (!container) return;
 
@@ -264,7 +287,9 @@ export const loadSocials = async (containerSelector, className = "social-link") 
     }
 
     const socials = await response.json();
-    container.innerHTML = socials.map(social => generateSocialHTML(social, className)).join("");
+    container.innerHTML = socials
+      .map((social) => generateSocialHTML(social, className))
+      .join("");
   } catch (error) {
     console.error("Error loading socials:", error);
   }

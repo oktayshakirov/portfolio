@@ -1,8 +1,23 @@
 [
   {
-    "id": 27,
+    "title": "Moment Tracker App",
+    "category": [
+      "applications"
+    ],
+    "status": "Complete Build",
+    "type": "Solo Project",
+    "technologies": "React Native",
+    "image": "./assets/images/projects/coming-soon.jpeg",
+    "links": {
+      "iosDisabled": true,
+      "androidDisabled": true
+    }
+  },
+  {
     "title": "Drone Pal",
-    "category": ["applications"],
+    "category": [
+      "applications"
+    ],
     "status": "Complete Build",
     "type": "Solo Project",
     "technologies": "React Native",
@@ -13,9 +28,11 @@
     }
   },
   {
-    "id": 1,
     "title": "Love Swipe",
-    "category": ["applications", "games"],
+    "category": [
+      "applications",
+      "games"
+    ],
     "status": "Complete Build",
     "type": "Solo Project",
     "technologies": "React Native",
@@ -26,9 +43,11 @@
     }
   },
   {
-    "id": 2,
     "title": "Hello Berlin 365",
-    "category": ["websites", "designs"],
+    "category": [
+      "websites",
+      "designs"
+    ],
     "status": "Complete Build",
     "type": "Solo Development",
     "technologies": "Next.js | Shadcn UI | Tailwind CSS",
@@ -39,9 +58,11 @@
     }
   },
   {
-    "id": 3,
     "title": "Shape Beats",
-    "category": ["applications", "games"],
+    "category": [
+      "applications",
+      "games"
+    ],
     "status": "Complete Build",
     "type": "Solo Project",
     "technologies": "React Native",
@@ -52,9 +73,10 @@
     }
   },
   {
-    "id": 4,
     "title": "Crypto Wiki App",
-    "category": ["applications"],
+    "category": [
+      "applications"
+    ],
     "status": "Complete Build",
     "type": "Solo Development",
     "technologies": "React Native | TypeScript | Firebase",
@@ -65,9 +87,10 @@
     }
   },
   {
-    "id": 5,
     "title": "Tinnitus Help App",
-    "category": ["applications"],
+    "category": [
+      "applications"
+    ],
     "status": "Complete Build",
     "type": "Solo Development",
     "technologies": "React Native | TypeScript | Firebase",
@@ -78,9 +101,10 @@
     }
   },
   {
-    "id": 6,
     "title": "Fungi vs Bacteria Mobile Game",
-    "category": ["games"],
+    "category": [
+      "games"
+    ],
     "status": "On Hold",
     "type": "Team Project",
     "technologies": "Unity | C# | Blender",
@@ -91,9 +115,10 @@
     }
   },
   {
-    "id": 7,
     "title": "Snowman Run Mobile Game",
-    "category": ["games"],
+    "category": [
+      "games"
+    ],
     "status": "Complete Build",
     "type": "Solo Development",
     "technologies": "Unity | C#",
@@ -104,9 +129,11 @@
     }
   },
   {
-    "id": 8,
     "title": "TheCrypto.Wiki",
-    "category": ["websites", "designs"],
+    "category": [
+      "websites",
+      "designs"
+    ],
     "status": "Complete Build",
     "type": "Solo Development",
     "technologies": "Next.js | React.js | API's",
@@ -117,9 +144,11 @@
     }
   },
   {
-    "id": 9,
     "title": "MyFitPhoto AI",
-    "category": ["websites", "applications"],
+    "category": [
+      "websites",
+      "applications"
+    ],
     "status": "Frontend + AI Integration",
     "type": "Team Project",
     "technologies": "React.js | Chakra UI",
@@ -129,9 +158,11 @@
     }
   },
   {
-    "id": 10,
     "title": "TinnitusHelp.me",
-    "category": ["websites", "designs"],
+    "category": [
+      "websites",
+      "designs"
+    ],
     "status": "Complete Build",
     "type": "Solo Development",
     "technologies": "Next.js | TypeScript | Material-UI",
@@ -142,9 +173,11 @@
     }
   },
   {
-    "id": 11,
     "title": "Clonings AI",
-    "category": ["applications", "websites"],
+    "category": [
+      "applications",
+      "websites"
+    ],
     "status": "Frontend",
     "type": "Team Project",
     "technologies": "React.js | Chakra UI",
@@ -155,9 +188,10 @@
     }
   },
   {
-    "id": 12,
     "title": "Cortextual AI Website",
-    "category": ["websites"],
+    "category": [
+      "websites"
+    ],
     "status": "Frontend",
     "type": "Solo Development",
     "technologies": "Wordpress",
@@ -167,9 +201,11 @@
     }
   },
   {
-    "id": 13,
     "title": "FashionSwap App",
-    "category": ["applications", "designs"],
+    "category": [
+      "applications",
+      "designs"
+    ],
     "status": "Design + Frontend",
     "type": "Team Project",
     "technologies": "Figma | React.js | Chakra UI",
@@ -180,9 +216,11 @@
     }
   },
   {
-    "id": 14,
     "title": "Inventory Management App",
-    "category": ["applications", "designs"],
+    "category": [
+      "applications",
+      "designs"
+    ],
     "status": "Design + Frontend",
     "type": "Team Project",
     "technologies": "Figma | React.js | Chakra UI",
@@ -193,9 +231,12 @@
     }
   },
   {
-    "id": 15,
     "title": "MyBestWishes AI",
-    "category": ["websites", "designs", "applications"],
+    "category": [
+      "websites",
+      "designs",
+      "applications"
+    ],
     "status": "Design + Frontend + AI Integration",
     "type": "Team Project",
     "technologies": "Figma | React.js | Chakra UI",
@@ -206,9 +247,12 @@
     }
   },
   {
-    "id": 16,
     "title": "MyWorkPhoto AI",
-    "category": ["websites", "designs", "applications"],
+    "category": [
+      "websites",
+      "designs",
+      "applications"
+    ],
     "status": "Design + Frontend + AI Integration",
     "type": "Team Project",
     "technologies": "Figma | React.js | Chakra UI",
@@ -219,9 +263,11 @@
     }
   },
   {
-    "id": 17,
     "title": "Ogno Marketing Dashboard",
-    "category": ["applications", "designs"],
+    "category": [
+      "applications",
+      "designs"
+    ],
     "status": "Complete Build",
     "type": "Solo Development",
     "technologies": "React.js | Strapi.js | MySQL",
@@ -232,9 +278,10 @@
     }
   },
   {
-    "id": 18,
     "title": "Bayer USA Health App",
-    "category": ["websites"],
+    "category": [
+      "websites"
+    ],
     "status": "Frontend",
     "type": "Team Project",
     "technologies": "Drupal | PHP | CSS",
@@ -244,9 +291,10 @@
     }
   },
   {
-    "id": 19,
     "title": "EnEmZet Online Store",
-    "category": ["websites"],
+    "category": [
+      "websites"
+    ],
     "status": "Complete Build",
     "type": "Solo Development",
     "technologies": "Next.js | TypeScript | MySQL",
@@ -257,9 +305,11 @@
     }
   },
   {
-    "id": 20,
     "title": "Timeazon Online Store",
-    "category": ["websites", "designs"],
+    "category": [
+      "websites",
+      "designs"
+    ],
     "status": "Complete Build",
     "type": "Solo Development",
     "technologies": "React.js | Node.js | MySQL | Sass",
@@ -270,9 +320,10 @@
     }
   },
   {
-    "id": 21,
     "title": "Weather App",
-    "category": ["applications"],
+    "category": [
+      "applications"
+    ],
     "status": "Frontend",
     "type": "Solo Development",
     "technologies": "JavaScript | API's | CSS",
@@ -283,9 +334,10 @@
     }
   },
   {
-    "id": 22,
     "title": "Pigletz Memory Game",
-    "category": ["games"],
+    "category": [
+      "games"
+    ],
     "status": "Frontend",
     "type": "Solo Development",
     "technologies": "JavaScript | CSS",
@@ -296,9 +348,10 @@
     }
   },
   {
-    "id": 23,
     "title": "Team Management Tool",
-    "category": ["applications"],
+    "category": [
+      "applications"
+    ],
     "status": "Complete Build",
     "type": "Solo Development",
     "technologies": "PHP | CSV Data | CSS",
@@ -309,9 +362,11 @@
     }
   },
   {
-    "id": 24,
     "title": "Personal Portfolio",
-    "category": ["websites", "designs"],
+    "category": [
+      "websites",
+      "designs"
+    ],
     "status": "Frontend",
     "type": "Solo Development",
     "technologies": "JavaScript | CSS | HTML",
@@ -322,9 +377,10 @@
     }
   },
   {
-    "id": 25,
     "title": "Quiz Time",
-    "category": ["games"],
+    "category": [
+      "games"
+    ],
     "status": "Frontend",
     "type": "Solo Development",
     "technologies": "PHP | CSS | HTML",
@@ -335,9 +391,10 @@
     }
   },
   {
-    "id": 26,
     "title": "BerliNEW Android App",
-    "category": ["applications"],
+    "category": [
+      "applications"
+    ],
     "status": "Complete Build",
     "type": "Solo Development",
     "technologies": "Wordpress | Android SDK",
