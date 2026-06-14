@@ -7,7 +7,7 @@
     "status": "Complete Build",
     "type": "Solo Project",
     "technologies": "React Native",
-    "image": "./assets/images/projects/coming-soon.jpeg",
+    "image": "./assets/images/projects/moment-tracker.png",
     "links": {
       "iosDisabled": true,
       "androidDisabled": true
