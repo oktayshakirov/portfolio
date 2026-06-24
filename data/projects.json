@@ -1,5 +1,18 @@
 [
   {
+    "title": "Online Pharmacy",
+    "category": [
+      "websites"
+    ],
+    "status": "In Development",
+    "type": "Solo Project",
+    "technologies": "Shopify | API's",
+    "image": "./assets/images/projects/coming-soon.jpeg",
+    "links": {
+      "previewDisabled": true
+    }
+  },
+  {
     "title": "Moment Tracker App",
     "category": [
       "applications"

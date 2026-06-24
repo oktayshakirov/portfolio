@@ -27,6 +27,13 @@ export const generateProjectHTML = (project) => {
         </a>
       `);
     }
+    if (links.previewDisabled) {
+      buttonLinks.push(`
+        <a href="#" class="disabled" aria-label="${title} preview coming soon" aria-disabled="true">
+          <ion-icon name="eye-outline"></ion-icon> Preview
+        </a>
+      `);
+    }
     if (links.ios) {
       buttonLinks.push(`
         <a href="${links.ios}" aria-label="Download ${title} on iOS" target="_blank" rel="noopener noreferrer">
