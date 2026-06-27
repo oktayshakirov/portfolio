@@ -18,7 +18,7 @@
     "technologies": "React Native",
     "image": "./assets/images/projects/moment-tracker.png",
     "links": {
-      "iosDisabled": true,
+      "ios": "https://apps.apple.com/de/app/moment-tracker-life-events/id6777827650?l=en-GB",
       "androidDisabled": true
     }
   },
