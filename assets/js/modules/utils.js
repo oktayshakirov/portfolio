@@ -12,24 +12,6 @@ export const elementToggle = (elem) => {
 };
 
 /**
- * Calculate age from birth date
- * @param {string} birthDate - Birth date in YYYY-MM-DD format
- * @returns {number} Age in years
- */
-export const calculateAge = (birthDate) => {
-  const birth = new Date(birthDate);
-  const today = new Date();
-  let age = today.getFullYear() - birth.getFullYear();
-  const monthDiff = today.getMonth() - birth.getMonth();
-
-  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
-    age--;
-  }
-
-  return age;
-};
-
-/**
  * Copy text to clipboard using modern Clipboard API
  * @param {string} text - Text to copy
  * @returns {Promise<boolean>} Success status

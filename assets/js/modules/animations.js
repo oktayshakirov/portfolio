@@ -161,15 +161,3 @@ export const initTechScrolling = () => {
   list.addEventListener("mouseenter", stopScrolling);
   list.addEventListener("mouseleave", startScrolling);
 };
-
-/**
- * Initialize age counter
- */
-export const initAgeCounter = async () => {
-  const ageElement = document.getElementById("age");
-  if (!ageElement) return;
-
-  const { calculateAge } = await import("./utils.js");
-  const age = calculateAge("1994-07-01");
-  ageElement.textContent = `${age} years old`;
-};
