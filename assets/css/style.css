@@ -2254,16 +2254,36 @@ main {
 /* Pagination Buttons */
 .pagination-box {
   display: flex;
+  justify-content: space-between;
+}
+
+.pagination-box--next-only {
   justify-content: flex-end;
-  padding-right: 21px;
+}
+
+.pagination-box--prev-only {
+  justify-content: flex-start;
 }
 
 .pagination-button {
-  padding: 10px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
   background-color: hsla(0, 0%, 23%, 0.214);
-  color: var(--orange-yellow-crayola);
+  color: var(--light-gray);
   cursor: pointer;
   border-radius: 10px;
+  transition: var(--transition-1);
+}
+
+.pagination-button:hover,
+.pagination-button:focus {
+  color: var(--orange-yellow-crayola);
+}
+
+.pagination-button ion-icon {
+  font-size: 22px;
 }
 
 .store-badges-container {
