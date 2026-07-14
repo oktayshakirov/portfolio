@@ -559,10 +559,12 @@
         <div class="activity-tooltip" style="display: none;"></div>
       </section>
 
-          <!-- Next Page -->
+          <!-- Pagination -->
           <br>
-          <div class="pagination-box">
-            <button class="pagination-button" data-nav-link data-target-section="projects">Next ></button>
+          <div class="pagination-box pagination-box--next-only">
+            <button class="pagination-button" data-nav-link data-target-section="projects" aria-label="Next section">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </button>
           </div>
 
       </article>
@@ -606,9 +608,14 @@
             <!-- Projects loaded dynamically from data/projects.json -->
           </ul>
 
-          <!-- Next Page -->
+          <!-- Pagination -->
           <div class="pagination-box">
-            <button class="pagination-button" data-nav-link data-target-section="sideworks">Next ></button>
+            <button class="pagination-button" data-nav-link data-target-section="about" aria-label="Previous section">
+              <ion-icon name="chevron-back-outline"></ion-icon>
+            </button>
+            <button class="pagination-button" data-nav-link data-target-section="sideworks" aria-label="Next section">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </button>
           </div>
 
         </section>
@@ -632,9 +639,14 @@
           </ul>
         </section>
 
-        <!-- Next Page -->
+        <!-- Pagination -->
         <div class="pagination-box">
-          <button class="pagination-button" data-nav-link data-target-section="certificates">Next ></button>
+          <button class="pagination-button" data-nav-link data-target-section="projects" aria-label="Previous section">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+          </button>
+          <button class="pagination-button" data-nav-link data-target-section="certificates" aria-label="Next section">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </button>
         </div>
 
       </article>
@@ -651,9 +663,14 @@
         <br><br>
         <!-- Certificates loaded dynamically from data/certificates.json -->
 
-        <!-- Next Page -->
+        <!-- Pagination -->
           <div class="pagination-box">
-            <button class="pagination-button" data-nav-link data-target-section="contact">Next ></button>
+            <button class="pagination-button" data-nav-link data-target-section="sideworks" aria-label="Previous section">
+              <ion-icon name="chevron-back-outline"></ion-icon>
+            </button>
+            <button class="pagination-button" data-nav-link data-target-section="contact" aria-label="Next section">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </button>
           </div>
 
         </section>
@@ -738,10 +755,12 @@
 
         </div>
 
-        <!-- Next Page -->
+        <!-- Pagination -->
         <br>
-        <div class="pagination-box">
-          <button class="pagination-button" data-nav-link data-target-section="sideworks">Next ></button>
+        <div class="pagination-box pagination-box--prev-only">
+          <button class="pagination-button" data-nav-link data-target-section="certificates" aria-label="Previous section">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+          </button>
         </div>
 
       </article>
