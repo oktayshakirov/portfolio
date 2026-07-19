@@ -1,21 +1,101 @@
 [
-  { "id": 1, "name": "HTML", "image": "./assets/images/html.png", "alt": "HTML" },
+  {
+    "id": 1,
+    "name": "HTML",
+    "image": "./assets/images/html.png",
+    "alt": "HTML"
+  },
   { "id": 2, "name": "CSS", "image": "./assets/images/css.png", "alt": "CSS" },
-  { "id": 3, "name": "JavaScript", "image": "./assets/images/java-script.png", "alt": "JavaScript" },
-  { "id": 4, "name": "TypeScript", "image": "./assets/images/typescript.png", "alt": "TypeScript" },
-  { "id": 5, "name": "React", "image": "./assets/images/react.png", "alt": "React" },
-  { "id": 6, "name": "React Native", "image": "./assets/images/react-native.png", "alt": "React Native" },
-  { "id": 7, "name": "Next", "image": "./assets/images/next.png", "alt": "Next" },
-  { "id": 8, "name": "Node", "image": "./assets/images/node.png", "alt": "Node" },
-  { "id": 9, "name": "Claude", "image": "./assets/images/claude.webp", "alt": "Claude" },
-  { "id": 10, "name": "OpenAI", "image": "./assets/images/openai.webp", "alt": "OpenAI" },
+  {
+    "id": 3,
+    "name": "JavaScript",
+    "image": "./assets/images/java-script.png",
+    "alt": "JavaScript"
+  },
+  {
+    "id": 4,
+    "name": "TypeScript",
+    "image": "./assets/images/typescript.png",
+    "alt": "TypeScript"
+  },
+  {
+    "id": 5,
+    "name": "React Native",
+    "image": "./assets/images/react-native.png",
+    "alt": "React Native"
+  },
+  {
+    "id": 6,
+    "name": "React",
+    "image": "./assets/images/react.png",
+    "alt": "React"
+  },
+  {
+    "id": 7,
+    "name": "Next",
+    "image": "./assets/images/next.png",
+    "alt": "Next"
+  },
+  {
+    "id": 8,
+    "name": "Node",
+    "image": "./assets/images/node.png",
+    "alt": "Node"
+  },
+  {
+    "id": 9,
+    "name": "Claude",
+    "image": "./assets/images/claude.png",
+    "alt": "Claude"
+  },
+  {
+    "id": 10,
+    "name": "OpenAI",
+    "image": "./assets/images/openai.webp",
+    "alt": "OpenAI"
+  },
   { "id": 11, "name": "n8n", "image": "./assets/images/n8n.png", "alt": "n8n" },
-  { "id": 12, "name": "MySQL", "image": "./assets/images/mysql.png", "alt": "MySQL" },
-  { "id": 13, "name": "Shopify", "image": "./assets/images/shopify.png", "alt": "Shopify" },
-  { "id": 14, "name": "Linux", "image": "./assets/images/linux.png", "alt": "Linux" },
-  { "id": 15, "name": "Wordpress", "image": "./assets/images/wordpress.webp", "alt": "Wordpress" },
+  {
+    "id": 12,
+    "name": "MySQL",
+    "image": "./assets/images/mysql.png",
+    "alt": "MySQL"
+  },
+  {
+    "id": 13,
+    "name": "Shopify",
+    "image": "./assets/images/shopify.png",
+    "alt": "Shopify"
+  },
+  {
+    "id": 14,
+    "name": "Linux",
+    "image": "./assets/images/linux.png",
+    "alt": "Linux"
+  },
+  {
+    "id": 15,
+    "name": "Wordpress",
+    "image": "./assets/images/wordpress.webp",
+    "alt": "Wordpress"
+  },
   { "id": 16, "name": "Git", "image": "./assets/images/git.png", "alt": "Git" },
-  { "id": 17, "name": "Docker", "image": "./assets/images/docker.png", "alt": "Docker" },
-  { "id": 18, "name": "Unity", "image": "./assets/images/unity.png", "alt": "Unity" },
-  { "id": 19, "name": "Figma", "image": "./assets/images/figma.png", "alt": "Figma" }
+  {
+    "id": 17,
+    "name": "Docker",
+    "image": "./assets/images/docker.png",
+    "alt": "Docker"
+  },
+  {
+    "id": 18,
+    "name": "Unity",
+    "image": "./assets/images/unity.png",
+    "alt": "Unity"
+  },
+  {
+    "id": 19,
+    "name": "Figma",
+    "image": "./assets/images/figma.png",
+    "alt": "Figma"
+  }
 ]
