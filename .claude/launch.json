@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "portfolio",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8123"],
+      "runtimeExecutable": "npx.cmd",
+      "runtimeArgs": ["-y", "http-server", ".", "-p", "8123", "-c-1"],
       "port": 8123
     }
   ]
