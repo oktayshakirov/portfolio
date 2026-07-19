@@ -33,7 +33,7 @@ const showLoadingState = (container, type = "projects") => {
     `,
       )
       .join(""),
-    technologies: Array(17)
+    technologies: Array(19)
       .fill(0)
       .map(
         () => `
@@ -96,6 +96,7 @@ const showErrorState = (
 export const loadFilters = async () => {
   const filterCategories = [
     "All",
+    "AI",
     "Websites",
     "Applications",
     "Games",

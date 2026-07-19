@@ -33,10 +33,14 @@ export const initStructuredData = () => {
       "TypeScript",
       "React",
       "React Native",
+      "Next.js",
       "Node.js",
-      "PHP",
+      "AI Integration",
+      "Workflow Automation",
+      "Tailwind CSS",
       "MySQL"
-    ]
+    ],
+    "knowsLanguage": ["English", "German", "Bulgarian", "Turkish"]
   };
 
   const script = document.createElement("script");

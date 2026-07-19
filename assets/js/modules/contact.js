@@ -64,18 +64,48 @@ export const initAboutTextToggle = () => {
 };
 
 /**
+ * Load the Calendly widget assets on demand (first click) instead of on page load
+ * @returns {Promise<void>}
+ */
+let calendlyLoader = null;
+const loadCalendlyAssets = () => {
+  if (calendlyLoader) return calendlyLoader;
+
+  calendlyLoader = new Promise((resolve, reject) => {
+    const css = document.createElement("link");
+    css.rel = "stylesheet";
+    css.href = "https://assets.calendly.com/assets/external/widget.css";
+    document.head.appendChild(css);
+
+    const script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    script.onload = resolve;
+    script.onerror = reject;
+    document.head.appendChild(script);
+  });
+
+  return calendlyLoader;
+};
+
+/**
  * Initialize Calendly link
  */
 export const initCalendly = () => {
   const calendlyLink = document.getElementById("calendly-link");
   if (!calendlyLink) return;
 
-  calendlyLink.addEventListener("click", (e) => {
+  calendlyLink.addEventListener("click", async (e) => {
     e.preventDefault();
-    if (typeof Calendly !== "undefined") {
-      Calendly.initPopupWidget({
-        url: "https://calendly.com/oktayshakirov/30min?hide_landing_page_details=1&hide_gdpr_banner=1"
-      });
+    try {
+      await loadCalendlyAssets();
+      if (typeof Calendly !== "undefined") {
+        Calendly.initPopupWidget({
+          url: "https://calendly.com/oktayshakirov/30min?hide_landing_page_details=1&hide_gdpr_banner=1"
+        });
+      }
+    } catch (error) {
+      console.error("Failed to load Calendly widget:", error);
     }
   });
 };
