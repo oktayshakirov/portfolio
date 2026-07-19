@@ -24,8 +24,10 @@ const updateActiveState = (targetSection) => {
     link.classList.toggle("active", linkTarget === targetSection);
   });
 
-  // Scroll to top when navigation occurs
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  // Scroll to top instantly on page switch. A smooth scroll here runs while
+  // the article swap changes the document height, which makes in-app browsers
+  // (Instagram/Facebook WKWebView) mispaint the fixed bottom navbar mid-screen.
+  window.scrollTo(0, 0);
 };
 
 /**

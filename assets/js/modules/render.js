@@ -34,6 +34,13 @@ export const generateProjectHTML = (project) => {
         </a>
       `);
     }
+    if (links.previewShutDown) {
+      buttonLinks.push(`
+        <a href="#" class="disabled" aria-label="${title} is no longer online" aria-disabled="true">
+          <ion-icon name="eye-off-outline"></ion-icon> Shut Down
+        </a>
+      `);
+    }
     if (links.ios) {
       buttonLinks.push(`
         <a href="${links.ios}" aria-label="Download ${title} on iOS" target="_blank" rel="noopener noreferrer">
@@ -151,7 +158,7 @@ export const generateFilterSelectHTML = (categories) => {
 export const generateTechnologyHTML = (tech) => {
   return `
     <li class="technologies-item">
-      <img src="${tech.image}" alt="${tech.alt}" id="${tech.id}">
+      <img src="${tech.image}" alt="${tech.alt}" id="${tech.id}" loading="lazy">
     </li>
   `;
 };
@@ -167,7 +174,7 @@ export const generateCertificateHTML = (cert) => {
       <h4 class="h4 timeline-item-title">${cert.title}</h4>
       <p class="timeline-text">${cert.issuer}</p>
       <div class="certificate-container">
-        <img src="${cert.image}" alt="${cert.title} Certificate">
+        <img src="${cert.image}" alt="${cert.title} Certificate" loading="lazy">
       </div>
     </li>
   `;

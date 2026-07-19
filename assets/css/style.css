@@ -156,11 +156,14 @@ textarea {
 
 html {
   font-family: var(--ff-poppins);
-  background: #0a0a0f;
+  background-color: #0a0a0f;
+  background-image: var(--sha-background);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 body {
-  background: var(--sha-background);
+  background: transparent;
 }
 
 body.dark-mode {
@@ -1111,6 +1114,42 @@ main {
   background: var(--text-gradient-yellow);
   height: 100%;
   border-radius: inherit;
+}
+
+/**
+ * Highlights column (shown next to human languages)
+ */
+
+.highlights-list {
+  padding: 20px;
+}
+
+.highlights-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.highlights-item:not(:last-child) {
+  margin-bottom: 18px;
+}
+
+.highlights-item ion-icon {
+  color: var(--orange-yellow-crayola);
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.highlights-text {
+  color: var(--light-gray);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-300);
+  line-height: 1.4;
+}
+
+.highlights-value {
+  color: var(--orange-yellow-crayola);
+  font-weight: var(--fw-500);
 }
 
 /*-----------------------------------*\
