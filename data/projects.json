@@ -39,11 +39,11 @@
     "title": "Hello Berlin 365",
     "category": ["websites", "designs"],
     "status": "Complete Build",
-    "type": "Solo Development",
+    "type": "Solo Project",
     "technologies": "Next.js | Shadcn UI | Tailwind CSS",
     "image": "./assets/images/projects/helloberlin365.webp",
     "links": {
-      "preview": "https://www.helloberlin365.com",
+      "preview": "https://helloberlin365.vercel.app",
       "github": "https://github.com/oktayshakirov/helloberlin365"
     }
   },
@@ -63,7 +63,7 @@
     "title": "Crypto Wiki App",
     "category": ["applications"],
     "status": "Complete Build",
-    "type": "Solo Development",
+    "type": "Solo Project",
     "technologies": "React Native | TypeScript | Firebase",
     "image": "./assets/images/projects/cryptowiki-app.webp",
     "links": {
@@ -75,7 +75,7 @@
     "title": "Tinnitus Help App",
     "category": ["applications"],
     "status": "Complete Build",
-    "type": "Solo Development",
+    "type": "Solo Project",
     "technologies": "React Native | TypeScript | Firebase",
     "image": "./assets/images/projects/tinnitushelp-app.webp",
     "links": {
@@ -99,7 +99,7 @@
     "title": "Snowman Run Mobile Game",
     "category": ["games"],
     "status": "Complete Build",
-    "type": "Solo Development",
+    "type": "Solo Project",
     "technologies": "Unity | C#",
     "image": "./assets/images/projects/snowman-run.webp",
     "links": {
@@ -111,7 +111,7 @@
     "title": "TheCrypto.Wiki",
     "category": ["websites", "designs"],
     "status": "Complete Build",
-    "type": "Solo Development",
+    "type": "Solo Project",
     "technologies": "Next.js | React.js | API's",
     "image": "./assets/images/projects/crypto-wiki.webp",
     "links": {
@@ -134,7 +134,7 @@
     "title": "TinnitusHelp.me",
     "category": ["websites", "designs"],
     "status": "Complete Build",
-    "type": "Solo Development",
+    "type": "Solo Project",
     "technologies": "Next.js | TypeScript | Material-UI",
     "image": "./assets/images/projects/tinnitus-blog.webp",
     "links": {
@@ -158,7 +158,7 @@
     "title": "Cortextual AI Website",
     "category": ["websites", "ai"],
     "status": "Frontend",
-    "type": "Solo Development",
+    "type": "Solo Project",
     "technologies": "Wordpress",
     "image": "./assets/images/projects/cortextual.webp",
     "links": {
@@ -217,7 +217,7 @@
     "title": "Ogno Marketing Dashboard",
     "category": ["applications", "designs"],
     "status": "Complete Build",
-    "type": "Solo Development",
+    "type": "Solo Project",
     "technologies": "React.js | Strapi.js | MySQL",
     "image": "./assets/images/projects/ogno-dashboard.webp",
     "links": {
@@ -240,7 +240,7 @@
     "title": "EnEmZet Online Store",
     "category": ["websites"],
     "status": "Complete Build",
-    "type": "Solo Development",
+    "type": "Solo Project",
     "technologies": "Next.js | TypeScript | MySQL",
     "image": "./assets/images/projects/enemzet.webp",
     "links": {
@@ -252,7 +252,7 @@
     "title": "Timeazon Online Store",
     "category": ["websites", "designs"],
     "status": "Complete Build",
-    "type": "Solo Development",
+    "type": "Solo Project",
     "technologies": "React.js | Node.js | MySQL | Sass",
     "image": "./assets/images/projects/watch_store.webp",
     "links": {
@@ -264,7 +264,7 @@
     "title": "Weather App",
     "category": ["applications"],
     "status": "Frontend",
-    "type": "Solo Development",
+    "type": "Solo Project",
     "technologies": "JavaScript | API's | CSS",
     "image": "./assets/images/projects/weather-app.webp",
     "links": {
@@ -276,7 +276,7 @@
     "title": "Pigletz Memory Game",
     "category": ["games"],
     "status": "Frontend",
-    "type": "Solo Development",
+    "type": "Solo Project",
     "technologies": "JavaScript | CSS",
     "image": "./assets/images/projects/pigletz-matching.webp",
     "links": {
@@ -288,7 +288,7 @@
     "title": "Team Management Tool",
     "category": ["applications"],
     "status": "Complete Build",
-    "type": "Solo Development",
+    "type": "Solo Project",
     "technologies": "PHP | CSV Data | CSS",
     "image": "./assets/images/projects/team-manager.webp",
     "links": {
@@ -300,7 +300,7 @@
     "title": "Personal Portfolio",
     "category": ["websites", "designs"],
     "status": "Frontend",
-    "type": "Solo Development",
+    "type": "Solo Project",
     "technologies": "JavaScript | CSS | HTML",
     "image": "./assets/images/projects/portfolio.webp",
     "links": {
@@ -312,7 +312,7 @@
     "title": "Quiz Time",
     "category": ["games"],
     "status": "Frontend",
-    "type": "Solo Development",
+    "type": "Solo Project",
     "technologies": "PHP | CSS | HTML",
     "image": "./assets/images/projects/quiz.webp",
     "links": {
@@ -324,7 +324,7 @@
     "title": "BerliNEW Android App",
     "category": ["applications"],
     "status": "Complete Build",
-    "type": "Solo Development",
+    "type": "Solo Project",
     "technologies": "Wordpress | Android SDK",
     "image": "./assets/images/projects/berlinew.webp",
     "links": {
