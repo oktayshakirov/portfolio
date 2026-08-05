@@ -14,22 +14,22 @@
   {
     "title": "Workflow Automation & AI",
     "categories": ["Workflow Automation", "AI Integration"],
-    "description": "I design automation workflows using n8n, OpenAI and Claude Code for SEO content writing, image generation and automated video editing in Final Cut Pro. My systems create and publish short and long form content across all platforms automatically.",
+    "description": "I design automation workflows with n8n, OpenAI and Claude Code. One system cuts video montages for YouTube and TikTok in Final Cut Pro, the others research topics, write SEO optimized articles, format them and pick the right images before publishing.",
     "image": "./assets/images/projects/n8n.webp",
     "alt": "Automation Workflows",
     "links": {
       "github": [
         {
-          "url": "https://github.com/oktayshakirov/crypto-wiki-automation",
-          "label": "Content"
-        },
-        {
           "url": "https://github.com/oktayshakirov/drone-edit-automation",
           "label": "Video Editing"
         },
         {
+          "url": "https://github.com/oktayshakirov/crypto-wiki-automation",
+          "label": "Article Writing"
+        },
+        {
           "url": "https://github.com/oktayshakirov/tinnitus-help-automation",
-          "label": "Tinnitus"
+          "label": "Article Writing 2"
         }
       ]
     }
