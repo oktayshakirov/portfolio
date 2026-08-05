@@ -14,11 +14,24 @@
   {
     "title": "Workflow Automation & AI",
     "categories": ["Workflow Automation", "AI Integration"],
-    "description": "I design automation workflows using n8n that integrate Claude, OpenAI, Gemini and other AI models for SEO content writing, image/video generation and social media sharing. My systems automatically generate and distribute content across all platforms.",
+    "description": "I design automation workflows using n8n, OpenAI and Claude Code for SEO content writing, image generation and automated video editing in Final Cut Pro. My systems create and publish short and long form content across all platforms automatically.",
     "image": "./assets/images/projects/n8n.webp",
     "alt": "Automation Workflows",
     "links": {
-      "github": "https://github.com/oktayshakirov/crypto-wiki-automation"
+      "github": [
+        {
+          "url": "https://github.com/oktayshakirov/crypto-wiki-automation",
+          "label": "Content"
+        },
+        {
+          "url": "https://github.com/oktayshakirov/drone-edit-automation",
+          "label": "Video Editing"
+        },
+        {
+          "url": "https://github.com/oktayshakirov/tinnitus-help-automation",
+          "label": "Tinnitus"
+        }
+      ]
     }
   },
   {
