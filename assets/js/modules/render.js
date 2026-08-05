@@ -216,11 +216,20 @@ export const generateSideworkHTML = (sidework) => {
       `);
     }
     if (links.github) {
-      buttonLinks.push(`
-        <a href="${links.github}" aria-label="View ${title} on GitHub" target="_blank" rel="noopener noreferrer">
-          <ion-icon name="logo-github"></ion-icon> GitHub
+      const githubLinks = Array.isArray(links.github)
+        ? links.github
+        : [{ url: links.github }];
+
+      githubLinks.forEach(({ url, label }) => {
+        const text = label ? `GitHub: ${label}` : "GitHub";
+        buttonLinks.push(`
+        <a href="${url}" aria-label="View ${title}${
+          label ? ` ${label}` : ""
+        } on GitHub" target="_blank" rel="noopener noreferrer">
+          <ion-icon name="logo-github"></ion-icon> ${text}
         </a>
       `);
+      });
     }
     if (links.instagram) {
       buttonLinks.push(`
