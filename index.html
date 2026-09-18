@@ -43,6 +43,7 @@
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/starry-night.css">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,6 +59,17 @@
 </head>
 
 <body class="preloader-active">
+
+  <div class="starry-sky" aria-hidden="true">
+    <div class="stars stars-sm"></div>
+    <div class="stars stars-md"></div>
+    <div class="stars stars-lg"></div>
+  </div>
+  <div class="shooting-sky" aria-hidden="true">
+    <span class="shooting-star" style="--top:10%;--left:75%;--cycle:14s;--delay:0.4s"></span>
+    <span class="shooting-star" style="--top:30%;--left:45%;--cycle:19s;--delay:6s"></span>
+    <span class="shooting-star" style="--top:5%;--left:30%;--cycle:25s;--delay:12s"></span>
+  </div>
 
   <div class="site-preloader" id="site-preloader" aria-hidden="true">
     <div class="site-preloader-spinner" role="status" aria-label="Loading website"></div>
