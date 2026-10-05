@@ -32,8 +32,7 @@ import {
 /**
  * Hide the initial page preloader
  */
-const PRELOADER_MIN_VISIBLE_MS = 900;
-const preloaderShownAt = performance.now();
+const PRELOADER_MAX_VISIBLE_MS = 1000;
 
 const hidePreloader = () => {
   const preloader = document.getElementById("site-preloader");
@@ -46,15 +45,6 @@ const hidePreloader = () => {
   window.setTimeout(() => {
     preloader.remove();
   }, 400);
-};
-
-/**
- * Ensure preloader remains visible long enough for at least one spin.
- */
-const hidePreloaderWithMinimumDelay = () => {
-  const elapsed = performance.now() - preloaderShownAt;
-  const remaining = Math.max(0, PRELOADER_MIN_VISIBLE_MS - elapsed);
-  window.setTimeout(hidePreloader, remaining);
 };
 
 /**
@@ -117,11 +107,11 @@ const init = () => {
   });
 };
 
-// Hide preloader when all critical page resources are loaded.
-window.addEventListener("load", hidePreloaderWithMinimumDelay);
+// Hide preloader as soon as the page has loaded.
+window.addEventListener("load", hidePreloader);
 
-// Fallback in case load is delayed by third-party resources.
-window.setTimeout(hidePreloaderWithMinimumDelay, 2500);
+// Never keep visitors waiting longer than this, even on slow connections.
+window.setTimeout(hidePreloader, PRELOADER_MAX_VISIBLE_MS);
 
 // Initialize when DOM is ready
 if (document.readyState === "loading") {

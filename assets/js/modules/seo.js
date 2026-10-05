@@ -11,13 +11,13 @@ export const initStructuredData = () => {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Oktay Shakirov",
-    "jobTitle": "Full-Stack Software Developer",
+    "jobTitle": "Full-Stack & Mobile Developer",
     "url": "https://oktayshakirov.com",
     "sameAs": [
       "https://github.com/oktayshakirov",
       "https://www.linkedin.com/in/oktayshakirov",
       "https://www.instagram.com/oktay.shakirov/",
-      "https://twitter.com/oktayshakirov"
+      "https://x.com/oktayshakirov"
     ],
     "address": {
       "@type": "PostalAddress",
@@ -35,10 +35,12 @@ export const initStructuredData = () => {
       "React Native",
       "Next.js",
       "Node.js",
+      "PHP",
+      "MySQL",
+      "Unity",
       "AI Integration",
       "Workflow Automation",
-      "Tailwind CSS",
-      "MySQL"
+      "n8n"
     ],
     "knowsLanguage": ["English", "German", "Bulgarian", "Turkish"]
   };

@@ -26,7 +26,7 @@ const filterProjects = (selectedValue) => {
 export const initProjectFilter = () => {
   const select = document.querySelector("[data-select]");
   const selectItems = document.querySelectorAll("[data-select-item]");
-  const selectValue = document.querySelector("[data-selecct-value]");
+  const selectValue = document.querySelector("[data-select-value]");
   const filterBtns = document.querySelectorAll("[data-filter-btn]");
 
   if (!select || !selectValue) {
