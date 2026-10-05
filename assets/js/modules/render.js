@@ -4,92 +4,108 @@
  */
 
 /**
+ * Generate the link buttons of a project (preview, stores, GitHub, Figma)
+ * @param {string} title - Project title
+ * @param {Object} links - Project links
+ * @returns {string} HTML string
+ */
+const generateProjectButtonsHTML = (title, links) => {
+  if (!links) return "";
+
+  const buttonLinks = [];
+
+  if (links.preview) {
+    buttonLinks.push(`
+      <a href="${links.preview}" aria-label="Preview ${title}" target="_blank" rel="noopener noreferrer">
+        <ion-icon name="eye-outline"></ion-icon> Preview
+      </a>
+    `);
+  }
+  if (links.previewDisabled) {
+    buttonLinks.push(`
+      <a href="#" class="disabled" aria-label="${title} preview coming soon" aria-disabled="true">
+        <ion-icon name="eye-outline"></ion-icon> Preview
+      </a>
+    `);
+  }
+  if (links.previewShutDown) {
+    buttonLinks.push(`
+      <a href="#" class="disabled" aria-label="${title} is no longer online" aria-disabled="true">
+        <ion-icon name="eye-off-outline"></ion-icon> Shut Down
+      </a>
+    `);
+  }
+  if (links.ios) {
+    buttonLinks.push(`
+      <a href="${links.ios}" aria-label="Download ${title} on iOS" target="_blank" rel="noopener noreferrer">
+        <ion-icon name="logo-apple"></ion-icon> iPhone
+      </a>
+    `);
+  }
+  if (links.iosDisabled) {
+    buttonLinks.push(`
+      <a href="#" class="disabled" aria-label="${title} on iOS coming soon" aria-disabled="true">
+        <ion-icon name="logo-apple"></ion-icon> iPhone
+      </a>
+    `);
+  }
+  if (links.android) {
+    buttonLinks.push(`
+      <a href="${links.android}" aria-label="Download ${title} on Android" target="_blank" rel="noopener noreferrer">
+        <ion-icon name="logo-android"></ion-icon> Android
+      </a>
+    `);
+  }
+  if (links.androidDisabled) {
+    buttonLinks.push(`
+      <a href="#" class="disabled" aria-label="${title} on Android coming soon" aria-disabled="true">
+        <ion-icon name="logo-android"></ion-icon> Android
+      </a>
+    `);
+  }
+  if (links.github) {
+    buttonLinks.push(`
+      <a href="${links.github}" aria-label="View ${title} on GitHub" target="_blank" rel="noopener noreferrer">
+        <ion-icon name="logo-github"></ion-icon> GitHub
+      </a>
+    `);
+  }
+  if (links.figma) {
+    buttonLinks.push(`
+      <a href="${links.figma}" aria-label="View ${title} design on Figma" target="_blank" rel="noopener noreferrer">
+        <ion-icon name="logo-figma"></ion-icon> Figma
+      </a>
+    `);
+  }
+
+  return buttonLinks.length > 0
+    ? `<div class="project-buttons">${buttonLinks.join("")}</div>`
+    : "";
+};
+
+/**
  * Generate project HTML from project data
  * @param {Object} project - Project data object
  * @returns {string} HTML string
  */
 export const generateProjectHTML = (project) => {
-  const { title, category, status, type, context, technologies, image, links } =
-    project;
+  const {
+    title,
+    description,
+    category,
+    status,
+    type,
+    context,
+    technologies,
+    image,
+    links,
+  } = project;
 
   const categoryString = category.join(" ");
   const hasLink =
     links?.preview || links?.ios || links?.android || links?.github;
 
-  let buttonsHTML = "";
-  if (links) {
-    const buttonLinks = [];
-
-    if (links.preview) {
-      buttonLinks.push(`
-        <a href="${links.preview}" aria-label="Preview ${title}" target="_blank" rel="noopener noreferrer">
-          <ion-icon name="eye-outline"></ion-icon> Preview
-        </a>
-      `);
-    }
-    if (links.previewDisabled) {
-      buttonLinks.push(`
-        <a href="#" class="disabled" aria-label="${title} preview coming soon" aria-disabled="true">
-          <ion-icon name="eye-outline"></ion-icon> Preview
-        </a>
-      `);
-    }
-    if (links.previewShutDown) {
-      buttonLinks.push(`
-        <a href="#" class="disabled" aria-label="${title} is no longer online" aria-disabled="true">
-          <ion-icon name="eye-off-outline"></ion-icon> Shut Down
-        </a>
-      `);
-    }
-    if (links.ios) {
-      buttonLinks.push(`
-        <a href="${links.ios}" aria-label="Download ${title} on iOS" target="_blank" rel="noopener noreferrer">
-          <ion-icon name="logo-apple"></ion-icon> iPhone
-        </a>
-      `);
-    }
-    if (links.iosDisabled) {
-      buttonLinks.push(`
-        <a href="#" class="disabled" aria-label="${title} on iOS coming soon" aria-disabled="true">
-          <ion-icon name="logo-apple"></ion-icon> iPhone
-        </a>
-      `);
-    }
-    if (links.android) {
-      buttonLinks.push(`
-        <a href="${links.android}" aria-label="Download ${title} on Android" target="_blank" rel="noopener noreferrer">
-          <ion-icon name="logo-android"></ion-icon> Android
-        </a>
-      `);
-    }
-    if (links.androidDisabled) {
-      buttonLinks.push(`
-        <a href="#" class="disabled" aria-label="${title} on Android coming soon" aria-disabled="true">
-          <ion-icon name="logo-android"></ion-icon> Android
-        </a>
-      `);
-    }
-    if (links.github) {
-      buttonLinks.push(`
-        <a href="${links.github}" aria-label="View ${title} on GitHub" target="_blank" rel="noopener noreferrer">
-          <ion-icon name="logo-github"></ion-icon> GitHub
-        </a>
-      `);
-    }
-    if (links.figma) {
-      buttonLinks.push(`
-        <a href="${links.figma}" aria-label="View ${title} design on Figma" target="_blank" rel="noopener noreferrer">
-          <ion-icon name="logo-figma"></ion-icon> Figma
-        </a>
-      `);
-    }
-
-    if (buttonLinks.length > 0) {
-      buttonsHTML = `<div class="project-buttons">${buttonLinks.join(
-        "",
-      )}</div>`;
-    }
-  }
+  const buttonsHTML = generateProjectButtonsHTML(title, links);
 
   const imageHTML = hasLink
     ? `<a href="${
@@ -107,11 +123,36 @@ export const generateProjectHTML = (project) => {
     <li class="project-item active" data-filter-item data-category="${categoryString}">
       ${imageHTML}
       <h3 class="project-title">${title}</h3>
+      ${description ? `<p class="project-description">${description}</p>` : ""}
       <p class="project-category">${status}</p>
       <p class="project-category">${type}${context ? ` · ${context}` : ""}</p>
       <p class="project-development">${technologies}</p>
       ${buttonsHTML}
     </li>
+  `;
+};
+
+/**
+ * Generate the "Currently Building" card for a project in development
+ * @param {Object} project - Project data object
+ * @returns {string} HTML string
+ */
+export const generateCurrentlyBuildingHTML = (project) => {
+  const { title, description, technologies, image, links } = project;
+
+  return `
+    <article class="building content-card">
+      <figure class="building-img">
+        <img src="${image}" loading="lazy" alt="${title} artwork">
+      </figure>
+      <div class="building-content">
+        <p class="building-badge"><span class="building-dot" aria-hidden="true"></span> Currently Building</p>
+        <h3 class="h3 building-title">${title}</h3>
+        ${description ? `<p class="building-text">${description}</p>` : ""}
+        <p class="building-tech">${technologies}</p>
+        ${generateProjectButtonsHTML(title, links)}
+      </div>
+    </article>
   `;
 };
 

@@ -32,15 +32,15 @@
   },
   {
     "id": 7,
-    "name": "Next",
+    "name": "Next.js",
     "image": "./assets/images/next.png",
-    "alt": "Next"
+    "alt": "Next.js"
   },
   {
     "id": 8,
-    "name": "Node",
+    "name": "Node.js",
     "image": "./assets/images/node.png",
-    "alt": "Node"
+    "alt": "Node.js"
   },
   { "id": 9, "name": "PHP", "image": "./assets/images/php.png", "alt": "PHP" },
   {

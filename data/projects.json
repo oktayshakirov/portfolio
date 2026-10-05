@@ -1,6 +1,7 @@
 [
   {
     "title": "Moment Tracker App",
+    "description": "Turns meaningful dates into live countdowns and \"days since\" trackers for life events.",
     "category": ["applications"],
     "status": "Complete Build",
     "type": "Solo Project",
@@ -13,6 +14,7 @@
   },
   {
     "title": "Drone Pal",
+    "description": "Pre-flight companion that gives drone pilots a Go/No-Go call from live weather and safety data.",
     "category": ["applications"],
     "status": "Complete Build",
     "type": "Solo Project",
@@ -25,6 +27,7 @@
   },
   {
     "title": "Love Swipe",
+    "description": "Swipe-based Truth or Dare game with themed card decks for game nights.",
     "category": ["applications", "games"],
     "status": "Complete Build",
     "type": "Solo Project",
@@ -37,6 +40,7 @@
   },
   {
     "title": "Hello Berlin 365",
+    "description": "Single-page website for a Berlin creative agency offering web design, drone shots and print.",
     "category": ["websites", "designs"],
     "status": "Complete Build",
     "type": "Solo Project",
@@ -49,6 +53,7 @@
   },
   {
     "title": "Shape Beats",
+    "description": "Drum pad app for making beats and playing along with built-in sound packs.",
     "category": ["applications", "games"],
     "status": "Complete Build",
     "type": "Solo Project",
@@ -61,6 +66,7 @@
   },
   {
     "title": "Crypto Wiki App",
+    "description": "Mobile companion to TheCrypto.Wiki with crypto guides, news and portfolio tracking.",
     "category": ["applications"],
     "status": "Complete Build",
     "type": "Solo Project",
@@ -73,6 +79,7 @@
   },
   {
     "title": "Tinnitus Help App",
+    "description": "Articles, sound therapy and tools that help people manage tinnitus day to day.",
     "category": ["applications"],
     "status": "Complete Build",
     "type": "Solo Project",
@@ -85,18 +92,21 @@
   },
   {
     "title": "Fungi vs Bacteria Mobile Game",
+    "description": "A 3D mobile game built in Unity, with models and animations made in Blender. Coming to the App Store and Google Play.",
     "category": ["games"],
-    "status": "On Hold",
+    "status": "In Development",
     "type": "Solo Project",
     "technologies": "Unity | C# | Blender",
     "image": "./assets/images/projects/fungi-vs-bacteria.webp",
     "links": {
       "github": "https://github.com/oktayshakirov/fungi-vs-bacteria",
       "figma": "https://www.figma.com/design/2WRQK888SfMS39zy0vgoIM/Fungi-vs-Bacteria?node-id=0-1&t=2dKGxUSf1MgOMDbK-1"
-    }
+    },
+    "currentlyBuilding": true
   },
   {
     "title": "Snowman Run Mobile Game",
+    "description": "Endless winter runner where a snowboarding snowman dodges obstacles and collects coins.",
     "category": ["games"],
     "status": "Complete Build",
     "type": "Solo Project",
@@ -109,6 +119,7 @@
   },
   {
     "title": "TheCrypto.Wiki",
+    "description": "SEO-focused crypto knowledge platform with guides, exchange reviews and live market data.",
     "category": ["websites", "designs"],
     "status": "Complete Build",
     "type": "Solo Project",
@@ -121,6 +132,7 @@
   },
   {
     "title": "MyFitPhoto AI",
+    "description": "AI app that generates fitness-style photos from a user's selfies.",
     "category": ["websites", "applications", "ai"],
     "status": "Frontend + AI Integration",
     "type": "Team Project",
@@ -132,6 +144,7 @@
   },
   {
     "title": "TinnitusHelp.me",
+    "description": "Content platform with articles on tinnitus causes, relief and sound therapy.",
     "category": ["websites", "designs"],
     "status": "Complete Build",
     "type": "Solo Project",
@@ -144,6 +157,7 @@
   },
   {
     "title": "Clonings AI",
+    "description": "AI platform that lets creators build a digital clone of themselves for their community.",
     "category": ["applications", "websites", "ai"],
     "status": "Frontend",
     "type": "Team Project",
@@ -156,6 +170,7 @@
   },
   {
     "title": "Cortextual AI Website",
+    "description": "Company website for Cortextual AI, a studio that builds and launches AI software.",
     "category": ["websites", "ai"],
     "status": "Frontend",
     "type": "Solo Project",
@@ -167,6 +182,7 @@
   },
   {
     "title": "FashionSwap App",
+    "description": "App for swapping clothes with other people, from the first design to the frontend.",
     "category": ["applications", "designs"],
     "status": "Design + Frontend",
     "type": "Team Project",
@@ -179,6 +195,7 @@
   },
   {
     "title": "Inventory Management App",
+    "description": "Inventory management web app for tracking stock, designed in Figma and built in React.",
     "category": ["applications", "designs"],
     "status": "Design + Frontend",
     "type": "Team Project",
@@ -191,6 +208,7 @@
   },
   {
     "title": "MyBestWishes AI",
+    "description": "AI tool that writes personalized wishes and greeting messages for any occasion.",
     "category": ["websites", "designs", "applications", "ai"],
     "status": "Design + Frontend + AI Integration",
     "type": "Team Project",
@@ -203,6 +221,7 @@
   },
   {
     "title": "MyWorkPhoto AI",
+    "description": "AI headshot generator that turns selfies into professional work photos.",
     "category": ["websites", "designs", "applications", "ai"],
     "status": "Design + Frontend + AI Integration",
     "type": "Team Project",
@@ -215,6 +234,7 @@
   },
   {
     "title": "Ogno Marketing Dashboard",
+    "description": "Marketing dashboard for tracking campaigns, built during my internship at Ogno.",
     "category": ["applications", "designs"],
     "status": "Complete Build",
     "type": "Solo Project",
@@ -227,6 +247,7 @@
   },
   {
     "title": "Bayer USA Health App",
+    "description": "Medical information portal for Bayer USA, including an AI chatbot integration.",
     "category": ["websites"],
     "status": "Frontend",
     "type": "Team Project",
@@ -238,6 +259,7 @@
   },
   {
     "title": "EnEmZet Online Store",
+    "description": "Online store for a Bulgarian company, built with Next.js, TypeScript and MySQL.",
     "category": ["websites"],
     "status": "Complete Build",
     "type": "Solo Project",
@@ -250,6 +272,7 @@
   },
   {
     "title": "Timeazon Online Store",
+    "description": "Full-stack watch store with a product catalog, cart and checkout.",
     "category": ["websites", "designs"],
     "status": "Complete Build",
     "type": "Solo Project",
@@ -263,6 +286,7 @@
   },
   {
     "title": "Weather App",
+    "description": "Current weather and forecasts for any city using the OpenWeatherMap API.",
     "category": ["applications"],
     "status": "Frontend",
     "type": "Solo Project",
@@ -276,6 +300,7 @@
   },
   {
     "title": "Pigletz Memory Game",
+    "description": "Card matching memory game featuring the Pigletz characters.",
     "category": ["games"],
     "status": "Frontend",
     "type": "Solo Project",
@@ -289,6 +314,7 @@
   },
   {
     "title": "Team Management Tool",
+    "description": "Tool for adding employees and organizing them by department.",
     "category": ["applications"],
     "status": "Complete Build",
     "type": "Solo Project",
@@ -302,6 +328,7 @@
   },
   {
     "title": "Personal Portfolio",
+    "description": "This website, built with vanilla JavaScript modules and no framework.",
     "category": ["websites", "designs"],
     "status": "Frontend",
     "type": "Solo Project",
@@ -314,6 +341,7 @@
   },
   {
     "title": "Quiz Time",
+    "description": "Trivia quiz pages with different input types and a random page generator.",
     "category": ["games"],
     "status": "Frontend",
     "type": "Solo Project",
@@ -327,6 +355,7 @@
   },
   {
     "title": "BerliNEW Android App",
+    "description": "Android app for a Berlin lifestyle and city guide blog.",
     "category": ["applications"],
     "status": "Complete Build",
     "type": "Solo Project",

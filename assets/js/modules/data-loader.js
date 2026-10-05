@@ -5,6 +5,7 @@
 
 import {
   generateProjectHTML,
+  generateCurrentlyBuildingHTML,
   generateTechnologyHTML,
   generateCertificateHTML,
   generateExperienceHTML,
@@ -139,7 +140,20 @@ export const loadProjects = async () => {
     }
 
     const projects = await response.json();
-    container.innerHTML = projects.map(generateProjectHTML).join("");
+
+    // Projects in development get the "Currently Building" card instead of a grid slot
+    const buildingContainer = document.querySelector(".currently-building");
+    if (buildingContainer) {
+      buildingContainer.innerHTML = projects
+        .filter((project) => project.currentlyBuilding)
+        .map(generateCurrentlyBuildingHTML)
+        .join("");
+    }
+
+    container.innerHTML = projects
+      .filter((project) => !project.currentlyBuilding)
+      .map(generateProjectHTML)
+      .join("");
     updateProjectHighlights(projects);
 
     // Re-initialize lazy loading for new content
