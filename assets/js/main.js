@@ -12,15 +12,17 @@ import {
   initTechScrolling,
 } from "./modules/animations.js";
 import { initGitHubCalendar } from "./modules/github-calendar.js";
-import { initEmailCopy, initAboutTextToggle, initCalendly } from "./modules/contact.js";
+import { initEmailCopy, initCalendly } from "./modules/contact.js";
 import { initTechnologies } from "./modules/technologies.js";
 import { initCertificates } from "./modules/certificates.js";
+import { initHighlights } from "./modules/highlights.js";
 import { initSEO } from "./modules/seo.js";
 import { initAnalytics } from "./modules/analytics.js";
 import { initAttribution } from "./modules/attribution.js";
 import {
   loadProjects,
   loadTechnologies,
+  loadExperience,
   loadCertificates,
   loadSideworks,
   loadSocials,
@@ -74,6 +76,7 @@ const init = () => {
   // Load dynamic content from JSON
   loadProjects().catch(console.error);
   loadTechnologies().catch(console.error);
+  loadExperience().catch(console.error);
   loadCertificates().catch(console.error);
   loadSideworks().catch(console.error);
   
@@ -85,10 +88,10 @@ const init = () => {
   initTechnologies();
   initGitHubCalendar();
   initCertificates();
+  initHighlights();
 
   // Contact and interactions
   initEmailCopy();
-  initAboutTextToggle();
   initCalendly();
 
   // SEO enhancements

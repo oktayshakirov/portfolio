@@ -1,0 +1,44 @@
+[
+  {
+    "group": "Experience",
+    "icon": "briefcase-outline",
+    "items": [
+      {
+        "title": "Full-Stack & Mobile Developer",
+        "organization": "Freelance",
+        "period": "Aug 2024 - Present",
+        "description": "Building and maintaining my own apps on the App Store and Google Play and content platforms with Next.js, from concept and architecture to store release, monetization and updates. Also delivering client projects, including e-commerce solutions."
+      },
+      {
+        "title": "Full-Stack Developer (Internship)",
+        "organization": "Ogno GmbH",
+        "period": "Sep 2023 - May 2024",
+        "description": "Built a React marketing dashboard for campaign tracking and worked on a Bayer USA project with Drupal, PHP and an AI chatbot integration, in an Agile Scrum team."
+      },
+      {
+        "title": "Marketing & Blockchain (Freelance)",
+        "organization": "Blockchain Hub - Crypto Varna",
+        "period": "Oct 2022 - Sep 2023",
+        "description": "Supported growth and partnership initiatives for blockchain platforms and gained hands-on experience with smart contract based applications."
+      },
+      {
+        "title": "Frontend Developer (Internship)",
+        "organization": "BlackDEEP Technologies",
+        "period": "Jan 2022 - Nov 2022",
+        "description": "Built client-facing web apps with React and TypeScript, turned Figma designs into production-ready UI components and connected them to REST APIs."
+      }
+    ]
+  },
+  {
+    "group": "Education",
+    "icon": "book-outline",
+    "items": [
+      {
+        "title": "IT Specialist - Application Development (Ausbildung)",
+        "organization": "BBQ Baumann Bildung & Qualifizierung",
+        "period": "Aug 2022 - Jul 2024",
+        "description": "Vocational degree in software development, completed with the IHK Berlin final exam."
+      }
+    ]
+  }
+]

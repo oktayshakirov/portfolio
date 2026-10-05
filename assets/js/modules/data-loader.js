@@ -7,11 +7,14 @@ import {
   generateProjectHTML,
   generateTechnologyHTML,
   generateCertificateHTML,
+  generateExperienceHTML,
+  generateTimelineGroupHTML,
   generateSideworkHTML,
   generateSocialHTML,
   generateFilterButtonsHTML,
   generateFilterSelectHTML,
 } from "./render.js";
+import { updateProjectHighlights } from "./highlights.js";
 
 /**
  * Show loading skeleton
@@ -33,7 +36,7 @@ const showLoadingState = (container, type = "projects") => {
     `,
       )
       .join(""),
-    technologies: Array(19)
+    technologies: Array(20)
       .fill(0)
       .map(
         () => `
@@ -137,6 +140,7 @@ export const loadProjects = async () => {
 
     const projects = await response.json();
     container.innerHTML = projects.map(generateProjectHTML).join("");
+    updateProjectHighlights(projects);
 
     // Re-initialize lazy loading for new content
     const { initLazyLoading } = await import("./animations.js");
@@ -186,10 +190,32 @@ export const loadTechnologies = async () => {
 };
 
 /**
+ * Load and render experience and education
+ */
+export const loadExperience = async () => {
+  const container = document.querySelector(".experience-list");
+  if (!container) return;
+
+  try {
+    const response = await fetch("./data/experience.json");
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const experienceGroups = await response.json();
+    container.innerHTML = experienceGroups
+      .map((group) => generateTimelineGroupHTML(group, generateExperienceHTML))
+      .join("");
+  } catch (error) {
+    console.error("Error loading experience:", error);
+  }
+};
+
+/**
  * Load and render certificates
  */
 export const loadCertificates = async () => {
-  const container = document.querySelector(".certificates");
+  const container = document.querySelector(".certificates-list");
   if (!container) return;
 
   try {
@@ -199,44 +225,9 @@ export const loadCertificates = async () => {
     }
 
     const certificateGroups = await response.json();
-
-    let html = "";
-    certificateGroups.forEach((group) => {
-      html += `
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="${group.icon}"></ion-icon>
-            </div>
-            <h3 class="h3">${group.group}</h3>
-          </div>
-          <ol class="timeline-list">
-            ${group.items.map(generateCertificateHTML).join("")}
-          </ol>
-        </section>
-      `;
-    });
-
-    // Find the certificates article and replace content
-    const certificatesArticle = document.querySelector(
-      '[data-page="certificates"]',
-    );
-    if (certificatesArticle) {
-      const header = certificatesArticle.querySelector("header");
-      const existingContent =
-        certificatesArticle.querySelector(".timeline")?.parentElement;
-
-      if (existingContent) {
-        existingContent.innerHTML = html;
-      } else {
-        const contentDiv = document.createElement("div");
-        contentDiv.innerHTML = html;
-        certificatesArticle.insertBefore(
-          contentDiv,
-          certificatesArticle.querySelector(".pagination-box"),
-        );
-      }
-    }
+    container.innerHTML = certificateGroups
+      .map((group) => generateTimelineGroupHTML(group, generateCertificateHTML))
+      .join("");
 
     // Re-initialize certificates module
     const { initCertificates } = await import("./certificates.js");

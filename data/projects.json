@@ -87,7 +87,7 @@
     "title": "Fungi vs Bacteria Mobile Game",
     "category": ["games"],
     "status": "On Hold",
-    "type": "Team Project",
+    "type": "Solo Project",
     "technologies": "Unity | C# | Blender",
     "image": "./assets/images/projects/fungi-vs-bacteria.webp",
     "links": {
@@ -253,6 +253,7 @@
     "category": ["websites", "designs"],
     "status": "Complete Build",
     "type": "Solo Project",
+    "context": "School Project",
     "technologies": "React.js | Node.js | MySQL | Sass",
     "image": "./assets/images/projects/watch_store.webp",
     "links": {
@@ -265,6 +266,7 @@
     "category": ["applications"],
     "status": "Frontend",
     "type": "Solo Project",
+    "context": "School Project",
     "technologies": "JavaScript | API's | CSS",
     "image": "./assets/images/projects/weather-app.webp",
     "links": {
@@ -277,6 +279,7 @@
     "category": ["games"],
     "status": "Frontend",
     "type": "Solo Project",
+    "context": "School Project",
     "technologies": "JavaScript | CSS",
     "image": "./assets/images/projects/pigletz-matching.webp",
     "links": {
@@ -289,6 +292,7 @@
     "category": ["applications"],
     "status": "Complete Build",
     "type": "Solo Project",
+    "context": "School Project",
     "technologies": "PHP | CSV Data | CSS",
     "image": "./assets/images/projects/team-manager.webp",
     "links": {
@@ -313,6 +317,7 @@
     "category": ["games"],
     "status": "Frontend",
     "type": "Solo Project",
+    "context": "School Project",
     "technologies": "PHP | CSS | HTML",
     "image": "./assets/images/projects/quiz.webp",
     "links": {

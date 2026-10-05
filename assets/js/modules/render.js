@@ -9,7 +9,7 @@
  * @returns {string} HTML string
  */
 export const generateProjectHTML = (project) => {
-  const { title, category, status, type, technologies, image, links } =
+  const { title, category, status, type, context, technologies, image, links } =
     project;
 
   const categoryString = category.join(" ");
@@ -108,7 +108,7 @@ export const generateProjectHTML = (project) => {
       ${imageHTML}
       <h3 class="project-title">${title}</h3>
       <p class="project-category">${status}</p>
-      <p class="project-category">${type}</p>
+      <p class="project-category">${type}${context ? ` · ${context}` : ""}</p>
       <p class="project-development">${technologies}</p>
       ${buttonsHTML}
     </li>
@@ -159,6 +159,46 @@ export const generateTechnologyHTML = (tech) => {
   return `
     <li class="technologies-item">
       <img src="${tech.image}" alt="${tech.alt}" id="${tech.id}" loading="lazy">
+    </li>
+  `;
+};
+
+/**
+ * Generate a titled timeline group (experience, education, certificates)
+ * @param {Object} group - Group with group, icon and items
+ * @param {Function} generateItemHTML - Renders a single item
+ * @returns {string} HTML string
+ */
+export const generateTimelineGroupHTML = (group, generateItemHTML) => {
+  return `
+    <section class="timeline">
+      <div class="title-wrapper">
+        <div class="icon-box">
+          <ion-icon name="${group.icon}"></ion-icon>
+        </div>
+        <h3 class="h3">${group.group}</h3>
+      </div>
+      <ol class="timeline-list">
+        ${group.items.map(generateItemHTML).join("")}
+      </ol>
+    </section>
+  `;
+};
+
+/**
+ * Generate experience or education timeline item HTML
+ * Leave out "organization" to show only the role and period.
+ * @param {Object} item - Experience data object
+ * @returns {string} HTML string
+ */
+export const generateExperienceHTML = (item) => {
+  const meta = [item.organization, item.period].filter(Boolean).join(" · ");
+
+  return `
+    <li class="timeline-item">
+      <h4 class="h4 timeline-item-title">${item.title}</h4>
+      <span>${meta}</span>
+      <p class="timeline-text">${item.description}</p>
     </li>
   `;
 };

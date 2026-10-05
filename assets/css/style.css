@@ -523,6 +523,10 @@ main {
   font-style: normal;
 }
 
+.contact-info .contact-link:hover {
+  color: var(--orange-yellow-crayola);
+}
+
 .social-list {
   display: flex;
   justify-content: center;
@@ -572,13 +576,17 @@ main {
   opacity: 0.8;
 }
 
-.support {
-  width: 300px;
-  border-radius: 15px;
+.support-text {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 10px;
 }
 
-.support:hover {
-  box-shadow: 0 0 10px hsla(45, 100%, 71%);
+.support-links {
+  margin-bottom: 0;
 }
 
 /*-----------------------------------*\
@@ -639,6 +647,62 @@ main {
 
 .about-text p {
   margin-bottom: 15px;
+}
+
+/**
+ * call to action buttons
+ */
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cta-button {
+  flex: 1 1 180px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px solid var(--jet);
+  border-radius: 8px;
+  background-color: hsla(0, 0%, 23%, 0.214);
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  text-align: center;
+  transition:
+    background-color var(--transition-1),
+    opacity var(--transition-1);
+}
+
+.cta-button:hover {
+  background-color: hsla(240, 3%, 13%, 0.581);
+}
+
+.cta-button--primary {
+  background: var(--text-gradient-yellow);
+  border-color: transparent;
+  color: hsl(240, 3%, 13%);
+}
+
+.cta-button--primary:hover {
+  opacity: 0.85;
+}
+
+.cta-button ion-icon {
+  font-size: 18px;
+}
+
+/**
+ * highlights
+ */
+
+.highlights {
+  margin-bottom: 35px;
 }
 
 /**
@@ -1041,6 +1105,25 @@ main {
   color: var(--light-gray);
   font-weight: var(--fw-300);
   line-height: 1.6;
+}
+
+.timeline-list span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.resume-note {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.resume-note-link {
+  color: var(--orange-yellow-crayola);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 /**
@@ -1662,24 +1745,6 @@ main {
     margin-bottom: 40px;
   }
 
-  .more {
-    font-size: 14px;
-    color: white;
-    animation: float 4s ease-in-out infinite;
-  }
-
-  @keyframes float {
-    0% {
-      transform: translatey(0px);
-    }
-    50% {
-      transform: translatey(10px);
-    }
-    100% {
-      transform: translatey(0px);
-    }
-  }
-
   /* service */
 
   .service-item {
@@ -1864,10 +1929,6 @@ main {
   .form-btn ion-icon {
     font-size: 18px;
   }
-
-  .support {
-    width: 160px;
-  }
 }
 
 /**
@@ -1968,10 +2029,6 @@ main {
   .form-btn {
     width: max-content;
     margin-left: auto;
-  }
-
-  .support {
-    width: 200px;
   }
 }
 
@@ -2080,10 +2137,6 @@ main {
 
   .sidework-banner-box {
     height: 230px;
-  }
-
-  .support {
-    width: 230px;
   }
 }
 

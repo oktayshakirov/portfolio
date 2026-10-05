@@ -21,7 +21,7 @@
   <meta property="og:title" content="Oktay Shakirov - Full-Stack Developer | Web, Mobile & AI" />
   <meta property="og:description"
     content="Full-Stack developer in Berlin building web and mobile apps with React, React Native, Next.js and TypeScript - including AI-powered features and automation." />
-  <meta property="og:image" content="./assets/images/og-image.png" />
+  <meta property="og:image" content="https://oktayshakirov.com/assets/images/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Oktay Shakirov - Full-Stack Developer Portfolio" />
@@ -32,7 +32,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Oktay Shakirov - Full-Stack Developer | Web, Mobile & AI">
   <meta name="twitter:description" content="Full-Stack developer in Berlin building web and mobile apps with React, React Native, Next.js and TypeScript - including AI-powered features and automation.">
-  <meta name="twitter:image" content="./assets/images/og-image.png">
+  <meta name="twitter:image" content="https://oktayshakirov.com/assets/images/og-image.png">
   <meta name="twitter:creator" content="@oktayshakirov">
   <!--
     - favicon
@@ -128,7 +128,7 @@
             </div>
             <div class="contact-info">
               <p class="contact-title">Personality Type</p>
-              <address>INTJ-T</address>
+              <a href="https://www.16personalities.com/intj-personality" class="contact-link" target="_blank" rel="noopener noreferrer">INTJ-T</a>
             </div>
           </li>
 
@@ -198,7 +198,7 @@
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link aria-label="Navigate to Certificates section" type="button">Certificates</button>
+            <button class="navbar-link" data-nav-link aria-label="Navigate to Resume section" type="button">Resume</button>
           </li>
 
           <li class="navbar-item">
@@ -232,46 +232,133 @@
 
 
         <section class="about-text content-card">
-          <div id="expandable-section">
-            <p>
-              Hello there! &#128075 My name is Oktay and I'm from Berlin, Germany. As a Full-Stack software developer, I
-              build websites, apps and mobile games that are not just functional but visually appealing. I work mainly
-              with React, React Native, Next.js, TypeScript and Node.js, and I've taken multiple apps from idea to
-              release on the App Store and Google Play. My passion for graphic design, photography and visual
-              storytelling plays a big role in everything I do. Whether it's 3D models, animations or the smallest UI
-              details, I make sure my projects don't just look good but also offer a great user experience.
-            </p>
-            <div id="more" style="display: none;">
-              <p>
-                Growing up bilingual, I developed a love for languages and I currently speak four of them fluently.
-                I believe that this skill has given me a unique perspective and allows me to communicate effectively
-                with clients from all over the world.
-                One of my strengths is adding a personal touch to my projects by adding the client's identity and
-                message into the design, creating meaningful and beautiful end products that are both eye-catching and
-                user-friendly.
-              </p>
-
-              <p>
-                I'm also invested in how AI is changing the way software gets built. I use tools like Claude Code
-                daily as a productivity multiplier for reviewing, refactoring and automating the repetitive parts,
-                while the architecture and quality decisions stay in my hands. Beyond coding, I design automation
-                pipelines with n8n that combine AI models like Claude, OpenAI and Gemini to generate, quality-check and
-                publish content on my own platforms every day. In my free time, I enjoy exploring my other passions,
-                such as drone photography and music production, which provide me with creative outlets.
-              </p>
-              <p>
-                If you have an innovative idea for a project that needs to be developed, I would love to hear from you.
-                Your vision can be turned into a real product.
-                Don't hesitate to reach out and let's start a conversation about your concept.
-                I'm excited to collaborate and help bring your ideas to life.
-              </p>
-            </div>
+          <p>
+            Hello there! &#128075 I'm Oktay, a Full-Stack developer from Berlin. I build web products with React,
+            Next.js, TypeScript and Node.js, and I've taken multiple apps from idea to release on the App Store and
+            Google Play with React Native. My background in graphic design, 3D and photography shows in the details,
+            so my projects work well and look good too.
+          </p>
+          <p>
+            Many of my projects grow out of things I love doing myself: Drone Pal came from flying drones, and Shape
+            Beats was inspired by years of music production. I use AI tools like Claude Code and n8n every day to move
+            faster, while the architecture and quality decisions stay with me.
+          </p>
+          <div class="cta-buttons">
+            <a href="#" class="cta-button cta-button--primary" data-calendly-link role="button">
+              <ion-icon name="videocam-outline" aria-hidden="true"></ion-icon> Book a video call
+            </a>
+            <button class="cta-button" data-nav-link data-target-section="projects" type="button">
+              <ion-icon name="grid-outline" aria-hidden="true"></ion-icon> See my projects
+            </button>
           </div>
-          <center> <button class="more" id="toggle-button" aria-label="Toggle about text visibility" type="button">&darr; &nbsp; &nbsp; Show more &nbsp;
-              &nbsp; &darr;</button> </center>
         </section>
 
+        <section class="highlights">
+          <!-- Highlights & Languages -->
 
+          <h3 class="h3 languages-title">Highlights & Languages</h3>
+
+          <section class="languages content-card">
+
+            <div class="languages-column">
+
+              <h3 class="h3 languages-title-second">Highlights</h3>
+
+              <ul class="highlights-list">
+
+                <li class="highlights-item">
+                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                  <p class="highlights-text"><span class="highlights-value" data-highlight="years">4+</span> years shipping production code</p>
+                </li>
+
+                <li class="highlights-item">
+                  <ion-icon name="phone-portrait-outline" aria-hidden="true"></ion-icon>
+                  <p class="highlights-text"><span class="highlights-value" data-highlight="apps">7</span> apps live on App Store & Google Play</p>
+                </li>
+
+                <li class="highlights-item">
+                  <ion-icon name="globe-outline" aria-hidden="true"></ion-icon>
+                  <p class="highlights-text"><span class="highlights-value" data-highlight="websites">12</span> websites & web apps live online</p>
+                </li>
+
+                <li class="highlights-item">
+                  <ion-icon name="hardware-chip-outline" aria-hidden="true"></ion-icon>
+                  <p class="highlights-text">AI content pipelines publishing <span class="highlights-value">daily</span></p>
+                </li>
+
+                <li class="highlights-item">
+                  <ion-icon name="logo-github" aria-hidden="true"></ion-icon>
+                  <p class="highlights-text"><span class="highlights-value" data-highlight="repos">28</span> open-source repositories</p>
+                </li>
+
+              </ul>
+            </div>
+
+            <!-- Human Languages -->
+            <div class="languages-column">
+
+              <h3 class="h3 languages-title-second">Human Languages</h3>
+
+              <ul class="languages-list">
+
+                <li class="languages-item">
+
+                  <div class="title-wrapper">
+                    <h5 class="h5">English</h5>
+                    <data value="fluent">Fluent</data>
+                  </div>
+
+                  <div class="languages-progress-bg">
+                    <div class="languages-progress-fill" style="width: 100%;"></div>
+                  </div>
+
+                </li>
+
+                <li class="languages-item">
+
+                  <div class="title-wrapper">
+                    <h5 class="h5">German</h5>
+                    <data value="fluent">Fluent</data>
+                  </div>
+
+                  <div class="languages-progress-bg">
+                    <div class="languages-progress-fill" style="width: 100%;"></div>
+                  </div>
+
+                </li>
+
+                <li class="languages-item">
+
+                  <div class="title-wrapper">
+                    <h5 class="h5">Bulgarian</h5>
+                    <data value="fluent">Native</data>
+                  </div>
+
+                  <div class="languages-progress-bg">
+                    <div class="languages-progress-fill" style="width: 100%;"></div>
+                  </div>
+
+                </li>
+
+                <li class="languages-item">
+
+                  <div class="title-wrapper">
+                    <h5 class="h5">Turkish</h5>
+                    <data value="fluent">Advanced</data>
+                  </div>
+
+                  <div class="languages-progress-bg">
+                    <div class="languages-progress-fill" style="width: 80%;"></div>
+                  </div>
+
+                </li>
+
+              </ul>
+
+            </div>
+
+          </section>
+        </section>
 
         <!--
           - service
@@ -355,113 +442,6 @@
 
           <br>
 
-          <!-- Highlights & Languages -->
-
-          <h3 class="h3 languages-title">Highlights & Languages</h3>
-
-          <section class="languages content-card">
-
-            <div class="languages-column">
-
-              <h3 class="h3 languages-title-second">Highlights</h3>
-
-              <ul class="highlights-list">
-
-                <li class="highlights-item">
-                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-                  <p class="highlights-text"><span class="highlights-value">4+</span> years shipping production code</p>
-                </li>
-
-                <li class="highlights-item">
-                  <ion-icon name="phone-portrait-outline" aria-hidden="true"></ion-icon>
-                  <p class="highlights-text"><span class="highlights-value">7+</span> apps live on App Store & Google Play</p>
-                </li>
-
-                <li class="highlights-item">
-                  <ion-icon name="globe-outline" aria-hidden="true"></ion-icon>
-                  <p class="highlights-text"><span class="highlights-value">10+</span> live production websites</p>
-                </li>
-
-                <li class="highlights-item">
-                  <ion-icon name="hardware-chip-outline" aria-hidden="true"></ion-icon>
-                  <p class="highlights-text">AI content pipelines publishing <span class="highlights-value">daily</span></p>
-                </li>
-
-                <li class="highlights-item">
-                  <ion-icon name="logo-github" aria-hidden="true"></ion-icon>
-                  <p class="highlights-text"><span class="highlights-value">25+</span> open-source repositories</p>
-                </li>
-
-              </ul>
-            </div>
-
-            <!-- Human Languages -->
-            <div class="languages-column">
-
-              <h3 class="h3 languages-title-second">Human Languages</h3>
-
-              <ul class="languages-list">
-
-                <li class="languages-item">
-
-                  <div class="title-wrapper">
-                    <h5 class="h5">English</h5>
-                    <data value="fluent">Fluent</data>
-                  </div>
-
-                  <div class="languages-progress-bg">
-                    <div class="languages-progress-fill" style="width: 100%;"></div>
-                  </div>
-
-                </li>
-
-                <li class="languages-item">
-
-                  <div class="title-wrapper">
-                    <h5 class="h5">German</h5>
-                    <data value="fluent">Fluent</data>
-                  </div>
-
-                  <div class="languages-progress-bg">
-                    <div class="languages-progress-fill" style="width: 100%;"></div>
-                  </div>
-
-                </li>
-
-                <li class="languages-item">
-
-                  <div class="title-wrapper">
-                    <h5 class="h5">Bulgarian</h5>
-                    <data value="fluent">Native</data>
-                  </div>
-
-                  <div class="languages-progress-bg">
-                    <div class="languages-progress-fill" style="width: 100%;"></div>
-                  </div>
-
-                </li>
-
-                <li class="languages-item">
-
-                  <div class="title-wrapper">
-                    <h5 class="h5">Turkish</h5>
-                    <data value="fluent">Advanced</data>
-                  </div>
-
-                  <div class="languages-progress-bg">
-                    <div class="languages-progress-fill" style="width: 80%;"></div>
-                  </div>
-
-                </li>
-
-              </ul>
-
-            </div>
-
-          </section>
-
-          <br>
-
           <!-- Technologies -->
 
           <h3 class="h3 technologies-title">Development Skills</h3>
@@ -485,7 +465,7 @@
                <li class="strenghts-item" id="1">
                  <div class="content-card" data-strenghts-item>
                    <figure class="strenghts-avatar-box">
-                     <img src="./assets/images/eye.png" alt="finances" width="60" data-strenghts-avatar>
+                     <img src="./assets/images/eye.png" alt="Creative code icon" width="60" data-strenghts-avatar>
                    </figure>
                    <h4 class="h4 strenghts-item-title" data-strenghts-title>Creative Code</h4>
                    <div class="strenghts-text" data-strenghts-text>
@@ -499,7 +479,7 @@
                <li class="strenghts-item" id="2">
                  <div class="content-card" data-strenghts-item>
                    <figure class="strenghts-avatar-box">
-                     <img src="./assets/images/code.png" alt="music" width="60" data-strenghts-avatar>
+                     <img src="./assets/images/code.png" alt="Complete solutions icon" width="60" data-strenghts-avatar>
                    </figure>
                    <h4 class="h4 strenghts-item-title" data-strenghts-title>Complete Solutions</h4>
                    <div class="strenghts-text" data-strenghts-text>
@@ -513,7 +493,7 @@
                <li class="strenghts-item" id="3">
                  <div class="content-card" data-strenghts-item>
                    <figure class="strenghts-avatar-box">
-                     <img src="./assets/images/vr.png" alt="photography" width="60" data-strenghts-avatar>
+                     <img src="./assets/images/vr.png" alt="Future focused icon" width="60" data-strenghts-avatar>
                    </figure>
                    <h4 class="h4 strenghts-item-title" data-strenghts-title>Future Focused</h4>
                    <div class="strenghts-text" data-strenghts-text>
@@ -527,7 +507,7 @@
                <li class="strenghts-item" id="4">
                 <div class="content-card" data-strenghts-item>
                   <figure class="strenghts-avatar-box">
-                    <img src="./assets/images/languages.png" alt="traveling" width="60" data-strenghts-avatar>
+                    <img src="./assets/images/languages.png" alt="Global fluency icon" width="60" data-strenghts-avatar>
                   </figure>
                   <h4 class="h4 strenghts-item-title" data-strenghts-title>Global Fluency</h4>
                   <div class="strenghts-text" data-strenghts-text>
@@ -636,24 +616,33 @@
           <button class="pagination-button" data-nav-link data-target-section="projects" aria-label="Previous section">
             <ion-icon name="chevron-back-outline"></ion-icon>
           </button>
-          <button class="pagination-button" data-nav-link data-target-section="certificates" aria-label="Next section">
+          <button class="pagination-button" data-nav-link data-target-section="resume" aria-label="Next section">
             <ion-icon name="chevron-forward-outline"></ion-icon>
           </button>
         </div>
 
       </article>
 
-      <!-- Certificates -->
-
-      <article class="certificates" data-page="certificates">
+      <!-- Resume -->
+      <article class="resume" data-page="resume">
 
         <header>
-          <h2 class="h2 article-title">My Certificates</h2>
+          <h2 class="h2 article-title">Resume</h2>
         </header>
 
+        <div class="experience-list">
+          <!-- Experience and education loaded dynamically from data/experience.json -->
+        </div>
 
-        <br><br>
-        <!-- Certificates loaded dynamically from data/certificates.json -->
+        <div class="certificates-list">
+          <!-- Certificates loaded dynamically from data/certificates.json -->
+        </div>
+
+        <p class="resume-note">
+          Need my CV as a PDF?
+          <button class="resume-note-link" data-nav-link data-target-section="contact" type="button">Get in touch</button>
+          and I'll send it over.
+        </p>
 
         <!-- Pagination -->
           <div class="pagination-box">
@@ -664,8 +653,6 @@
               <ion-icon name="chevron-forward-outline"></ion-icon>
             </button>
           </div>
-
-        </section>
 
       </article>
 
@@ -695,7 +682,7 @@
           <br>
           <center>
             <a href=""
-              id="calendly-link"
+              data-calendly-link
               aria-label="Schedule a video call via Calendly"
               role="button"
               class="calendly-icon-link">
@@ -719,36 +706,24 @@
 
         <div class="content-card">
           <h3 class="h3 form-title" align="center">Support my work:</h3>
-          <br>
-          <center>
-            <p class="about-text">With every small donation, you contribute
-              to hostings, domains and other essential costs. All my work which is made public on GitHub or Figma is
-              open source and free for everyone to use. </p>
-          </center>
-          <center>
-            <a href="https://www.buymeacoffee.com/oktayshakirov" target="_blank" rel="noopener">
-              <img src="./assets/images/coffee-sponsort.png" alt="Buy me a coffee" class="support">
+          <p class="support-text">My public work on GitHub and Figma is free to use. If it helped you, you can chip in for hosting and domains:</p>
+          <div class="project-buttons support-links">
+            <a href="https://www.buymeacoffee.com/oktayshakirov" target="_blank" rel="noopener noreferrer">
+              <ion-icon name="cafe-outline"></ion-icon> Buy me a coffee
             </a>
-          </center>
-          <br>
-          <center>
-            <a href="https://github.com/sponsors/oktayshakirov" target="_blank" rel="noopener">
-              <img src="./assets/images/github-sponsors.png" alt="Sponsor on GitHub" class="support">
+            <a href="https://github.com/sponsors/oktayshakirov" target="_blank" rel="noopener noreferrer">
+              <ion-icon name="logo-github"></ion-icon> GitHub Sponsors
             </a>
-          </center>
-          <br>
-          <center>
-            <a href="https://www.paypal.com/paypalme/OShakirov" target="_blank" rel="noopener">
-              <img src="./assets/images/paypalme.png" alt="PayPal Me" class="support">
+            <a href="https://www.paypal.com/paypalme/OShakirov" target="_blank" rel="noopener noreferrer">
+              <ion-icon name="logo-paypal"></ion-icon> PayPal
             </a>
-          </center>
-
+          </div>
         </div>
 
         <!-- Pagination -->
         <br>
         <div class="pagination-box pagination-box--prev-only">
-          <button class="pagination-button" data-nav-link data-target-section="certificates" aria-label="Previous section">
+          <button class="pagination-button" data-nav-link data-target-section="resume" aria-label="Previous section">
             <ion-icon name="chevron-back-outline"></ion-icon>
           </button>
         </div>

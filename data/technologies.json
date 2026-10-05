@@ -42,58 +42,59 @@
     "image": "./assets/images/node.png",
     "alt": "Node"
   },
+  { "id": 9, "name": "PHP", "image": "./assets/images/php.png", "alt": "PHP" },
   {
-    "id": 9,
+    "id": 10,
     "name": "Claude",
     "image": "./assets/images/claude.png",
     "alt": "Claude"
   },
   {
-    "id": 10,
+    "id": 11,
     "name": "OpenAI",
     "image": "./assets/images/openai.webp",
     "alt": "OpenAI"
   },
-  { "id": 11, "name": "n8n", "image": "./assets/images/n8n.png", "alt": "n8n" },
+  { "id": 12, "name": "n8n", "image": "./assets/images/n8n.png", "alt": "n8n" },
   {
-    "id": 12,
+    "id": 13,
     "name": "MySQL",
     "image": "./assets/images/mysql.png",
     "alt": "MySQL"
   },
   {
-    "id": 13,
+    "id": 14,
     "name": "Shopify",
     "image": "./assets/images/shopify.png",
     "alt": "Shopify"
   },
   {
-    "id": 14,
+    "id": 15,
     "name": "Linux",
     "image": "./assets/images/linux.png",
     "alt": "Linux"
   },
   {
-    "id": 15,
+    "id": 16,
     "name": "Wordpress",
     "image": "./assets/images/wordpress.webp",
     "alt": "Wordpress"
   },
-  { "id": 16, "name": "Git", "image": "./assets/images/git.png", "alt": "Git" },
+  { "id": 17, "name": "Git", "image": "./assets/images/git.png", "alt": "Git" },
   {
-    "id": 17,
+    "id": 18,
     "name": "Docker",
     "image": "./assets/images/docker.png",
     "alt": "Docker"
   },
   {
-    "id": 18,
+    "id": 19,
     "name": "Unity",
     "image": "./assets/images/unity.png",
     "alt": "Unity"
   },
   {
-    "id": 19,
+    "id": 20,
     "name": "Figma",
     "image": "./assets/images/figma.png",
     "alt": "Figma"
