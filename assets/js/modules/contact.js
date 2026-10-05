@@ -40,30 +40,6 @@ export const initEmailCopy = () => {
 };
 
 /**
- * Initialize about text toggle
- */
-export const initAboutTextToggle = () => {
-  const toggleButton = document.getElementById("toggle-button");
-  const moreText = document.getElementById("more");
-
-  if (!toggleButton || !moreText) return;
-
-  toggleButton.addEventListener("click", () => {
-    const isHidden = moreText.style.display === "none" || !moreText.style.display;
-
-    if (isHidden) {
-      moreText.style.display = "block";
-      toggleButton.innerHTML = "&uarr; &nbsp; &nbsp; Hide text &nbsp; &nbsp; &uarr;";
-      toggleButton.setAttribute("aria-expanded", "true");
-    } else {
-      moreText.style.display = "none";
-      toggleButton.innerHTML = "&darr; &nbsp; &nbsp; Show more &nbsp; &nbsp; &darr;";
-      toggleButton.setAttribute("aria-expanded", "false");
-    }
-  });
-};
-
-/**
  * Load the Calendly widget assets on demand (first click) instead of on page load
  * @returns {Promise<void>}
  */
@@ -89,23 +65,24 @@ const loadCalendlyAssets = () => {
 };
 
 /**
- * Initialize Calendly link
+ * Initialize Calendly links (every element with data-calendly-link)
  */
 export const initCalendly = () => {
-  const calendlyLink = document.getElementById("calendly-link");
-  if (!calendlyLink) return;
+  const calendlyLinks = document.querySelectorAll("[data-calendly-link]");
 
-  calendlyLink.addEventListener("click", async (e) => {
-    e.preventDefault();
-    try {
-      await loadCalendlyAssets();
-      if (typeof Calendly !== "undefined") {
-        Calendly.initPopupWidget({
-          url: "https://calendly.com/oktayshakirov/30min?hide_landing_page_details=1&hide_gdpr_banner=1"
-        });
+  calendlyLinks.forEach((calendlyLink) => {
+    calendlyLink.addEventListener("click", async (e) => {
+      e.preventDefault();
+      try {
+        await loadCalendlyAssets();
+        if (typeof Calendly !== "undefined") {
+          Calendly.initPopupWidget({
+            url: "https://calendly.com/oktayshakirov/30min?hide_landing_page_details=1&hide_gdpr_banner=1"
+          });
+        }
+      } catch (error) {
+        console.error("Failed to load Calendly widget:", error);
       }
-    } catch (error) {
-      console.error("Failed to load Calendly widget:", error);
-    }
+    });
   });
 };
