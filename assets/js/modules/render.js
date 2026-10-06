@@ -282,6 +282,14 @@ export const generateSocialHTML = (social, className = "social-link") => {
  * @param {Object} sidework - Sidework data object
  * @returns {string} HTML string
  */
+/**
+ * Normalize a link field that can be a URL string or a list of { url, label }
+ * @param {string|Array<Object>} value - Link value from the JSON data
+ * @returns {Array<Object>} List of { url, label }
+ */
+const toLinkList = (value) =>
+  Array.isArray(value) ? value : [{ url: value }];
+
 export const generateSideworkHTML = (sidework) => {
   const { title, categories, description, image, alt, links } = sidework;
 
@@ -297,11 +305,7 @@ export const generateSideworkHTML = (sidework) => {
       `);
     }
     if (links.github) {
-      const githubLinks = Array.isArray(links.github)
-        ? links.github
-        : [{ url: links.github }];
-
-      githubLinks.forEach(({ url, label }) => {
+      toLinkList(links.github).forEach(({ url, label }) => {
         const text = label ? `GitHub: ${label}` : "GitHub";
         buttonLinks.push(`
         <a href="${url}" aria-label="View ${title}${
@@ -320,11 +324,28 @@ export const generateSideworkHTML = (sidework) => {
       `);
     }
     if (links.youtube) {
-      buttonLinks.push(`
-        <a href="${links.youtube}" aria-label="View ${title} on YouTube" target="_blank" rel="noopener noreferrer">
-          <ion-icon name="videocam"></ion-icon> YouTube
+      toLinkList(links.youtube).forEach(({ url, label }) => {
+        const text = label ? `YouTube: ${label}` : "YouTube";
+        buttonLinks.push(`
+        <a href="${url}" aria-label="View ${title}${
+          label ? ` ${label}` : ""
+        } on YouTube" target="_blank" rel="noopener noreferrer">
+          <ion-icon name="videocam"></ion-icon> ${text}
         </a>
       `);
+      });
+    }
+    if (links.tiktok) {
+      toLinkList(links.tiktok).forEach(({ url, label }) => {
+        const text = label ? `TikTok: ${label}` : "TikTok";
+        buttonLinks.push(`
+        <a href="${url}" aria-label="View ${title}${
+          label ? ` ${label}` : ""
+        } on TikTok" target="_blank" rel="noopener noreferrer">
+          <ion-icon name="logo-tiktok"></ion-icon> ${text}
+        </a>
+      `);
+      });
     }
     if (links.spotify) {
       buttonLinks.push(`

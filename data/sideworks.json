@@ -14,7 +14,7 @@
   {
     "title": "Workflow Automation & AI",
     "categories": ["Workflow Automation", "AI Integration"],
-    "description": "I design automation workflows with n8n, OpenAI and Claude Code. One system cuts video montages for YouTube and TikTok in Final Cut Pro, the others research topics, write SEO optimized articles, format them and pick the right images before publishing.",
+    "description": "I design automation workflows with n8n, OpenAI and Claude Code. One system cuts video montages for YouTube and TikTok in Final Cut Pro, another researches topics, writes SEO optimized articles, formats them and picks the right images before publishing, and a third turns manuscripts into narrated audiobooks with local text to speech.",
     "image": "./assets/images/projects/n8n.webp",
     "alt": "Automation Workflows",
     "links": {
@@ -28,8 +28,37 @@
           "label": "Article Writing"
         },
         {
-          "url": "https://github.com/oktayshakirov/tinnitus-help-automation",
-          "label": "Article Writing 2"
+          "url": "https://github.com/oktayshakirov/audio-book-automation",
+          "label": "Audiobooks"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Faceless AI Channels",
+    "categories": ["AI Video", "Content Automation"],
+    "description": "I run faceless YouTube and TikTok channels for Tinnitus Help and The Crypto Wiki. My own pipelines turn articles into scripts, voiceovers and edited videos, from long explainers to Shorts, with thumbnails and metadata ready to publish.",
+    "image": "./assets/images/projects/faceless-channels.webp",
+    "alt": "Faceless AI Channels",
+    "links": {
+      "youtube": [
+        {
+          "url": "https://www.youtube.com/@TinnitusHelpMe",
+          "label": "Tinnitus Help"
+        },
+        {
+          "url": "https://www.youtube.com/@TheCrypto_Wiki",
+          "label": "Crypto Wiki"
+        }
+      ],
+      "tiktok": [
+        {
+          "url": "https://www.tiktok.com/@tinnitushelp.me",
+          "label": "Tinnitus Help"
+        },
+        {
+          "url": "https://www.tiktok.com/@thecrypto.wiki",
+          "label": "Crypto Wiki"
         }
       ]
     }
