@@ -43,11 +43,21 @@ export const initAnalytics = () => {
     return;
   }
 
-  // Load Google Analytics script
-  const script = document.createElement('script');
-  script.async = true;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
-  document.head.appendChild(script);
+  // Load the Google Analytics script after the page has loaded, so it doesn't
+  // compete with the content on slow connections. Events queued in dataLayer
+  // before that are sent once it arrives.
+  const loadScript = () => {
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
+    document.head.appendChild(script);
+  };
+
+  if (document.readyState === 'complete') {
+    loadScript();
+  } else {
+    window.addEventListener('load', loadScript, { once: true });
+  }
 
   // Initialize gtag
   window.dataLayer = window.dataLayer || [];
