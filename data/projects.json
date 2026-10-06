@@ -14,7 +14,7 @@
   },
   {
     "title": "Drone Pal",
-    "description": "Pre-flight companion that gives drone pilots a Go/No-Go call from live weather and safety data.",
+    "description": "Helps drone pilots decide when to fly with a Go/No-Go call from live weather and safety data, plus a no fly zone map.",
     "category": ["applications"],
     "status": "Complete Build",
     "type": "Solo Project",
@@ -27,7 +27,7 @@
   },
   {
     "title": "Love Swipe",
-    "description": "Swipe-based Truth or Dare game with themed card decks for game nights.",
+    "description": "Truth or Dare game for couples, with themed card decks you swipe through on date nights.",
     "category": ["applications", "games"],
     "status": "Complete Build",
     "type": "Solo Project",
@@ -66,7 +66,7 @@
   },
   {
     "title": "Crypto Wiki App",
-    "description": "Mobile companion to TheCrypto.Wiki with crypto guides, news and portfolio tracking.",
+    "description": "Mobile app for TheCrypto.Wiki with crypto guides, news and portfolio tracking, plus widgets and push notifications.",
     "category": ["applications"],
     "status": "Complete Build",
     "type": "Solo Project",
@@ -79,7 +79,7 @@
   },
   {
     "title": "Tinnitus Help App",
-    "description": "Articles, sound therapy and tools that help people manage tinnitus day to day.",
+    "description": "Articles, sound therapy and a daily journal tracker that help people manage tinnitus, plus widgets and push notifications.",
     "category": ["applications"],
     "status": "Complete Build",
     "type": "Solo Project",
@@ -157,7 +157,7 @@
   },
   {
     "title": "Clonings AI",
-    "description": "AI platform that lets creators build a digital clone of themselves for their community.",
+    "description": "AI platform for creating digital clones of yourself, fictional characters or famous people.",
     "category": ["applications", "websites", "ai"],
     "status": "Frontend",
     "type": "Team Project",
@@ -182,7 +182,7 @@
   },
   {
     "title": "FashionSwap App",
-    "description": "App for swapping clothes with other people, from the first design to the frontend.",
+    "description": "App for swapping clothes onto your photo, taken from pictures of other people or from images of clothes.",
     "category": ["applications", "designs"],
     "status": "Design + Frontend",
     "type": "Team Project",
@@ -195,7 +195,7 @@
   },
   {
     "title": "Inventory Management App",
-    "description": "Inventory management web app for tracking stock, designed in Figma and built in React.",
+    "description": "Inventory management web app for a large designer outlet store in Bulgaria, designed in Figma and built in React.",
     "category": ["applications", "designs"],
     "status": "Design + Frontend",
     "type": "Team Project",
@@ -208,7 +208,7 @@
   },
   {
     "title": "MyBestWishes AI",
-    "description": "AI tool that writes personalized wishes and greeting messages for any occasion.",
+    "description": "AI tool that generates fun personalized wish videos for any occasion.",
     "category": ["websites", "designs", "applications", "ai"],
     "status": "Design + Frontend + AI Integration",
     "type": "Team Project",
@@ -221,7 +221,7 @@
   },
   {
     "title": "MyWorkPhoto AI",
-    "description": "AI headshot generator that turns selfies into professional work photos.",
+    "description": "AI headshot generator that turns selfies into professional photos for your CV or LinkedIn.",
     "category": ["websites", "designs", "applications", "ai"],
     "status": "Design + Frontend + AI Integration",
     "type": "Team Project",
@@ -355,14 +355,14 @@
   },
   {
     "title": "BerliNEW Android App",
-    "description": "Android app for a Berlin lifestyle and city guide blog.",
+    "description": "Android app for newcomers in Berlin with help on paperwork, lifestyle tips and a city guide.",
     "category": ["applications"],
     "status": "Complete Build",
     "type": "Solo Project",
     "technologies": "Wordpress | Android SDK",
     "image": "./assets/images/projects/berlinew.webp",
     "links": {
-      "preview": "https://berlinew.wordpress.com/categories"
+      "previewShutDown": true
     }
   }
 ]
