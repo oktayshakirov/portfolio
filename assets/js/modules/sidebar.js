@@ -17,13 +17,9 @@ export const initSidebar = () => {
     return;
   }
 
-  // Toggle sidebar on button click
+  // Toggle sidebar on button click.
+  // On mobile it starts expanded via the inline script in index.html.
   sidebarBtn.addEventListener("click", () => {
     elementToggle(sidebar);
   });
-
-  // Auto-expand sidebar on mobile by default
-  if (window.innerWidth < 768) {
-    sidebarBtn.click();
-  }
 };

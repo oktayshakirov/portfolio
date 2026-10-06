@@ -129,6 +129,13 @@ li {
   list-style: none;
 }
 
+/* reserve icon space before Ionicons loads, so nothing jumps when it arrives */
+ion-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+
 button {
   font: inherit;
   background: none;
@@ -170,10 +177,6 @@ body.dark-mode {
   background: var(--sha-background-dark);
 }
 
-body.preloader-active {
-  overflow: hidden;
-}
-
 .site-preloader {
   position: fixed;
   inset: 0;
@@ -187,6 +190,15 @@ body.preloader-active {
   transition:
     opacity 0.35s ease,
     visibility 0.35s ease;
+  /* fade out on its own, so the content never waits for JavaScript */
+  animation: site-preloader-out 0.35s ease 0.4s forwards;
+}
+
+@keyframes site-preloader-out {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 .site-preloader.hidden {
@@ -380,6 +392,11 @@ main {
 
 .sidebar.active {
   max-height: 405px;
+}
+
+/* no expand animation while the page loads, only when the visitor toggles it */
+body.preloader-active .sidebar {
+  transition: none;
 }
 
 .sidebar-info {
@@ -970,6 +987,7 @@ main {
 .technologies-item img {
   width: 100px;
   height: 100px;
+  object-fit: contain;
   margin: 0 auto;
   transition: var(--transition-1);
 }
@@ -1910,6 +1928,7 @@ main {
 
   .strengths-avatar-box img {
     width: 80px;
+    height: 80px;
   }
 
   .strengths-item-title {

@@ -2,51 +2,51 @@
   {
     "id": 1,
     "name": "HTML",
-    "image": "./assets/images/html.png",
+    "image": "./assets/images/html.webp",
     "alt": "HTML"
   },
-  { "id": 2, "name": "CSS", "image": "./assets/images/css.png", "alt": "CSS" },
+  { "id": 2, "name": "CSS", "image": "./assets/images/css.webp", "alt": "CSS" },
   {
     "id": 3,
     "name": "JavaScript",
-    "image": "./assets/images/java-script.png",
+    "image": "./assets/images/java-script.webp",
     "alt": "JavaScript"
   },
   {
     "id": 4,
     "name": "TypeScript",
-    "image": "./assets/images/typescript.png",
+    "image": "./assets/images/typescript.webp",
     "alt": "TypeScript"
   },
   {
     "id": 5,
     "name": "React Native",
-    "image": "./assets/images/react-native.png",
+    "image": "./assets/images/react-native.webp",
     "alt": "React Native"
   },
   {
     "id": 6,
     "name": "React",
-    "image": "./assets/images/react.png",
+    "image": "./assets/images/react.webp",
     "alt": "React"
   },
   {
     "id": 7,
     "name": "Next.js",
-    "image": "./assets/images/next.png",
+    "image": "./assets/images/next.webp",
     "alt": "Next.js"
   },
   {
     "id": 8,
     "name": "Node.js",
-    "image": "./assets/images/node.png",
+    "image": "./assets/images/node.webp",
     "alt": "Node.js"
   },
-  { "id": 9, "name": "PHP", "image": "./assets/images/php.png", "alt": "PHP" },
+  { "id": 9, "name": "PHP", "image": "./assets/images/php.webp", "alt": "PHP" },
   {
     "id": 10,
     "name": "Claude",
-    "image": "./assets/images/claude.png",
+    "image": "./assets/images/claude.webp",
     "alt": "Claude"
   },
   {
@@ -55,23 +55,23 @@
     "image": "./assets/images/openai.webp",
     "alt": "OpenAI"
   },
-  { "id": 12, "name": "n8n", "image": "./assets/images/n8n.png", "alt": "n8n" },
+  { "id": 12, "name": "n8n", "image": "./assets/images/n8n.webp", "alt": "n8n" },
   {
     "id": 13,
     "name": "MySQL",
-    "image": "./assets/images/mysql.png",
+    "image": "./assets/images/mysql.webp",
     "alt": "MySQL"
   },
   {
     "id": 14,
     "name": "Shopify",
-    "image": "./assets/images/shopify.png",
+    "image": "./assets/images/shopify.webp",
     "alt": "Shopify"
   },
   {
     "id": 15,
     "name": "Linux",
-    "image": "./assets/images/linux.png",
+    "image": "./assets/images/linux.webp",
     "alt": "Linux"
   },
   {
@@ -80,23 +80,23 @@
     "image": "./assets/images/wordpress.webp",
     "alt": "Wordpress"
   },
-  { "id": 17, "name": "Git", "image": "./assets/images/git.png", "alt": "Git" },
+  { "id": 17, "name": "Git", "image": "./assets/images/git.webp", "alt": "Git" },
   {
     "id": 18,
     "name": "Docker",
-    "image": "./assets/images/docker.png",
+    "image": "./assets/images/docker.webp",
     "alt": "Docker"
   },
   {
     "id": 19,
     "name": "Unity",
-    "image": "./assets/images/unity.png",
+    "image": "./assets/images/unity.webp",
     "alt": "Unity"
   },
   {
     "id": 20,
     "name": "Figma",
-    "image": "./assets/images/figma.png",
+    "image": "./assets/images/figma.webp",
     "alt": "Figma"
   }
 ]

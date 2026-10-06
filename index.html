@@ -10,7 +10,6 @@
   <meta name="keywords" content="Full-Stack & Mobile Developer, Full-Stack Developer, Mobile App Developer, Web Developer, React, React Native, Next.js, JavaScript, TypeScript, AI Integration, Automation, Berlin, Germany">
   <meta name="author" content="Oktay Shakirov">
   <meta name="theme-color" content="#276aa5">
-  <style>body.preloader-active>main{visibility:hidden}</style>
 
   <title>Oktay Shakirov - Full-Stack & Mobile Developer | Berlin</title>
 
@@ -86,11 +85,13 @@
     -->
 
     <aside class="sidebar" data-sidebar>
+      <!-- Expand on mobile before the first paint, so the page does not jump when the scripts load -->
+      <script>if (window.matchMedia("(max-width: 767px)").matches) document.currentScript.parentElement.classList.add("active");</script>
 
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/avatar.jpg" alt="Oktay Shakirov">
+          <img src="./assets/images/avatar.webp" alt="Oktay Shakirov" width="150" height="150">
         </figure>
 
         <div class="info-content">
@@ -300,7 +301,7 @@
                 <li class="languages-item">
 
                   <div class="title-wrapper">
-                    <h5 class="h5">English</h5>
+                    <h4 class="h5">English</h4>
                     <data value="fluent">Fluent</data>
                   </div>
 
@@ -313,7 +314,7 @@
                 <li class="languages-item">
 
                   <div class="title-wrapper">
-                    <h5 class="h5">German</h5>
+                    <h4 class="h5">German</h4>
                     <data value="fluent">Fluent</data>
                   </div>
 
@@ -326,7 +327,7 @@
                 <li class="languages-item">
 
                   <div class="title-wrapper">
-                    <h5 class="h5">Bulgarian</h5>
+                    <h4 class="h5">Bulgarian</h4>
                     <data value="fluent">Native</data>
                   </div>
 
@@ -339,7 +340,7 @@
                 <li class="languages-item">
 
                   <div class="title-wrapper">
-                    <h5 class="h5">Turkish</h5>
+                    <h4 class="h5">Turkish</h4>
                     <data value="fluent">Advanced</data>
                   </div>
 
@@ -370,7 +371,7 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40" height="40">
               </div>
 
               <div class="service-content-box">
@@ -386,8 +387,7 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-frameworks.svg
-                " alt="frameworks icon" width="40">
+                <img src="./assets/images/icon-frameworks.svg" alt="Frameworks icon" width="40" height="40">
               </div>
 
               <div class="service-content-box">
@@ -403,7 +403,7 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40" height="40">
               </div>
 
               <div class="service-content-box">
@@ -419,7 +419,7 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-ai.svg" alt="AI and automation icon" width="40">
+                <img src="./assets/images/icon-ai.svg" alt="AI and automation icon" width="40" height="40">
               </div>
 
               <div class="service-content-box">
@@ -461,7 +461,7 @@
                <li class="strengths-item" id="1">
                  <div class="content-card" data-strengths-item>
                    <figure class="strengths-avatar-box">
-                     <img src="./assets/images/eye.png" alt="Creative code icon" width="60" data-strengths-avatar>
+                     <img src="./assets/images/eye.webp" alt="Creative code icon" width="60" height="60" data-strengths-avatar>
                    </figure>
                    <h4 class="h4 strengths-item-title" data-strengths-title>Creative Code</h4>
                    <div class="strengths-text" data-strengths-text>
@@ -475,7 +475,7 @@
                <li class="strengths-item" id="2">
                  <div class="content-card" data-strengths-item>
                    <figure class="strengths-avatar-box">
-                     <img src="./assets/images/code.png" alt="Complete solutions icon" width="60" data-strengths-avatar>
+                     <img src="./assets/images/code.webp" alt="Complete solutions icon" width="60" height="60" data-strengths-avatar>
                    </figure>
                    <h4 class="h4 strengths-item-title" data-strengths-title>Complete Solutions</h4>
                    <div class="strengths-text" data-strengths-text>
@@ -489,7 +489,7 @@
                <li class="strengths-item" id="3">
                  <div class="content-card" data-strengths-item>
                    <figure class="strengths-avatar-box">
-                     <img src="./assets/images/vr.png" alt="Future focused icon" width="60" data-strengths-avatar>
+                     <img src="./assets/images/vr.webp" alt="Future focused icon" width="60" height="60" data-strengths-avatar>
                    </figure>
                    <h4 class="h4 strengths-item-title" data-strengths-title>Future Focused</h4>
                    <div class="strengths-text" data-strengths-text>
@@ -503,7 +503,7 @@
                <li class="strengths-item" id="4">
                 <div class="content-card" data-strengths-item>
                   <figure class="strengths-avatar-box">
-                    <img src="./assets/images/languages.png" alt="Global fluency icon" width="60" data-strengths-avatar>
+                    <img src="./assets/images/languages.webp" alt="Global fluency icon" width="60" height="60" data-strengths-avatar>
                   </figure>
                   <h4 class="h4 strengths-item-title" data-strengths-title>Global Fluency</h4>
                   <div class="strengths-text" data-strengths-text>
