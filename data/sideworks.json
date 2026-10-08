@@ -1,5 +1,34 @@
 [
   {
+    "title": "Faceless AI Channels",
+    "categories": ["AI Video", "Content Automation"],
+    "description": "I run faceless YouTube and TikTok channels for Tinnitus Help and The Crypto Wiki. My own pipelines turn articles into scripts, voiceovers and edited videos, from long explainers to Shorts, with thumbnails and metadata ready to publish.",
+    "image": "./assets/images/projects/faceless-channels.webp",
+    "alt": "Faceless AI Channels",
+    "links": {
+      "youtube": [
+        {
+          "url": "https://www.youtube.com/@TinnitusHelpMe",
+          "label": "Tinnitus Help"
+        },
+        {
+          "url": "https://www.youtube.com/@TheCrypto_Wiki",
+          "label": "Crypto Wiki"
+        }
+      ],
+      "tiktok": [
+        {
+          "url": "https://www.tiktok.com/@tinnitushelp.me",
+          "label": "Tinnitus Help"
+        },
+        {
+          "url": "https://www.tiktok.com/@thecrypto.wiki",
+          "label": "Crypto Wiki"
+        }
+      ]
+    }
+  },
+  {
     "title": "Drone Cinematography",
     "categories": ["Aerial Photography", "Cinematography"],
     "description": "I capture stunning perspectives using professional drone for landscape photography, video cinematography and commercial imagery. I license my drone footage through stock platforms for filmmakers, marketers and content creators worldwide.",
@@ -30,35 +59,6 @@
         {
           "url": "https://github.com/oktayshakirov/audio-book-automation",
           "label": "Audiobooks"
-        }
-      ]
-    }
-  },
-  {
-    "title": "Faceless AI Channels",
-    "categories": ["AI Video", "Content Automation"],
-    "description": "I run faceless YouTube and TikTok channels for Tinnitus Help and The Crypto Wiki. My own pipelines turn articles into scripts, voiceovers and edited videos, from long explainers to Shorts, with thumbnails and metadata ready to publish.",
-    "image": "./assets/images/projects/faceless-channels.webp",
-    "alt": "Faceless AI Channels",
-    "links": {
-      "youtube": [
-        {
-          "url": "https://www.youtube.com/@TinnitusHelpMe",
-          "label": "Tinnitus Help"
-        },
-        {
-          "url": "https://www.youtube.com/@TheCrypto_Wiki",
-          "label": "Crypto Wiki"
-        }
-      ],
-      "tiktok": [
-        {
-          "url": "https://www.tiktok.com/@tinnitushelp.me",
-          "label": "Tinnitus Help"
-        },
-        {
-          "url": "https://www.tiktok.com/@thecrypto.wiki",
-          "label": "Crypto Wiki"
         }
       ]
     }
