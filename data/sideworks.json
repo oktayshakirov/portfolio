@@ -2,7 +2,7 @@
   {
     "title": "Faceless AI Channels",
     "categories": ["AI Video", "Content Automation"],
-    "description": "I run faceless YouTube and TikTok channels for Tinnitus Help and The Crypto Wiki. My own pipelines turn articles into scripts, voiceovers and edited videos, from long explainers to Shorts, with thumbnails and metadata ready to publish.",
+    "description": "I run faceless YouTube channels for Tinnitus Help and The Crypto Wiki. My own pipelines turn articles into scripts, voiceovers and edited videos, from long explainers to Shorts, with thumbnails and metadata ready to publish.",
     "image": "./assets/images/projects/faceless-channels.webp",
     "alt": "Faceless AI Channels",
     "links": {
@@ -13,16 +13,6 @@
         },
         {
           "url": "https://www.youtube.com/@TheCrypto_Wiki",
-          "label": "Crypto Wiki"
-        }
-      ],
-      "tiktok": [
-        {
-          "url": "https://www.tiktok.com/@tinnitushelp.me",
-          "label": "Tinnitus Help"
-        },
-        {
-          "url": "https://www.tiktok.com/@thecrypto.wiki",
           "label": "Crypto Wiki"
         }
       ]
