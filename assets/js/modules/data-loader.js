@@ -11,6 +11,7 @@ import {
   generateExperienceHTML,
   generateTimelineGroupHTML,
   generateSideworkHTML,
+  generateSideworkColumnsHTML,
   generateSocialHTML,
   generateFilterButtonsHTML,
   generateFilterSelectHTML,
@@ -251,6 +252,20 @@ export const loadCertificates = async () => {
   }
 };
 
+// Matches the breakpoint where .sidework-posts-list switches to two columns
+const sideworkColumnsQuery = window.matchMedia("(min-width: 768px)");
+
+/**
+ * Render sideworks as a single list on mobile, or as two masonry columns
+ * @param {HTMLElement} container - Container element
+ * @param {Array<Object>} sideworks - Sidework data objects
+ */
+const renderSideworks = (container, sideworks) => {
+  container.innerHTML = sideworkColumnsQuery.matches
+    ? generateSideworkColumnsHTML(sideworks, 2)
+    : sideworks.map(generateSideworkHTML).join("");
+};
+
 /**
  * Load and render sideworks
  */
@@ -267,7 +282,10 @@ export const loadSideworks = async () => {
     }
 
     const sideworks = await response.json();
-    container.innerHTML = sideworks.map(generateSideworkHTML).join("");
+    renderSideworks(container, sideworks);
+    sideworkColumnsQuery.addEventListener("change", () =>
+      renderSideworks(container, sideworks),
+    );
   } catch (error) {
     console.error("Error loading sideworks:", error);
     showErrorState(container, "Failed to load side projects.", loadSideworks);

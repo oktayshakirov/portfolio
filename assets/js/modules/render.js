@@ -141,7 +141,7 @@ export const generateCurrentlyBuildingHTML = (project) => {
   const { title, description, technologies, image, links } = project;
 
   return `
-    <article class="building content-card">
+    <div class="building content-card">
       <figure class="building-img">
         <img src="${image}" loading="lazy" alt="${title} artwork">
       </figure>
@@ -152,7 +152,7 @@ export const generateCurrentlyBuildingHTML = (project) => {
         <p class="building-tech">${technologies}</p>
         ${generateProjectButtonsHTML(title, links)}
       </div>
-    </article>
+    </div>
   `;
 };
 
@@ -395,4 +395,23 @@ export const generateSideworkHTML = (sidework) => {
       ${buttonsHTML}
     </li>
   `;
+};
+
+/**
+ * Generate sidework cards split into independent columns (masonry), so each
+ * card keeps its natural height. Cards alternate between columns to keep the
+ * left-to-right reading order of a regular grid.
+ * @param {Array<Object>} sideworks - Sidework data objects
+ * @param {number} columnCount - Number of columns
+ * @returns {string} HTML string
+ */
+export const generateSideworkColumnsHTML = (sideworks, columnCount) => {
+  return Array.from({ length: columnCount }, (_, column) => {
+    const cards = sideworks
+      .filter((_, index) => index % columnCount === column)
+      .map(generateSideworkHTML)
+      .join("");
+
+    return `<li class="sidework-column"><ul>${cards}</ul></li>`;
+  }).join("");
 };
