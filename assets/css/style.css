@@ -1705,6 +1705,10 @@ body.preloader-active .sidebar {
   padding: 15px;
 }
 
+.sidework-card .project-buttons {
+  flex-direction: column;
+}
+
 .sidework-meta {
   display: flex;
   justify-content: flex-start;
@@ -2193,6 +2197,11 @@ body.preloader-active .sidebar {
   .project-list,
   .sidework-posts-list {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .sidework-column > ul {
+    display: grid;
+    gap: 30px;
   }
 
   /**
