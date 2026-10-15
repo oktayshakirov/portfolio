@@ -138,7 +138,7 @@ export const generateProjectHTML = (project) => {
  * @returns {string} HTML string
  */
 export const generateCurrentlyBuildingHTML = (project) => {
-  const { title, description, technologies, image, links } = project;
+  const { title, description, type, technologies, image, links } = project;
 
   return `
     <div class="building content-card">
@@ -149,7 +149,7 @@ export const generateCurrentlyBuildingHTML = (project) => {
         <p class="building-badge"><span class="building-dot" aria-hidden="true"></span> Currently Building</p>
         <h3 class="h3 building-title">${title}</h3>
         ${description ? `<p class="building-text">${description}</p>` : ""}
-        <p class="building-tech">${technologies}</p>
+        <p class="building-tech">${technologies}${type ? ` · ${type}` : ""}</p>
         ${generateProjectButtonsHTML(title, links)}
       </div>
     </div>
