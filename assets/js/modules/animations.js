@@ -23,6 +23,22 @@ const increaseProgress = (element, targetWidth) => {
 };
 
 /**
+ * Pause all CSS animations while the tab is hidden or the window is unfocused,
+ * so a portfolio left open behind other windows doesn't keep the GPU busy
+ */
+export const initMotionPause = () => {
+  const update = () => {
+    const paused = document.hidden || !document.hasFocus();
+    document.body.classList.toggle("motion-paused", paused);
+  };
+
+  document.addEventListener("visibilitychange", update);
+  window.addEventListener("blur", update);
+  window.addEventListener("focus", update);
+  update();
+};
+
+/**
  * Initialize progress bar animations on scroll
  */
 export const initProgressBars = () => {
@@ -117,6 +133,8 @@ export const initTechScrolling = () => {
     if (!scrolling && scrollInterval === null) {
       scrolling = true;
       scrollInterval = setInterval(() => {
+        if (document.body.classList.contains("motion-paused")) return;
+
         const totalWidth = getTotalWidth();
         
         // Recalculate if content might have changed

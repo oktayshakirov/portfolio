@@ -17,12 +17,11 @@ html {
   background-color: #050507;
 }
 
-/* Glass-ish panels so the sky shows through */
+/* Tinted panels so the sky shows through. No backdrop-filter: the sky behind
+   animates forever, so a blur here gets recomputed every frame (GPU heat). */
 .sidebar,
 article {
-  background: hsla(240, 2%, 12%, 0.35);
-  backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px);
+  background: hsla(240, 2%, 12%, 0.4);
 }
 
 /* lighter tint on phones, where the cards cover most of the sky */
@@ -30,8 +29,6 @@ article {
   .sidebar,
   article {
     background: hsla(240, 2%, 12%, 0.06);
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
   }
 }
 
@@ -691,4 +688,17 @@ body.preloader-active .shooting-sky .shooting-star {
   .starry-sky .stars {
     animation: none;
   }
+}
+
+/* Freeze the infinite animations while the tab is hidden or the window is
+   unfocused (class toggled by initMotionPause in animations.js). One-shot
+   reveals (preloader-out, article fade, project scaleUp) must never be listed
+   here: paused on their first frame they'd keep the page invisible. */
+body.motion-paused .starry-sky .stars,
+body.motion-paused .shooting-sky .shooting-star,
+body.motion-paused .info-content .title::after,
+body.motion-paused .building-dot,
+body.motion-paused .loading::before,
+body.motion-paused .skeleton {
+  animation-play-state: paused;
 }
