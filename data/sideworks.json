@@ -19,6 +19,17 @@
     }
   },
   {
+    "title": "Audiobooks",
+    "categories": ["Audiobooks", "Publishing"],
+    "description": "I publish audiobooks on different topics, each one turning a complex subject into a clear, easy listen you can follow on a walk, a commute or at the gym. The library is growing, with new titles coming soon.",
+    "image": "./assets/images/projects/audiobooks.webp",
+    "alt": "Audiobooks",
+    "links": {
+      "spotify": "https://open.spotify.com/show/5L3CgtyFC83zbayVI9LSKU",
+      "googlePlay": "https://play.google.com/store/audiobooks/details?id=AQAAAEBGeRs5TM"
+    }
+  },
+  {
     "title": "Drone Cinematography",
     "categories": ["Aerial Photography", "Cinematography"],
     "description": "I capture stunning perspectives using professional drone for landscape photography, video cinematography and commercial imagery. I license my drone footage through stock platforms for filmmakers, marketers and content creators worldwide.",

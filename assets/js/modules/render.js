@@ -354,6 +354,13 @@ export const generateSideworkHTML = (sidework) => {
         </a>
       `);
     }
+    if (links.googlePlay) {
+      buttonLinks.push(`
+        <a href="${links.googlePlay}" aria-label="Listen to ${title} on Google Play" target="_blank" rel="noopener noreferrer">
+          <ion-icon name="logo-google-playstore"></ion-icon> Google Play
+        </a>
+      `);
+    }
     if (links.adobeStock) {
       buttonLinks.push(`
         <a href="${links.adobeStock}" aria-label="View ${title} on Adobe Stock" target="_blank" rel="noopener noreferrer">
