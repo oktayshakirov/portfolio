@@ -10,6 +10,7 @@ import {
   initProgressBars,
   initLazyLoading,
   initTechScrolling,
+  initMotionPause,
 } from "./modules/animations.js";
 import { initGitHubCalendar } from "./modules/github-calendar.js";
 import { initEmailCopy, initCalendly } from "./modules/contact.js";
@@ -59,6 +60,7 @@ const init = () => {
   loadFilters().catch(console.error);
 
   // Animations and effects
+  initMotionPause();
   initProgressBars();
   initLazyLoading();
   // initTechScrolling() is called after technologies are loaded in loadTechnologies()

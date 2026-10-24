@@ -479,23 +479,36 @@ body.preloader-active .sidebar {
   width: 175px;
   padding: 3px 12px;
   border-radius: 18px;
+  position: relative;
+}
+
+/* Glow is painted once on a pseudo-element and only its opacity animates,
+   so the GPU composites it instead of repainting the shadow every frame */
+.info-content .title::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow:
+    0 0 0.5px #fff,
+    0 0 1px #fff,
+    0 0 2px #fff,
+    0 0 4px hsla(45, 100%, 90%, 0.5),
+    0 0 7px hsla(45, 100%, 90%, 0.5),
+    0 0 10px hsla(45, 100%, 90%, 0.5),
+    0 0 12px hsla(45, 100%, 90%, 0.5),
+    0 0 15px hsla(45, 100%, 90%, 0.5);
+  will-change: opacity;
   animation: glow 5s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
   from {
-    box-shadow:
-      0 0 0.5px #fff,
-      0 0 1px #fff,
-      0 0 2px #fff,
-      0 0 4px hsla(45, 100%, 90%, 0.5),
-      0 0 7px hsla(45, 100%, 90%, 0.5),
-      0 0 10px hsla(45, 100%, 90%, 0.5),
-      0 0 12px hsla(45, 100%, 90%, 0.5),
-      0 0 15px hsla(45, 100%, 90%, 0.5);
+    opacity: 1;
   }
   to {
-    box-shadow: 0 0 2.5px #ffffff0e;
+    opacity: 0.05;
   }
 }
 
