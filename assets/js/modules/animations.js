@@ -27,14 +27,24 @@ const increaseProgress = (element, targetWidth) => {
  * so a portfolio left open behind other windows doesn't keep the GPU busy
  */
 export const initMotionPause = () => {
+  // Only an actual blur counts. Don't read document.hasFocus() on load:
+  // Instagram/Facebook in-app browsers report false until the first tap.
+  let blurred = false;
+
   const update = () => {
-    const paused = document.hidden || !document.hasFocus();
+    const paused = document.hidden || blurred;
     document.body.classList.toggle("motion-paused", paused);
   };
 
+  const setBlurred = (value) => () => {
+    blurred = value;
+    update();
+  };
+
   document.addEventListener("visibilitychange", update);
-  window.addEventListener("blur", update);
-  window.addEventListener("focus", update);
+  window.addEventListener("blur", setBlurred(true));
+  window.addEventListener("focus", setBlurred(false));
+  window.addEventListener("pointerdown", setBlurred(false));
   update();
 };
 
