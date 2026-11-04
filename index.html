@@ -739,10 +739,17 @@
   <script type="module" src="./assets/js/main.js"></script>
 
   <!--
-    - ionicon link
+    - Icons: Ionicons 7.4.0, self-hosted in assets/vendor/ionicons (MIT, see LICENSE there).
+    - Only the icons the site uses are included, as SVG files in assets/vendor/ionicons/svg/.
+    -
+    - Need another icon? Take it from the same library and version so it matches the rest:
+    -   1. Find it at https://ionic.io/ionicons (for example "rocket-outline")
+    -   2. Download https://unpkg.com/ionicons@7.4.0/dist/ionicons/svg/rocket-outline.svg
+    -      into assets/vendor/ionicons/svg/
+    -   3. Use it as <ion-icon name="rocket-outline"></ion-icon>, or as an "icon" value in data/*.json
+    - An icon without its SVG file in that folder shows up as an empty space.
   -->
-  <script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+  <script type="module" src="./assets/vendor/ionicons/ionicons.esm.js"></script>
 
 </body>
 

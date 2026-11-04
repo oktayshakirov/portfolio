@@ -21,7 +21,7 @@ My personal portfolio at [oktayshakirov.com](https://oktayshakirov.com). A fully
 - Project filter by category and a "Currently Building" card for work in progress
 - Video call booking through Calendly in an in-page modal
 - Animated starry background that pauses when the tab is hidden and respects "reduce motion"
-- Self-hosted Poppins font, WebP images and native lazy loading
+- Self-hosted Poppins font and [Ionicons](https://ionic.io/ionicons), WebP images and native lazy loading
 - Privacy policy pages for my mobile apps in `privacy-policy/`
 
 ## Running locally
@@ -46,6 +46,7 @@ assets/js/main.js            Entry point, starts all modules
 assets/js/modules/           One module per feature (navigation, rendering, contact, analytics, ...)
 assets/images/               Images (projects/, certificates/, icons)
 assets/fonts/                Self-hosted Poppins
+assets/vendor/ionicons/      Self-hosted Ionicons 7.4.0 (only the icons in use, see below)
 privacy-policy/              App privacy policies
 sitemap.xml, robots.txt      Search engines
 CNAME                        Custom domain for GitHub Pages
@@ -60,9 +61,19 @@ CNAME                        Custom domain for GitHub Pages
 | `data/experience.json` | Experience and education in the Resume tab |
 | `data/certificates.json` | Certificates in the Resume tab |
 | `data/technologies.json` | "Development Skills" icons on the About tab (`name`, `image`, `alt`) |
-| `data/socials.json` | Social links in the sidebar and Contact tab (`icon` is an [Ionicons](https://ionic.io/ionicons) name) |
+| `data/socials.json` | Social links in the sidebar and Contact tab (`icon` is an Ionicons name, see [Icons](#icons)) |
 
 The intro text, highlights, languages, focus areas and strengths on the About tab are written directly in `index.html`.
+
+### Icons
+
+Icons come from [Ionicons](https://ionic.io/ionicons) 7.4.0, served from `assets/vendor/ionicons/`. To keep the site light, only the icons in use are included, in `assets/vendor/ionicons/svg/`. To use a new icon, take it from the same library and version:
+
+1. Find it at [ionic.io/ionicons](https://ionic.io/ionicons), for example `rocket-outline`
+2. Download `https://unpkg.com/ionicons@7.4.0/dist/ionicons/svg/rocket-outline.svg` into `assets/vendor/ionicons/svg/`
+3. Use it as `<ion-icon name="rocket-outline"></ion-icon>` or as an `icon` value in the data files
+
+An icon whose SVG file is missing shows up as an empty space.
 
 ### Projects
 
@@ -94,7 +105,7 @@ Side projects have `title`, `categories` (a list of labels), `description`, `ima
 
 ### Resume
 
-`experience.json` and `certificates.json` are lists of groups. Each group has a `group` title, an Ionicons `icon` and `items`:
+`experience.json` and `certificates.json` are lists of groups. Each group has a `group` title, an Ionicons `icon` (see [Icons](#icons)) and `items`:
 
 - Experience: `title`, `organization` (optional), `period`, `description`
 - Certificates: `title`, `issuer`, `image`
