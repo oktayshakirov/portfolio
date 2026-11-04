@@ -199,6 +199,9 @@ textarea {
 }
 
 html {
+  /* tells the browser the site is dark, so the overscroll area behind the
+     page (pull past the top/bottom on phones) is dark instead of white */
+  color-scheme: dark;
   font-family: var(--ff-poppins);
   background-color: #0a0a0f;
   background-image: var(--sha-background);
