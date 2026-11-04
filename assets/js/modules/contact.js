@@ -57,6 +57,11 @@ const buildCalendlySrc = () => {
     embed_type: "Inline",
     hide_landing_page_details: "1",
     hide_gdpr_banner: "1",
+    // Dark colors matching the site. Calendly only applies these on paid
+    // plans; on the free plan they are ignored and the page stays white.
+    background_color: "1e1e1f",
+    text_color: "fafafa",
+    primary_color: "ffdb70",
   });
   return `${CALENDLY_URL}?${params.toString()}`;
 };
@@ -102,7 +107,15 @@ const ensureCalendlyFrame = (modal) => {
   frame.src = buildCalendlySrc();
   frame.title = "Book a video call with Oktay Shakirov";
   frame.setAttribute("frameborder", "0");
-  frame.addEventListener("load", () => panel.classList.add("is-loaded"), { once: true });
+  // Calendly shows its own loader at the top of the frame while the booking
+  // page boots. The frame stays hidden behind our centered spinner until
+  // Calendly posts that the page is ready (see initCalendly); this timeout
+  // is a fallback in case that message never arrives.
+  frame.addEventListener(
+    "load",
+    () => window.setTimeout(() => panel.classList.add("is-loaded"), 4000),
+    { once: true }
+  );
   panel.appendChild(frame);
 };
 
@@ -151,7 +164,11 @@ export const initCalendly = () => {
 
   window.addEventListener("message", (e) => {
     if (e.origin !== "https://calendly.com") return;
-    if (e.data && e.data.event === "calendly.event_scheduled") {
+    const event = e.data && e.data.event;
+    if (event === "calendly.event_type_viewed" || event === "calendly.page_height") {
+      calendlyModal?.querySelector(".calendly-modal__panel").classList.add("is-loaded");
+    }
+    if (event === "calendly.event_scheduled") {
       calendlyBooked = true;
     }
   });
