@@ -17,6 +17,10 @@ import {
   generateFilterSelectHTML,
 } from "./render.js";
 import { updateProjectHighlights } from "./highlights.js";
+import { initProjectFilter } from "./projects.js";
+import { initTechnologies } from "./technologies.js";
+import { initTechScrolling } from "./animations.js";
+import { initCertificates } from "./certificates.js";
 
 /**
  * Show loading skeleton
@@ -96,9 +100,9 @@ const showErrorState = (
 };
 
 /**
- * Load and render filter categories
+ * Render filter categories and initialize filtering
  */
-export const loadFilters = async () => {
+export const loadFilters = () => {
   const filterCategories = [
     "All",
     "AI",
@@ -120,9 +124,16 @@ export const loadFilters = async () => {
     selectList.innerHTML = generateFilterSelectHTML(filterCategories);
   }
 
-  // Re-initialize project filter after rendering
-  const { initProjectFilter } = await import("./projects.js");
   initProjectFilter();
+};
+
+/**
+ * Hide the loading bar of a project image once it has loaded (or failed to)
+ * @param {Event} event - load or error event
+ */
+const handleProjectImageLoad = (event) => {
+  if (event.target.tagName !== "IMG") return;
+  event.target.closest(".project-img")?.classList.remove("loading");
 };
 
 /**
@@ -133,6 +144,12 @@ export const loadProjects = async () => {
   if (!container) return;
 
   showLoadingState(container, "projects");
+
+  // Image load events don't bubble, so listen in the capture phase. The
+  // browser lazy-loads the images itself (loading="lazy"). Adding the same
+  // listener again on a retry is a no-op.
+  container.addEventListener("load", handleProjectImageLoad, true);
+  container.addEventListener("error", handleProjectImageLoad, true);
 
   try {
     const response = await fetch("./data/projects.json");
@@ -156,10 +173,6 @@ export const loadProjects = async () => {
       .map(generateProjectHTML)
       .join("");
     updateProjectHighlights(projects);
-
-    // Re-initialize lazy loading for new content
-    const { initLazyLoading } = await import("./animations.js");
-    initLazyLoading();
   } catch (error) {
     console.error("Error loading projects:", error);
     showErrorState(
@@ -188,16 +201,8 @@ export const loadTechnologies = async () => {
     const technologies = await response.json();
     container.innerHTML = technologies.map(generateTechnologyHTML).join("");
 
-    // Re-initialize technologies module
-    const { initTechnologies } = await import("./technologies.js");
     initTechnologies();
-
-    // Re-initialize tech scrolling after content is loaded
-    const { initTechScrolling } = await import("./animations.js");
-    // Wait a bit for DOM to update and images to load
-    setTimeout(() => {
-      initTechScrolling();
-    }, 100);
+    initTechScrolling();
   } catch (error) {
     console.error("Error loading technologies:", error);
     showErrorState(container, "Failed to load technologies.", loadTechnologies);
@@ -244,8 +249,6 @@ export const loadCertificates = async () => {
       .map((group) => generateTimelineGroupHTML(group, generateCertificateHTML))
       .join("");
 
-    // Re-initialize certificates module
-    const { initCertificates } = await import("./certificates.js");
     initCertificates();
   } catch (error) {
     console.error("Error loading certificates:", error);
