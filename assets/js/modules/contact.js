@@ -40,28 +40,100 @@ export const initEmailCopy = () => {
 };
 
 /**
- * Load the Calendly widget assets on demand (first click) instead of on page load
- * @returns {Promise<void>}
+ * Calendly booking modal
+ *
+ * We embed Calendly's booking page as a plain iframe inside our own modal
+ * instead of using Calendly's popup widget (widget.js / widget.css). Their
+ * popup CSS gives the dialog a 900px min-width, which on phones made the
+ * whole page zoom out to desktop width with a lot of empty space. Owning the
+ * modal keeps the layout under our control and skips the third-party
+ * script entirely.
  */
-let calendlyLoader = null;
-const loadCalendlyAssets = () => {
-  if (calendlyLoader) return calendlyLoader;
+const CALENDLY_URL = "https://calendly.com/oktayshakirov/30min";
 
-  calendlyLoader = new Promise((resolve, reject) => {
-    const css = document.createElement("link");
-    css.rel = "stylesheet";
-    css.href = "https://assets.calendly.com/assets/external/widget.css";
-    document.head.appendChild(css);
+const buildCalendlySrc = () => {
+  const params = new URLSearchParams({
+    embed_domain: window.location.hostname || "oktayshakirov.com",
+    embed_type: "Inline",
+    hide_landing_page_details: "1",
+    hide_gdpr_banner: "1",
+  });
+  return `${CALENDLY_URL}?${params.toString()}`;
+};
 
-    const script = document.createElement("script");
-    script.src = "https://assets.calendly.com/assets/external/widget.js";
-    script.async = true;
-    script.onload = resolve;
-    script.onerror = reject;
-    document.head.appendChild(script);
+let calendlyModal = null;
+let calendlyLastFocus = null;
+let calendlyBooked = false;
+
+const createCalendlyModal = () => {
+  const modal = document.createElement("div");
+  modal.className = "calendly-modal";
+  modal.hidden = true;
+  modal.setAttribute("role", "dialog");
+  modal.setAttribute("aria-modal", "true");
+  modal.setAttribute("aria-label", "Book a video call");
+  modal.innerHTML = `
+    <div class="calendly-modal__backdrop" data-calendly-close></div>
+    <button class="calendly-modal__close" type="button" data-calendly-close aria-label="Close booking window">
+      <ion-icon name="close" aria-hidden="true"></ion-icon>
+    </button>
+    <div class="calendly-modal__panel">
+      <div class="calendly-modal__spinner" aria-hidden="true"></div>
+    </div>
+  `;
+
+  modal.addEventListener("click", (e) => {
+    if (e.target.closest("[data-calendly-close]")) closeCalendlyModal();
   });
 
-  return calendlyLoader;
+  modal.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeCalendlyModal();
+  });
+
+  document.body.appendChild(modal);
+  return modal;
+};
+
+const ensureCalendlyFrame = (modal) => {
+  const panel = modal.querySelector(".calendly-modal__panel");
+  if (panel.querySelector("iframe")) return;
+
+  const frame = document.createElement("iframe");
+  frame.src = buildCalendlySrc();
+  frame.title = "Book a video call with Oktay Shakirov";
+  frame.setAttribute("frameborder", "0");
+  frame.addEventListener("load", () => panel.classList.add("is-loaded"), { once: true });
+  panel.appendChild(frame);
+};
+
+const openCalendlyModal = () => {
+  if (!calendlyModal) calendlyModal = createCalendlyModal();
+
+  calendlyLastFocus = document.activeElement;
+  ensureCalendlyFrame(calendlyModal);
+  calendlyModal.hidden = false;
+  document.documentElement.classList.add("calendly-modal-open");
+  calendlyModal.querySelector(".calendly-modal__close").focus();
+};
+
+const closeCalendlyModal = () => {
+  if (!calendlyModal || calendlyModal.hidden) return;
+
+  calendlyModal.hidden = true;
+  document.documentElement.classList.remove("calendly-modal-open");
+
+  // Keep the iframe between opens so an accidental close doesn't lose
+  // progress, but start fresh once a booking has been made.
+  if (calendlyBooked) {
+    const panel = calendlyModal.querySelector(".calendly-modal__panel");
+    panel.querySelector("iframe")?.remove();
+    panel.classList.remove("is-loaded");
+    calendlyBooked = false;
+  }
+
+  if (calendlyLastFocus && typeof calendlyLastFocus.focus === "function") {
+    calendlyLastFocus.focus();
+  }
 };
 
 /**
@@ -71,18 +143,16 @@ export const initCalendly = () => {
   const calendlyLinks = document.querySelectorAll("[data-calendly-link]");
 
   calendlyLinks.forEach((calendlyLink) => {
-    calendlyLink.addEventListener("click", async (e) => {
+    calendlyLink.addEventListener("click", (e) => {
       e.preventDefault();
-      try {
-        await loadCalendlyAssets();
-        if (typeof Calendly !== "undefined") {
-          Calendly.initPopupWidget({
-            url: "https://calendly.com/oktayshakirov/30min?hide_landing_page_details=1&hide_gdpr_banner=1"
-          });
-        }
-      } catch (error) {
-        console.error("Failed to load Calendly widget:", error);
-      }
+      openCalendlyModal();
     });
+  });
+
+  window.addEventListener("message", (e) => {
+    if (e.origin !== "https://calendly.com") return;
+    if (e.data && e.data.event === "calendly.event_scheduled") {
+      calendlyBooked = true;
+    }
   });
 };
