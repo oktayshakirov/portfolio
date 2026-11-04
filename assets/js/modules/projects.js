@@ -35,20 +35,18 @@ export const initProjectFilter = () => {
   }
 
   // Mobile select dropdown
-  if (select) {
-    select.addEventListener("click", () => {
-      select.classList.toggle("active");
-    });
+  select.addEventListener("click", () => {
+    select.classList.toggle("active");
+  });
 
-    selectItems.forEach((item) => {
-      item.addEventListener("click", () => {
-        const selectedValue = item.textContent.trim().toLowerCase();
-        selectValue.textContent = item.textContent.trim();
-        select.classList.remove("active");
-        filterProjects(selectedValue);
-      });
+  selectItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      const selectedValue = item.textContent.trim().toLowerCase();
+      selectValue.textContent = item.textContent.trim();
+      select.classList.remove("active");
+      filterProjects(selectedValue);
     });
-  }
+  });
 
   // Desktop filter buttons
   let lastClickedBtn = filterBtns[0];

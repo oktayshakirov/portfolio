@@ -45,8 +45,7 @@ article {
 
 /* Warm glow on interactive surfaces */
 .project-item > a:hover,
-.service-item:hover,
-.form-btn:not(:disabled):hover {
+.service-item:hover {
   box-shadow: 0 0 22px hsla(45, 90%, 60%, 0.15);
 }
 

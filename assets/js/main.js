@@ -5,17 +5,9 @@
 
 import { initSidebar } from "./modules/sidebar.js";
 import { initNavigation } from "./modules/navigation.js";
-import { initProjectFilter } from "./modules/projects.js";
-import {
-  initProgressBars,
-  initLazyLoading,
-  initTechScrolling,
-  initMotionPause,
-} from "./modules/animations.js";
+import { initProgressBars, initMotionPause } from "./modules/animations.js";
 import { initGitHubCalendar } from "./modules/github-calendar.js";
 import { initEmailCopy, initCalendly } from "./modules/contact.js";
-import { initTechnologies } from "./modules/technologies.js";
-import { initCertificates } from "./modules/certificates.js";
 import { initHighlights } from "./modules/highlights.js";
 import { initSEO } from "./modules/seo.js";
 import { initAnalytics } from "./modules/analytics.js";
@@ -56,16 +48,15 @@ const init = () => {
   initSidebar();
   initNavigation();
   
-  // Load filter categories first, then initialize filter functionality
-  loadFilters().catch(console.error);
+  // Render the project filter buttons and wire up filtering
+  loadFilters();
 
   // Animations and effects
   initMotionPause();
   initProgressBars();
-  initLazyLoading();
-  // initTechScrolling() is called after technologies are loaded in loadTechnologies()
 
-  // Load dynamic content from JSON
+  // Load dynamic content from JSON. Each loader also sets up the behavior of
+  // its content (filtering, tech scrolling, certificate links) once rendered.
   loadProjects().catch(console.error);
   loadTechnologies().catch(console.error);
   loadExperience().catch(console.error);
@@ -77,9 +68,7 @@ const init = () => {
   loadSocials('[data-page="contact"] .social-list', "social-link").catch(console.error);
 
   // Content modules
-  initTechnologies();
   initGitHubCalendar();
-  initCertificates();
   initHighlights();
 
   // Contact and interactions
@@ -94,19 +83,6 @@ const init = () => {
 
   // Attribution (only shows on unauthorized domains)
   initAttribution();
-
-  // Handle image loading
-  window.addEventListener("DOMContentLoaded", () => {
-    const imageContainers = document.querySelectorAll(".project-img");
-    imageContainers.forEach((container) => {
-      const image = container.querySelector("img");
-      if (image) {
-        image.addEventListener("load", () => {
-          container.classList.remove("loading");
-        });
-      }
-    });
-  });
 };
 
 // Hide preloader as soon as the page has loaded.

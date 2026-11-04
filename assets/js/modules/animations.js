@@ -83,51 +83,12 @@ export const initProgressBars = () => {
 };
 
 /**
- * Initialize lazy loading for project images
- */
-export const initLazyLoading = () => {
-  const projectItems = document.querySelectorAll(".project-item");
-
-  if (projectItems.length === 0) return;
-
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const img = entry.target.querySelector("img[data-src]");
-          if (img) {
-            img.src = img.getAttribute("data-src");
-            img.removeAttribute("data-src");
-            entry.target
-              .querySelector(".project-img")
-              ?.classList.remove("loading");
-            observer.unobserve(entry.target);
-          }
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
-
-  projectItems.forEach((item) => {
-    observer.observe(item);
-  });
-};
-
-/**
  * Initialize auto-scrolling for technologies list
+ * (called by loadTechnologies once the list is rendered)
  */
 export const initTechScrolling = () => {
   const list = document.querySelector(".technologies-list");
   if (!list) return;
-
-  // Check if content is actually loaded (not skeleton loaders)
-  const hasContent = list.querySelectorAll(".technologies-item img").length > 0;
-  if (!hasContent) {
-    // Content not loaded yet, wait a bit and retry
-    setTimeout(() => initTechScrolling(), 200);
-    return;
-  }
 
   const scrollSpeed = 0.7;
   const intervalDuration = 10;

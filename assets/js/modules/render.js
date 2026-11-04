@@ -107,17 +107,14 @@ export const generateProjectHTML = (project) => {
 
   const buttonsHTML = generateProjectButtonsHTML(title, links);
 
+  const figureHTML = `
+    <figure class="project-img loading">
+      <img src="${image}" loading="lazy" alt="${title} project screenshot">
+    </figure>`;
+
   const imageHTML = hasLink
-    ? `<a href="${
-        links.preview || links.ios || links.android || links.github || "#"
-      }">
-         <figure class="project-img loading">
-           <img data-src="${image}" loading="lazy" alt="${title} project screenshot">
-         </figure>
-       </a>`
-    : `<figure class="project-img loading">
-         <img data-src="${image}" loading="lazy" alt="${title} project screenshot">
-       </figure>`;
+    ? `<a href="${links.preview || links.ios || links.android || links.github}">${figureHTML}</a>`
+    : figureHTML;
 
   return `
     <li class="project-item active" data-filter-item data-category="${categoryString}">
@@ -199,7 +196,7 @@ export const generateFilterSelectHTML = (categories) => {
 export const generateTechnologyHTML = (tech) => {
   return `
     <li class="technologies-item">
-      <img src="${tech.image}" alt="${tech.alt}" id="${tech.id}" loading="lazy">
+      <img src="${tech.image}" alt="${tech.alt}" loading="lazy">
     </li>
   `;
 };
@@ -278,11 +275,6 @@ export const generateSocialHTML = (social, className = "social-link") => {
 };
 
 /**
- * Generate sidework HTML from sidework data
- * @param {Object} sidework - Sidework data object
- * @returns {string} HTML string
- */
-/**
  * Normalize a link field that can be a URL string or a list of { url, label }
  * @param {string|Array<Object>} value - Link value from the JSON data
  * @returns {Array<Object>} List of { url, label }
@@ -290,6 +282,11 @@ export const generateSocialHTML = (social, className = "social-link") => {
 const toLinkList = (value) =>
   Array.isArray(value) ? value : [{ url: value }];
 
+/**
+ * Generate sidework HTML from sidework data
+ * @param {Object} sidework - Sidework data object
+ * @returns {string} HTML string
+ */
 export const generateSideworkHTML = (sidework) => {
   const { title, categories, description, image, alt, links } = sidework;
 
