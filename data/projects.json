@@ -23,6 +23,16 @@
     "currentlyBuilding": true
   },
   {
+    "title": "Contact Lens Online Shop",
+    "description": "E-commerce store for contact lenses and care products, with prescription-based ordering, subscription reorders and a fast, SEO-friendly storefront.",
+    "category": ["websites"],
+    "status": "In Development",
+    "type": "Solo Project",
+    "technologies": "Next.js | TypeScript | Tailwind CSS",
+    "image": "./assets/images/projects/coming-soon.webp",
+    "currentlyBuilding": true
+  },
+  {
     "title": "Moment Tracker App",
     "description": "Turns meaningful dates into live countdowns and \"days since\" trackers for life events.",
     "category": ["applications"],
