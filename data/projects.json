@@ -13,13 +13,13 @@
     }
   },
   {
-    "title": "Fitness App",
-    "description": "Workout guide app organized by muscle group, with 3D models showing how to do each exercise. Coming to the App Store and Google Play.",
+    "title": "Muscle Pal",
+    "description": "Offline-first workout app: tap a muscle on the body map to find exercises, then follow looping 3D animations of correct form with the worked muscles highlighted. Animations come from my own Blender pipeline. Includes workout logging, recovery tracking and home screen widgets. Coming to the App Store and Google Play.",
     "category": ["applications"],
     "status": "In Development",
     "type": "Solo Project",
-    "technologies": "React Native",
-    "image": "./assets/images/projects/coming-soon.webp",
+    "technologies": "React Native | Expo | TypeScript | SQLite | Blender | Python",
+    "image": "./assets/images/projects/muscle-pal.webp",
     "currentlyBuilding": true
   },
   {
