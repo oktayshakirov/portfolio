@@ -133,6 +133,14 @@
   --spacing-sm: 1rem;
   --spacing-md: 1.5rem;
   --spacing-lg: 2rem;
+
+  /**
+   * stacked pages: space between them, and where a page lands
+   * when it is opened from the navbar
+   */
+
+  --page-gap: 15px;
+  --page-scroll-margin: 15px;
   --spacing-xl: 3rem;
 
   /**
@@ -308,22 +316,13 @@ article {
   --ionicon-stroke-width: 35px;
 }
 
+/* all pages are stacked into one continuous scroll (see navigation.js) */
 article {
-  display: none;
+  scroll-margin-top: var(--page-scroll-margin);
 }
 
-article.active {
-  display: block;
-  animation: fade 0.5s ease backwards;
-}
-
-@keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+article + article {
+  margin-top: var(--page-gap);
 }
 
 .h2,
@@ -688,7 +687,7 @@ body.preloader-active .sidebar {
 }
 
 .navbar-link:hover,
-.navbar-link:focus {
+.navbar-link:focus-visible {
   color: var(--light-gray-70);
 }
 
@@ -2013,6 +2012,10 @@ body.preloader-active .sidebar {
     --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.125);
     --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.125);
     --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.125);
+
+    /* same spot as the first page at the top of the site */
+    --page-gap: 25px;
+    --page-scroll-margin: 20px;
   }
 
   /**
@@ -2043,21 +2046,48 @@ body.preloader-active .sidebar {
    * NAVBAR
    */
 
+  /*
+   * The navbar sticks to the top while the pages scroll under it. It takes
+   * no space itself: the bar hangs over the top-right corner of the first
+   * page, and floats as a rounded bar once the pages scroll under it.
+   */
+
   .navbar {
-    position: absolute;
+    position: sticky;
+    top: var(--page-scroll-margin);
     bottom: auto;
-    top: 0;
     left: auto;
-    right: 0;
-    width: max-content;
-    border-radius: 0 20px;
-    padding: 0 10px;
+    width: auto;
+    height: 0;
+    padding: 0;
+    background: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    border-radius: 0;
     box-shadow: none;
   }
 
   .navbar-list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    flex-wrap: nowrap;
+    white-space: nowrap;
     gap: 30px;
-    padding: 0 20px;
+    padding: 0 30px;
+    background: hsla(240, 1%, 17%, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--jet);
+    border-radius: 0 20px;
+    transition: border-radius var(--transition-1),
+      box-shadow var(--transition-1);
+  }
+
+  .navbar.is-stuck .navbar-list {
+    border-radius: 20px;
+    box-shadow: var(--shadow-2);
   }
 
   .navbar-link {
@@ -2116,10 +2146,6 @@ body.preloader-active .sidebar {
   .sidebar,
   article {
     width: auto;
-  }
-
-  article {
-    min-height: 100%;
   }
 
   /**
@@ -2432,41 +2458,6 @@ html.calendly-modal-open body {
   border: 1px solid #000;
   pointer-events: none;
   box-sizing: border-box;
-}
-
-/* Pagination Buttons */
-.pagination-box {
-  display: flex;
-  justify-content: space-between;
-}
-
-.pagination-box--next-only {
-  justify-content: flex-end;
-}
-
-.pagination-box--prev-only {
-  justify-content: flex-start;
-}
-
-.pagination-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  background-color: hsla(0, 0%, 23%, 0.214);
-  color: var(--light-gray);
-  cursor: pointer;
-  border-radius: 10px;
-  transition: var(--transition-1);
-}
-
-.pagination-button:hover,
-.pagination-button:focus {
-  color: var(--orange-yellow-crayola);
-}
-
-.pagination-button ion-icon {
-  font-size: 22px;
 }
 
 .store-badges-container {
