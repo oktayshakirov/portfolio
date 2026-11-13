@@ -22,10 +22,20 @@ const supportsScrollEnd = "onscrollend" in window;
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
+// From this width the stuck navbar docks to the right of the pages as a
+// vertical bar (see style.css). Narrower desktops hide it on scroll down.
+const navbarRail = window.matchMedia("(min-width: 1400px)");
+
+// How far the visitor has to scroll in one direction before the navbar
+// hides (down) or comes back (up), so small jitters do not toggle it
+const HIDE_SCROLL_DELTA = 8;
+const DOCK_DURATION_MS = 450;
+
 let pages = [];
 let navbar = null;
 let navbarLinks = [];
 let navbarStickyTop = NaN;
+let navbarScrollAnchor = 0;
 let activeSection = null;
 
 // The page a navbar click (or shared link) scrolled to. While set, the
@@ -168,19 +178,100 @@ const armSettleTimer = () => {
 };
 
 /**
+ * Toggle the stuck state of the navbar. Where it docks into the vertical
+ * bar, the links glide from their old spot to the new one (FLIP) while the
+ * bar's background fades in around them.
+ * @param {boolean} stuck - Pages have scrolled under the navbar
+ */
+const setNavbarStuck = (stuck) => {
+  if (navbar.classList.contains("is-stuck") === stuck) return;
+
+  const list = navbar.querySelector(".navbar-list");
+  const animate =
+    navbarRail.matches && !reduceMotion.matches && list && "animate" in list;
+  if (!animate) {
+    navbar.classList.toggle("is-stuck", stuck);
+    return;
+  }
+
+  const before = navbarLinks.map((link) => link.getBoundingClientRect());
+  navbarLinks.forEach((link) =>
+    link.getAnimations().forEach((animation) => animation.cancel())
+  );
+  navbar.classList.toggle("is-stuck", stuck);
+
+  const timing = {
+    duration: DOCK_DURATION_MS,
+    easing: "cubic-bezier(0.2, 0.8, 0.2, 1)",
+  };
+  navbarLinks.forEach((link, i) => {
+    const after = link.getBoundingClientRect();
+    const dx = before[i].left - after.left;
+    const dy = before[i].top - after.top;
+    if (Math.abs(dx) < 1 && Math.abs(dy) < 1) return;
+    link.animate(
+      [{ transform: `translate(${dx}px, ${dy}px)` }, { transform: "none" }],
+      timing
+    );
+  });
+  list.animate(
+    [
+      {
+        backgroundColor: "transparent",
+        borderColor: "transparent",
+        boxShadow: "none",
+        backdropFilter: "blur(0px)",
+      },
+      {},
+    ],
+    timing
+  );
+};
+
+/**
+ * Between 1024px and 1399px the stuck navbar slides away while the visitor
+ * scrolls down and comes back when they scroll up (CSS only applies the
+ * hidden state there). Scrolls started from the navbar leave it as it is.
+ * @param {boolean} stuck - Pages have scrolled under the navbar
+ */
+const updateNavbarHidden = (stuck) => {
+  const maxScrollY =
+    document.documentElement.scrollHeight - window.innerHeight;
+  // Ignore the rubber-band bounce past either end of the page
+  const y = Math.max(0, Math.min(window.scrollY, maxScrollY));
+
+  if (!stuck) {
+    navbar.classList.remove("is-hidden");
+    navbarScrollAnchor = y;
+    return;
+  }
+  if (pinnedSection) {
+    navbarScrollAnchor = y;
+    return;
+  }
+
+  const delta = y - navbarScrollAnchor;
+  if (Math.abs(delta) < HIDE_SCROLL_DELTA) return;
+  navbar.classList.toggle("is-hidden", delta > 0);
+  navbarScrollAnchor = y;
+};
+
+/**
  * Work out which page is being read and update the navbar and URL
  */
 const updateFromScroll = () => {
   frameRequested = false;
   if (pages.length === 0) return;
 
-  // On desktop the navbar sticks to the top; it is restyled once the pages
-  // scroll under it. (The mobile navbar is fixed to the bottom instead.)
+  // On desktop the navbar sticks to the top; once the pages scroll under it
+  // it docks to the side or hides while scrolling down, so it never covers
+  // them. (The mobile navbar is fixed to the bottom instead.)
   if (navbar) {
     const stuck =
       !Number.isNaN(navbarStickyTop) &&
       pages[0].getBoundingClientRect().top < navbarStickyTop - 0.5;
-    navbar.classList.toggle("is-stuck", stuck);
+    setNavbarStuck(stuck);
+    updateNavbarHidden(stuck);
   }
 
   if (pinnedSection) return;

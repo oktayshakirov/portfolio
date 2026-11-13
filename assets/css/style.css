@@ -2248,6 +2248,65 @@ body.preloader-active .sidebar {
   }
 }
 
+/**
+ * NAVBAR WHILE SCROLLING (desktop)
+ *
+ * The bar must never cover the pages. Between 1024px and 1399px there is no
+ * free column for it, so it slides away while the visitor scrolls down and
+ * comes back when they scroll up. From 1400px it docks into its own lane on
+ * the right of the pages as a vertical bar instead.
+ */
+
+@media (min-width: 1024px) and (max-width: 1399px) {
+  .navbar-list {
+    transition: border-radius var(--transition-1),
+      box-shadow var(--transition-1), transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .navbar.is-stuck.is-hidden:not(:focus-within) .navbar-list {
+    transform: translateY(calc(-100% - var(--page-scroll-margin) - 10px));
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@media (min-width: 1400px) {
+  :root {
+    /* room kept free on each side of the pages for the vertical navbar */
+    --navbar-lane: 150px;
+  }
+
+  main {
+    max-width: min(1200px, calc(100% - 2 * var(--navbar-lane)));
+  }
+
+  .navbar.is-stuck .navbar-list {
+    position: fixed;
+    top: 30px;
+    right: auto;
+    /* in the lane right of the pages, which are centered in the window */
+    left: calc(50% + min(600px, 50% - var(--navbar-lane)) + 12px);
+    width: calc(var(--navbar-lane) - 24px);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+    padding: 8px 6px;
+  }
+
+  .navbar.is-stuck .navbar-link {
+    --fs-8: 14px;
+    width: 100%;
+    padding: 9px 10px;
+    border-radius: 12px;
+    text-align: left;
+    transition: color var(--transition-1), background var(--transition-1);
+  }
+
+  .navbar.is-stuck .navbar-link.active {
+    background: hsla(45, 100%, 72%, 0.08);
+  }
+}
+
 /* Calendly Icon Link */
 .form-title {
   text-align: center;
