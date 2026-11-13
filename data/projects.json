@@ -1,15 +1,16 @@
 [
   {
     "title": "Fungi vs Bacteria Mobile Game",
-    "description": "A 3D mobile game built in Unity, with models and animations made in Blender. Coming to the App Store and Google Play.",
+    "description": "A 3D mobile game built in Unity, with models and animations made in Blender. Available on the App Store, coming soon to Google Play.",
     "category": ["games"],
     "status": "Complete Build",
     "type": "Solo Project",
     "technologies": "Unity | C# | Blender",
     "image": "./assets/images/projects/fungi-vs-bacteria.webp",
     "links": {
-      "github": "https://github.com/oktayshakirov/fungi-vs-bacteria",
-      "figma": "https://www.figma.com/design/2WRQK888SfMS39zy0vgoIM/Fungi-vs-Bacteria?node-id=0-1&t=2dKGxUSf1MgOMDbK-1"
+      "ios": "https://apps.apple.com/us/app/fungi-vs-bacteria/id6815334040",
+      "androidDisabled": true,
+      "github": "https://github.com/oktayshakirov/fungi-vs-bacteria"
     }
   },
   {
