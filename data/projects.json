@@ -9,8 +9,7 @@
     "image": "./assets/images/projects/fungi-vs-bacteria.webp",
     "links": {
       "ios": "https://apps.apple.com/us/app/fungi-vs-bacteria/id6815334040",
-      "androidDisabled": true,
-      "github": "https://github.com/oktayshakirov/fungi-vs-bacteria"
+      "androidDisabled": true
     }
   },
   {
