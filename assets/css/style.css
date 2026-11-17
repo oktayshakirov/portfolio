@@ -470,6 +470,7 @@ body.preloader-active .sidebar {
 .info-content .title {
   display: flex;
   justify-content: center;
+  text-align: center;
   color: var(--white-1);
   background: var(--eerie-black-2);
   font-size: var(--fs-8);
