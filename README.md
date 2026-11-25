@@ -79,6 +79,8 @@ node scripts/build-prompts.mjs
 
 Each entry has `id` (the URL), `title`, `headline` (the page's h1), `seoTitle`, `description` (meta and intro), `summary` (catalogue card), `tags`, `date`, `updated`, `video` (`id`, `title`, `url`, `uploadDate`), `body` (the page text file) and `prompt`. `aliases` lists old ids: `/prompts/#<old-id>` links redirect to the prompt's page.
 
+Keep every prompt helpful but general: the principle, not the exact settings or the tools behind my videos, and nothing personal or private.
+
 ### Icons
 
 Icons come from [Ionicons](https://ionic.io/ionicons) 7.4.0, served from `assets/vendor/ionicons/`. To keep the site light, only the icons in use are included, in `assets/vendor/ionicons/svg/`. To use a new icon, take it from the same library and version:
