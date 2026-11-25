@@ -48,6 +48,8 @@ assets/images/               Images (projects/, certificates/, icons)
 assets/fonts/                Self-hosted Poppins
 assets/vendor/ionicons/      Self-hosted Ionicons 7.4.0 (only the icons in use, see below)
 privacy-policy/              App privacy policies
+prompts/                     Free prompts: the catalogue and one page per prompt (built, see Prompts)
+scripts/build-prompts.mjs    Builds prompts/ and the prompts block in sitemap.xml
 sitemap.xml, robots.txt      Search engines
 CNAME                        Custom domain for GitHub Pages
 ```
@@ -64,6 +66,18 @@ CNAME                        Custom domain for GitHub Pages
 | `data/socials.json` | Social links in the sidebar and Contact tab (`icon` is an Ionicons name, see [Icons](#icons)) |
 
 The intro text, highlights, languages, focus areas and strengths on the About tab are written directly in `index.html`.
+
+### Prompts
+
+`/prompts/` is a catalogue of free prompts from my videos, kept out of the navbar. Every prompt has its own static page at `/prompts/<id>/` so search engines can read it: the prompt with a copy button first, then the article in `data/prompt-pages/<id>.html` (how to use it, what it checks, questions), the video, and structured data (Article, VideoObject, BreadcrumbList).
+
+To add or edit one, change `data/prompts.json` and its page text, then build:
+
+```bash
+node scripts/build-prompts.mjs
+```
+
+Each entry has `id` (the URL), `title`, `headline` (the page's h1), `seoTitle`, `description` (meta and intro), `summary` (catalogue card), `tags`, `date`, `updated`, `video` (`id`, `title`, `url`, `uploadDate`), `body` (the page text file) and `prompt`. `aliases` lists old ids: `/prompts/#<old-id>` links redirect to the prompt's page.
 
 ### Icons
 
