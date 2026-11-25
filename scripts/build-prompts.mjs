@@ -81,16 +81,21 @@ function catalogue() {
   const url = `${SITE}/prompts/`;
   const aliases = {};
   for (const p of prompts) for (const a of p.aliases || []) aliases[a] = `${p.id}/`;
-  const cards = prompts.map((p) => `        <li class="prompt-item content-card">
-          <a class="prompt-item-link" href="${esc(p.id)}/">
-            <h2 class="prompt-item-title">${esc(p.title)}</h2>
-          </a>
-          <p class="prompt-summary">${esc(p.summary)}</p>
-          <div class="prompt-meta">
-            ${(p.tags || []).map((t) => `<span class="prompt-tag">${esc(t)}</span>`).join("")}
-            <time datetime="${p.date}">${fmtDate(p.date)}</time>
-          </div>
-          <a class="prompt-open" href="${esc(p.id)}/">Open the prompt <span aria-hidden="true">&rarr;</span></a>
+  const cards = prompts.map((p) => `        <li class="prompt-item content-card${p.video?.id ? " has-thumb" : ""}">
+          <div class="prompt-item-text">
+            <a class="prompt-item-link" href="${esc(p.id)}/">
+              <h2 class="prompt-item-title">${esc(p.title)}</h2>
+            </a>
+            <p class="prompt-summary">${esc(p.summary)}</p>
+            <div class="prompt-meta">
+              ${(p.tags || []).map((t) => `<span class="prompt-tag">${esc(t)}</span>`).join("")}
+              <time datetime="${p.date}">${fmtDate(p.date)}</time>
+            </div>
+            <a class="prompt-open" href="${esc(p.id)}/">Open the prompt <span aria-hidden="true">&rarr;</span></a>
+          </div>${p.video?.id ? `
+          <a class="prompt-item-thumb" href="${esc(p.id)}/" tabindex="-1" aria-hidden="true">
+            <img src="https://i.ytimg.com/vi/${esc(p.video.id)}/mqdefault.jpg" alt="" loading="lazy" width="320" height="180">
+          </a>` : ""}
         </li>`).join("\n");
 
   const data = {
@@ -196,14 +201,14 @@ function page(p) {
 
 <body>
   <main class="prompts-page">
-    <nav class="prompts-crumbs" aria-label="Breadcrumb"><a href="../">All prompts</a></nav>
     <article class="active prompt-article">
+      <nav class="prompt-topbar" aria-label="Breadcrumb">
+        <a class="prompt-back" href="../">All prompts</a>
+        <time datetime="${p.date}">${fmtDate(p.date)}</time>
+      </nav>
       <header>
         <h1 class="prompt-h1">${esc(p.headline || p.title)}</h1>
-        <p class="prompt-meta">
-          <time datetime="${p.date}">${fmtDate(p.date)}</time>
-          ${v.url ? `<span>From the video <a href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.title)}</a></span>` : ""}
-        </p>
+        ${v.url ? `<p class="prompt-meta"><span>From the video <a href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.title)}</a></span></p>` : ""}
       </header>
       <p class="prompt-lead">${esc(p.description)}</p>
 

@@ -3,16 +3,23 @@
 .prompts-page { max-width: 860px; margin: 0 auto; padding: 32px 16px 64px; }
 .prompts-page > article { width: auto; max-width: 100%; box-sizing: border-box; }
 
-.prompts-crumbs { margin-bottom: 18px; font-size: var(--fs-6); }
-.prompts-crumbs a { color: var(--light-gray-70); text-decoration: none; }
-.prompts-crumbs a::before { content: "\2190\00a0"; }
-.prompts-crumbs a:hover { color: var(--orange-yellow-crayola); }
+.prompt-topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  margin-bottom: 16px; font-size: var(--fs-7); color: var(--light-gray-70); white-space: nowrap; }
+.prompt-back { color: var(--light-gray); text-decoration: none; padding: 6px 12px; border: 1px solid var(--jet);
+  border-radius: 20px; transition: var(--transition-1); }
+.prompt-back::before { content: "\2190\00a0"; }
+.prompt-back:hover { color: var(--orange-yellow-crayola); border-color: var(--orange-yellow-crayola); }
 
 .prompts-intro p { color: var(--light-gray); font-size: var(--fs-5); line-height: 1.7; margin-bottom: 12px; }
 
 /* --- catalogue --- */
 .prompt-list { display: grid; gap: 18px; margin: 24px 0 0; padding: 0; list-style: none; }
 .prompt-item { min-width: 0; padding-top: 22px; }
+.prompt-item.has-thumb { display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 20px; align-items: center; }
+.prompt-item-thumb { display: block; border-radius: 10px; overflow: hidden; border: 1px solid var(--jet); }
+.prompt-item-thumb img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover;
+  transition: var(--transition-1); }
+.prompt-item-thumb:hover img { transform: scale(1.03); }
 .prompt-item-link { text-decoration: none; }
 .prompt-item-title { color: var(--white-2); font-size: var(--fs-2); font-weight: var(--fw-600); margin-bottom: 8px;
   transition: var(--transition-1); }
@@ -79,6 +86,8 @@
 .prompt-video-title a { color: var(--orange-yellow-crayola); text-decoration: none; }
 
 @media (max-width: 600px) {
+  .prompt-item.has-thumb { grid-template-columns: 1fr; }
+  .prompt-item-thumb { order: -1; }
   .prompts-page { padding: 20px 8px 48px; }
   .prompts-page > article { padding: 18px 14px; }
   .prompt-h1 { font-size: 21px; }
