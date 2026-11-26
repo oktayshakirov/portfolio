@@ -49,6 +49,19 @@
     }
   },
   {
+    "title": "Shake to AI",
+    "description": "An open-source Android app that starts a live AI voice conversation with a shake or a tap. Includes six languages and configurable shake detection.",
+    "category": ["applications"],
+    "status": "Complete Build",
+    "type": "Solo Project",
+    "technologies": "Kotlin | Jetpack Compose | WebRTC | OpenAI Realtime API",
+    "image": "./assets/images/projects/shake-to-ai.webp",
+    "links": {
+      "androidDisabled": true,
+      "github": "https://github.com/oktayshakirov/grandpa-voice"
+    }
+  },
+  {
     "title": "Love Swipe",
     "description": "Truth or Dare game for couples, with themed card decks you swipe through on date nights.",
     "category": ["applications", "games"],
