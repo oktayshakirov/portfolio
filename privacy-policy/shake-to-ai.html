@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shake to AI Privacy Policy</title>
+    <meta name="description" content="How Shake to AI handles voice conversations, API credentials, phone permissions, and feedback." />
+    <link rel="canonical" href="https://oktayshakirov.com/privacy-policy/shake-to-ai.html" />
+    <link rel="icon" href="../assets/images/logo.ico" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <style>
+      .policy h2 { margin: 1.5rem 0 0.5rem; font-size: 1.2rem; }
+      .policy a { display: inline; color: var(--orange-yellow-crayola); text-decoration: underline; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="main-content">
+        <article class="active policy">
+          <header>
+            <h1 class="h2 article-title">Shake to AI Privacy Policy</h1>
+          </header>
+          <section class="about-text content-card">
+            <p>
+              Shake to AI is an Android voice conversation app developed by Oktay Shakirov.
+              For privacy questions or requests, email
+              <a href="mailto:shaketoai@oktayshakirov.com">shaketoai@oktayshakirov.com</a>.
+            </p>
+            <h2>Voice conversations</h2>
+            <p>
+              When you start a conversation, the app uses your microphone and streams audio to
+              the OpenAI Realtime API over encrypted WebRTC. OpenAI processes the audio and generates
+              the spoken response. If you enter a preferred name or customize the assistant's
+              instructions, that information may be sent during session setup.
+              The app keeps no local recordings, transcripts, or conversation history.
+            </p>
+            <p>
+              OpenAI describes its data retention, abuse monitoring, and model training practices
+              in its <a href="https://developers.openai.com/api/docs/guides/your-data">API data controls</a>.
+            </p>
+            <h2>API credentials and optional servers</h2>
+            <p>
+              Shake to AI has no user accounts. If you enter your own OpenAI API key, the app stores
+              it encrypted on your phone and sends it to OpenAI over HTTPS to establish sessions.
+              Your OpenAI account pays for its usage.
+            </p>
+            <p>
+              If you configure a third-party or self-hosted server, the app sends your device token
+              and session setup data to that server. The server operator controls its data handling.
+              With the project's included token broker, conversation audio goes directly from your
+              phone to OpenAI after the broker issues session credentials.
+            </p>
+            <h2>Phone permissions and storage</h2>
+            <p>
+              The app uses your phone's accelerometer locally to detect shakes. With screen-off shake
+              detection enabled, a foreground service watches for the gesture. The app uses the
+              microphone during conversations and stops capturing audio when they end. Language,
+              voice, and shake settings are saved on your phone.
+            </p>
+            <h2>Reports and support</h2>
+            <p>
+              In versions with AI response reporting, the description you submit goes to Google
+              Apps Script, which emails it to the developer. The app does not attach audio,
+              transcripts, API keys, or device identifiers. The script stores a daily send count
+              to limit abuse. We use and retain these emails as needed to address reports.
+            </p>
+            <p>
+              If you email us directly, we use and retain your message as needed to respond.
+              If you post a GitHub issue, it may be public and is subject to GitHub's privacy
+              practices. Leave out personal details and API keys when sending feedback.
+            </p>
+            <h2>Privacy requests and deletion</h2>
+            <p>
+              Clear the app's storage or uninstall it to remove settings and credentials stored on
+              your phone. You can revoke microphone access in Android Settings. Contact the relevant
+              provider for data it holds. To request access to, correction of, or deletion of data we
+              hold about you, email
+              <a href="mailto:shaketoai@oktayshakirov.com">shaketoai@oktayshakirov.com</a>.
+            </p>
+          </section>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>
