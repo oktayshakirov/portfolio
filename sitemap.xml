@@ -51,8 +51,14 @@
   <!-- prompts:start -->
   <url>
     <loc>https://oktayshakirov.com/prompts/</loc>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://oktayshakirov.com/prompts/ai-audiobook-planner/</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
