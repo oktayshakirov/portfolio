@@ -8,7 +8,6 @@
     "technologies": "Kotlin | WebRTC | OpenAI API",
     "image": "./assets/images/projects/shake-to-ai.webp",
     "links": {
-      "androidDisabled": true,
       "github": "https://github.com/oktayshakirov/grandpa-voice"
     }
   },
